@@ -1,0 +1,789 @@
+---
+pagetitle: "Point32Health AI Agent Platform Executive Case"
+execute:
+  enabled: false
+resources:
+  - assets/**
+
+deck:
+  css: source.css
+  renderer: custom
+  theme: univ-ai-p32-consulting
+deck-note: "Draft executive case derived from the executive briefing deck."
+---
+
+## From AI Pilots To A Managed AI Platform {.section-divider data-section="Opening" data-title="Point32Health AI Agent Platform Executive Case"}
+
+[Executive case]{.eyebrow}
+
+::: lead
+Rahul Dave (Univ.Ai)
+:::
+
+::: lead
+A practical case for moving from scattered AI experiments to <span class="platform-name">The Shared Platform</span> that Point32Health can manage, reuse, and improve.
+:::
+
+::: why-line
+The choice is whether AI work grows in many separate corners, or through <span class="platform-name">The Shared Platform</span>: one managed path that leaders can see, trust, and scale.
+:::
+
+::: notes
+Set the tone as an executive decision discussion. The ask comes later; the opener should frame why a shared platform matters before talking about money.
+:::
+
+## BBVA Faced Hidden AI Demand In A Regulated Business {data-section="BBVA Case" data-title="BBVA Faced Hidden AI Demand"}
+
+[Regulated enterprise]{.eyebrow}
+
+::: lead
+BBVA was not an obvious fast mover: a global bank with heavy regulation, deep compliance requirements, and a large workforce. Leaders saw that employees were going to use AI, so unmanaged use became the risk to solve.
+:::
+
+<div class="story-stat-grid" aria-label="BBVA starting point">
+<div class="story-stat theme-catalog"><b>25</b><span>Countries in BBVA's global operations.</span></div>
+<div class="story-stat" style="--accent: var(--teal);"><b>77M+</b><span>Clients, which made privacy and trust central.</span></div>
+<div class="story-stat" style="--accent: var(--green);"><b>125k</b><span>Workers, enough for hidden AI use to spread quickly.</span></div>
+<div class="story-stat theme-evidence"><b>Regulated</b><span>Risk, legal, compliance, privacy, and audit all mattered.</span></div>
+<div class="story-stat" style="--accent: var(--amber);"><b>Hidden demand</b><span>Employees already had reasons to use AI; leadership needed a managed path.</span></div>
+</div>
+
+::: {.callout .neutral}
+The setup is the tension: moving slowly leaves AI use unmanaged, but moving fast without controls creates risk.
+:::
+
+::: source-line
+Source: Garicano et al. BBVA case excerpt supplied by Rahul.
+:::
+
+::: notes
+Do not draw the conclusion yet. Use this slide to set up BBVA as the story, then let the next slides explain the adoption system.
+:::
+
+## BBVA Made Adoption Social And Useful {data-section="BBVA Case" data-title="BBVA Made Adoption Social And Useful"}
+
+[Managed adoption]{.eyebrow}
+
+::: lead
+BBVA treated adoption as a change program, not only a software rollout. Early access went to motivated employees, peer support spread know-how, and useful internal assistants became a source of status.
+:::
+
+<div class="story-layout">
+<div class="story-panel theme-catalog">
+<strong>What changed</strong>
+<p>AI moved from scattered interest to visible participation. People had a reason to use it, share what worked, and help others learn.</p>
+</div>
+
+<div class="story-steps">
+<div class="theme-profile"><strong>Motivated first users</strong><span>Early access went to committed employees, not only the most senior people.</span></div>
+<div class="theme-catalog"><strong>Peer network</strong><span>Regional champions and power users helped people learn from colleagues.</span></div>
+<div style="--accent: var(--green)"><strong>Status and sharing</strong><span>People were rewarded for building and sharing useful assistants, not just trying the tool.</span></div>
+<div class="theme-evidence"><strong>Strong implementer</strong><span>Elena Alfaro brought bank knowledge, technology judgment, communication skill, and leadership backing.</span></div>
+</div>
+</div>
+
+::: source-line
+Source: Garicano et al. BBVA case excerpt supplied by Rahul.
+:::
+
+## BBVA Then Proved Scale With Control {data-section="BBVA Case" data-title="BBVA Then Proved Scale With Control"}
+
+[Measured result]{.eyebrow}
+
+::: lead
+The payoff came after the operating choices were in place: approved access, fast review, prompt privacy, human ownership, quality checks, and visible measurement.
+:::
+
+<div class="story-stat-grid" aria-label="BBVA measured results">
+<div class="story-stat theme-catalog"><b>2 mo.</b><span>Risk, legal, and compliance review moved quickly enough to become the managed path.</span></div>
+<div class="story-stat" style="--accent: var(--teal);"><b>83%</b><span>OpenAI reported weekly active use among early licensed users in 2025.</span></div>
+<div class="story-stat" style="--accent: var(--green);"><b>3 hrs</b><span>OpenAI reported average time saved per employee each week.</span></div>
+<div class="story-stat theme-evidence"><b>20k+</b><span>OpenAI reported custom GPTs created across the bank.</span></div>
+<div class="story-stat" style="--accent: var(--amber);"><b>100k+</b><span>OpenAI reported broad ChatGPT Enterprise use across BBVA in 2026.</span></div>
+</div>
+
+::: {.callout .theme-catalog}
+Point32Health needs the same arc, tuned for healthcare: start with visible demand, build the managed path, then scale only with privacy, compliance, evidence, and human accountability.
+:::
+
+::: source-line
+Sources: Garicano et al. BBVA case excerpt supplied by Rahul; OpenAI BBVA case study, June 11, 2026; BBVA news on the 2025 expansion to 11,000 licenses.
+:::
+
+## The Shared Path {data-section="The Ask" data-title="The Shared Path"}
+
+[The ask]{.eyebrow}
+
+::: lead
+Approve a staged program that creates <span class="platform-name">The Shared Platform</span> for AI agents, shows it works through safe first demos, and gives executives a way to manage the AI portfolio.
+:::
+
+::: {.three-col .compact}
+::: {.card .metric-card .theme-runtime}
+**Core build team**
+
+Product, engineering, security, data, compliance, design, and business experts working as one program.
+:::
+
+::: {.card .metric-card .theme-catalog}
+**Shared platform services**
+
+Catalog, profiles, agent harnesses, runtime services, evidence, quality checks, and release gates. Human-in-the-loop review is part of the runtime: <span class="platform-name">The Shared Platform</span> routes work to people when review is required.
+:::
+
+::: {.card .metric-card .theme-evidence}
+**First demonstrations**
+
+Agent harnesses for Codex and Claude Code; DAIS, the legal redlining app, as the first app port; Synthetic Benefits with synthetic data in the same early wave.
+:::
+:::
+
+::: {.callout .theme-profile}
+The decision today is not a final production launch. The decision is whether Point32Health builds <span class="platform-name">The Shared Platform</span> needed before many teams scale AI agents.
+:::
+
+## Agent Harnesses Create The First Platform Foundation {data-section="The Ask" data-title="Agent Harnesses Create The First Platform Foundation"}
+
+[Foundation build]{.eyebrow}
+
+::: lead
+The first build creates controlled Codex and Claude Code workspaces, then uses their work to grow the catalog, context indexes, memory, and trace indexes.
+:::
+
+<div class="timeline">
+<div class="theme-runtime"><strong>1. Agent harnesses</strong><span>Codex and Claude Code launch with approved instructions, allowed files and tools, and named reviewers.</span></div>
+<div class="theme-runtime"><strong>2. Runtime review</strong><span>Start with markdown plan/spec review: the runtime routes the plan to people so they can approve, question, or change it before agent work continues.</span></div>
+<div style="--accent: var(--green)"><strong>3. Context capture</strong><span>As agents work, save the documents, code, decisions, and notes they actually used.</span></div>
+<div class="theme-catalog"><strong>4. Catalog indexes and memory</strong><span>Build catalog-owned search stores and memory, including vector databases for meaning-based search.</span></div>
+<div class="theme-evidence"><strong>5. Trace indexes</strong><span>Index the step-by-step traces so reviewers can inspect, compare, reuse, and debug agent work.</span></div>
+</div>
+
+::: {.callout .neutral}
+The benefit is that DAIS, Synthetic Benefits, and later teams inherit these platform functions instead of rebuilding them: harnesses, human review, context capture, catalog memory, and trace indexing.
+:::
+
+## Applications Are The Next Step {data-section="The Ask" data-title="Applications Are The Next Step"}
+
+[First applications]{.eyebrow}
+
+::: lead
+After the agent harnesses, the next step is to test <span class="platform-name">The Shared Platform</span> with two applications: DAIS, our legal redlining pilot, and Synthetic Benefits, using synthetic data.
+:::
+
+<div class="timeline">
+<div class="theme-runtime"><strong>1. Application controls</strong><span>Keep the harness controls; add app-specific users, tools, screens, and limits for each workflow.</span></div>
+<div class="theme-runtime"><strong>2. Runtime review</strong><span>Keep markdown plan/spec review; add DAIS redline review and Synthetic Benefits answer review through the shared runtime.</span></div>
+<div style="--accent: var(--green)"><strong>3. Context capture</strong><span>DAIS adds legal documents and contract language; Synthetic Benefits adds plan documents, benefits rules, and provider data.</span></div>
+<div class="theme-catalog"><strong>4. Catalog indexes and memory</strong><span>Keep catalog-owned search and memory; add redline examples, benefit examples, reviewer decisions, and reusable patterns.</span></div>
+<div class="theme-evidence"><strong>5. Trace indexes</strong><span>Keep step-by-step traces; add app outcomes such as accepted redlines, changed answers, issues, and time saved.</span></div>
+</div>
+
+::: {.callout .neutral}
+The application work improves the harness foundation instead of bypassing it.
+:::
+
+## What The Shared Platform Gives Point32Health {.hero-title data-section="Platform Case" data-title="What The Shared Platform Gives Point32Health"}
+
+[Shared foundation]{.eyebrow}
+
+::: why-line
+AI agents will touch data, decisions, workflows, and customers. <span class="platform-name">The Shared Platform</span> gives every team the same basic path for using them safely.
+:::
+
+<div class="axis-map six" aria-label="Executive platform reasons">
+<div class="axis-node" style="--accent: var(--teal)"><b>1</b><strong>Managed adoption</strong><span>Employees get an approved path instead of hidden AI use.</span></div>
+<div class="axis-node" style="--accent: var(--rose)"><b>2</b><strong>Shared controls</strong><span>PHI, security, compliance, runtime review, and evidence are handled once.</span></div>
+<div class="axis-node theme-catalog"><b>3</b><strong>Portfolio visibility</strong><span>The catalog shows owners, value, risk, stage, and next decisions.</span></div>
+<div class="axis-node theme-runtime"><b>4</b><strong>Better context</strong><span>Agents use approved context packs and memory, not random files.</span></div>
+<div class="axis-node" style="--accent: var(--green)"><b>5</b><strong>Reuse and learning</strong><span>Good prompts, services, fixes, and evidence help the next team.</span></div>
+<div class="axis-node" style="--accent: var(--amber)"><b>6</b><strong>Path to scale</strong><span>Release gates and future AI patterns fit the same model.</span></div>
+</div>
+
+## The Four Platform Parts {.hero-title data-section="Platform Model" data-title="The Four Platform Parts"}
+
+[Four parts]{.eyebrow}
+
+::: hero-subtitle
+Every AI effort uses the same four parts: one agreement on what is allowed, one shared view of the work, one controlled place to run it, and one record of what happened.
+:::
+
+<div class="flow" aria-label="Platform plain-English building blocks">
+<div class="theme-profile"><strong>Profile</strong><span>The approved instructions for one AI effort: owner, purpose, data, actions, review, and stage.</span></div>
+<div class="theme-catalog"><strong>Catalog</strong><span>The shared map of AI work: owners, risks, approvals, value, evidence, and readiness.</span></div>
+<div class="theme-runtime"><strong>Runtime</strong><span>The controlled place where approved AI work runs, uses only the access it needs, and routes required human review.</span></div>
+<div class="theme-evidence"><strong>Evidence</strong><span>The record of what happened: data used, tools called, approvals, outputs, issues, and results.</span></div>
+</div>
+
+::: semantic-summary
+A profile says what is allowed. The catalog shows the portfolio. The runtime runs approved work safely, including required human review. Evidence shows what happened and why decisions were made.
+:::
+
+## Shared Services Mean Teams Need Not Rebuild Controls {data-section="Platform Model" data-title="Shared Services Avoid Rebuilt Controls"}
+
+[Shared services]{.eyebrow}
+
+::: lead
+Shared services are common platform capabilities every team can use, such as PHI handling, access checks, runtime review, compliance review, evidence capture, monitoring, and rollback.
+:::
+
+::: {.three-col .compact}
+::: {.card .metric-card style="--accent: var(--rose)"}
+**PHI and sensitive data**
+
+Minimum necessary data, approved sources, masking, retention, and member privacy rules are handled once and reused.
+:::
+
+::: {.card .metric-card style="--accent: var(--amber)"}
+**Security and access**
+
+Identity, narrow permissions, tool limits, secrets, monitoring, and emergency stop controls are shared.
+:::
+
+::: {.card .metric-card style="--accent: var(--teal)"}
+**Compliance and evidence**
+
+Approvals, runtime review, evidence, traces, test results, and audit records follow the same pattern.
+:::
+:::
+
+::: chip-row
+[PHI]{.chip}[Security]{.chip}[Compliance]{.chip}[Runtime review]{.chip}[Evidence]{.chip}[Access]{.chip}[Monitoring]{.chip}[Rollback]{.chip}
+:::
+
+## How The Four Parts Work Together {data-section="Platform Model" data-title="How The Four Parts Work Together"}
+
+[Operating model]{.eyebrow}
+
+::: lead
+Profile, catalog, runtime, and evidence are the working parts of <span class="platform-name">The Shared Platform</span>. They let teams move faster without losing control.
+:::
+
+<div class="core-cycle-layout">
+<div class="core-cycle" aria-label="Profile to catalog to runtime to evidence cycle">
+<div class="cycle-center"><div><strong>Managed AI work</strong><span>Clear rules, controlled action, visible evidence.</span></div></div>
+<div class="cycle-node profile theme-profile"><b>1</b><strong>Profile</strong><span>The approved instructions for one AI effort.</span></div>
+<div class="cycle-node catalog theme-catalog"><b>2</b><strong>Catalog</strong><span>The shared map of work, owners, value, risk, and readiness.</span></div>
+<div class="cycle-node runtime theme-runtime"><b>3</b><strong>Runtime</strong><span>The controlled place where approved work runs and required human review happens.</span></div>
+<div class="cycle-node evidence theme-evidence"><b>4</b><strong>Evidence</strong><span>The record that shows what happened and helps improve it.</span></div>
+<div class="cycle-arrow pc theme-profile"><b>&rarr;</b></div>
+<div class="cycle-arrow cr theme-catalog"><b>&rarr;</b></div>
+<div class="cycle-arrow re theme-runtime"><b>&rarr;</b></div>
+<div class="cycle-arrow ep theme-evidence"><b>&rarr;</b></div>
+</div>
+
+::: {.aside-panel .theme-evidence}
+### Why executives should care
+
+Business owners, delivery teams, Security, Compliance, and executives work from the same facts.
+:::
+</div>
+
+## What The Catalog Does {data-section="Catalog Control" data-title="What The Catalog Does"}
+
+[Living inventory]{.eyebrow}
+
+::: lead
+The catalog is the living inventory for AI work. It shows what exists, who owns it, what it can touch, what stage it is in, what evidence supports it, and what decision is needed next.
+:::
+
+<div class="axis-map six" aria-label="Catalog functionality">
+<div class="axis-node theme-catalog"><b>1</b><strong>Inventory</strong><span>List AI efforts, agent harnesses, apps, owners, business areas, and current stage.</span></div>
+<div class="axis-node theme-profile"><b>2</b><strong>Profiles</strong><span>Link each effort to the approved instructions and limits it must follow.</span></div>
+<div class="axis-node" style="--accent: var(--amber)"><b>3</b><strong>Data and systems</strong><span>Show which data, tools, vendors, and business systems each effort can use.</span></div>
+<div class="axis-node theme-evidence"><b>4</b><strong>Evidence</strong><span>Keep the records needed for review, audit, quality checks, and learning.</span></div>
+<div class="axis-node" style="--accent: var(--green)"><b>5</b><strong>Reuse</strong><span>Make useful prompts, data packages, review patterns, and services discoverable.</span></div>
+<div class="axis-node" style="--accent: var(--rose)"><b>6</b><strong>Decisions</strong><span>Help leaders decide what to grow, pause, fix, retire, or move to the next stage.</span></div>
+</div>
+
+## The Catalog Shows Portfolio, Risk, And Next Decisions {data-section="Catalog Control" data-title="Catalog Shows Portfolio Risk And Decisions"}
+
+[Executive view]{.eyebrow}
+
+::: lead
+The catalog is the one view for AI work. Security, Compliance, business owners, delivery teams, and executives work from the same facts.
+:::
+
+<div class="kpi-grid">
+<div class="kpi theme-catalog"><b>Portfolio</b><span>What exists, who owns it, which business area it serves, and what stage it is in.</span></div>
+<div class="kpi"><b>Value</b><span>Expected benefit, users affected, adoption, cost, quality, and business result.</span></div>
+<div class="kpi"><b>Risk</b><span>Data involved, systems touched, member or provider impact, allowed actions, and open exceptions.</span></div>
+<div class="kpi theme-evidence"><b>Next decision</b><span>Approve testing, request changes, expand, pause, retire, or assign follow-up.</span></div>
+</div>
+
+::: {.callout .neutral}
+Executives see which AI efforts to grow, pause, fix, or retire without asking each team for a different report.
+:::
+
+## The Catalog Shows What Context An Agent May Use {data-section="Catalog Control" data-title="Catalog Shows What Context An Agent May Use"}
+
+[Catalog and context]{.eyebrow}
+
+::: lead
+Context means the information given to an agent for one task. The catalog shows which sources are approved, who owns them, what limits apply, and what must be saved as evidence.
+:::
+
+<div class="timeline">
+<div class="theme-profile"><strong>Request</strong><span>What the person is asking the agent to do, and what outcome is expected.</span></div>
+<div class="theme-catalog"><strong>Approved sources</strong><span>Policies, plan rules, workflows, examples, and operating guidance cleared for this kind of task.</span></div>
+<div style="--accent: var(--amber)"><strong>Allowed data</strong><span>Only the records, documents, and data packages the task is allowed to use.</span></div>
+<div class="theme-runtime"><strong>Runtime limits</strong><span>What the agent may do with the context, and when a human must review it.</span></div>
+<div class="theme-evidence"><strong>Source record</strong><span>Where the information came from, which version was used, and why it was allowed.</span></div>
+</div>
+
+## Every Agent Run Starts With A Check {data-section="Runtime Control" data-title="Every Agent Run Starts With A Check"}
+
+[Runtime]{.eyebrow}
+
+::: lead
+A run is one piece of AI work. Before it starts, the runtime checks the profile, owner, purpose, data, allowed action, review need, and release stage.
+:::
+
+<div class="flow runtime-flow" style="grid-template-columns: repeat(5, 1fr);">
+<div class="theme-profile"><strong>Check the profile</strong><span>Confirm owner, purpose, limits, and stage.</span></div>
+<div><strong>Check access</strong><span>Give only the narrow access needed for this task.</span></div>
+<div class="theme-catalog"><strong>Check approved data</strong><span>Use approved sources and versions, not unapproved places.</span></div>
+<div class="theme-runtime"><strong>Run the work</strong><span>Call the model, tools, and shared human review steps through the runtime.</span></div>
+<div class="theme-evidence"><strong>Write evidence</strong><span>Record decisions, data used, tool calls, approvals, results, and issues.</span></div>
+</div>
+
+::: {.callout .neutral}
+This is how speed stays safe: each run gets narrow access for that task instead of ongoing broad access.
+:::
+
+## Approvals Create The Control Record {.section-divider data-section="Evidence And Controls" data-title="Approvals Create The Control Record"}
+
+[Approval and evidence]{.eyebrow}
+
+::: lead
+Before AI work grows, the platform asks the same questions: who owns it, what value it creates, what data it touches, what actions are allowed, what human review is required, and what evidence it leaves. Those answers become the record Security and Compliance use.
+:::
+
+::: chip-row
+[Owner]{.chip .theme-evidence}[Purpose]{.chip .theme-evidence}[Data]{.chip .theme-evidence}[Allowed actions]{.chip .theme-evidence}[Human review]{.chip .theme-evidence}[Evidence]{.chip .theme-evidence}[Release stage]{.chip .theme-evidence}
+:::
+
+## The Evidence Layers {data-section="Evidence And Controls" data-title="The Evidence Layers"}
+
+[Evidence layers]{.eyebrow}
+
+::: lead
+Evidence is not one log file. It is a set of records that gives control teams the facts they need.
+:::
+
+<div class="timeline">
+<div class="theme-profile"><strong>Decision record</strong><span>Who approved the work, what profile applied, and what stage it was allowed to run in.</span></div>
+<div class="theme-catalog"><strong>Context record</strong><span>Which information was provided to the agent, from which source, and under which limits.</span></div>
+<div class="theme-runtime"><strong>Run trace</strong><span>What the agent did step by step: model calls, tool calls, outputs, and errors.</span></div>
+<div class="theme-evidence"><strong>Review record</strong><span>Who reviewed the output, what they changed, and whether it was accepted or rejected.</span></div>
+<div style="--accent: var(--green)"><strong>Outcome record</strong><span>Whether the work saved time, improved quality, reduced risk, or created follow-up work.</span></div>
+</div>
+
+## Every Important Run Leaves Evidence {data-section="Evidence And Controls" data-title="Evidence Turns Agent Work Into Auditable Work"}
+
+[Auditability]{.eyebrow}
+
+<div class="timeline">
+<div class="theme-profile"><strong>What was approved?</strong><span>The profile, owner, and allowed stage.</span></div>
+<div class="theme-evidence"><strong>Who got access?</strong><span>The exact data, tool, system, and time limit.</span></div>
+<div style="--accent: var(--green)"><strong>What was used?</strong><span>Approved data source, version, citation, and context.</span></div>
+<div class="theme-runtime"><strong>What happened?</strong><span>Model calls, tool calls, human review, output, and exceptions.</span></div>
+<div class="theme-evidence"><strong>What was decided?</strong><span>Approval, failure, move-forward gate, rollback, or improvement item.</span></div>
+</div>
+
+::: {.callout .theme-evidence}
+Evidence protects the company and helps teams improve. It gives Security and Compliance the record needed for audit, quality review, incident response, and future reuse.
+:::
+
+## Access Is Decided, Limited, And Recorded For Each Run {data-section="Security And Compliance" data-title="Access Is Decided Limited And Recorded"}
+
+[Security and access]{.eyebrow}
+
+::: lead
+For each run, the platform asks who is requesting access, why it is needed, what data or tool is required, and what human review applies.
+:::
+
+::: {.four-col .compact}
+::: {.card .metric-card}
+**Decision per run**
+
+Approve, deny, narrow, or require human review for that task.
+:::
+
+::: {.card .metric-card .theme-profile}
+**Short lived**
+
+Access expires and can be revoked.
+:::
+
+::: {.card .metric-card .theme-runtime}
+**Purpose bound**
+
+Access is tied to the approved task, stage, and business purpose.
+:::
+
+::: {.card .metric-card .theme-evidence}
+**Recorded**
+
+The decision, exchange, and next step are saved as evidence.
+:::
+:::
+
+::: callout
+Because the decision is recorded, Security and Compliance can see why access was granted, narrowed, denied, or sent for review.
+:::
+
+## Audits For Compliance And Security {data-section="Security And Compliance" data-title="Audits For Compliance And Security"}
+
+[Audit tests]{.eyebrow}
+
+::: lead
+Because runs leave evidence, AI can help test the work itself. Security and Compliance can scan traces, context, citations, outputs, and reviewer decisions for known problems.
+:::
+
+::: {.four-col .compact}
+::: {.card .metric-card style="--accent: var(--rose)"}
+**PHI checks**
+
+Look for sensitive data that was not needed, missing masking, wrong retention, or use outside the approved purpose.
+:::
+
+::: {.card .metric-card style="--accent: var(--amber)"}
+**Prompt exfiltration**
+
+Test whether prompts or outside content can trick the agent into leaking data, ignoring rules, or calling the wrong tool.
+:::
+
+::: {.card .metric-card style="--accent: var(--violet)"}
+**Fairness checks**
+
+Review outputs for unfair treatment, unsupported denials, missing citations, or inconsistent decisions across similar cases.
+:::
+
+::: {.card .metric-card .theme-evidence}
+**Exception checks**
+
+Find unresolved exceptions, failed tests, reviewer overrides, incidents, and release blockers before the work expands.
+:::
+:::
+
+::: {.callout .theme-evidence}
+This makes evidence useful, not passive: AI helps inspect the record, and humans decide what must be fixed before release.
+:::
+
+## Healthcare Risks Are Built Into The Platform {data-section="Security And Compliance" data-title="Healthcare Risks Are First-Class Controls"}
+
+[Healthcare guardrails]{.eyebrow}
+
+::: {.three-col .compact}
+::: {.card .metric-card style="--accent: var(--rose)"}
+**Minimum necessary data**
+
+Use only the data needed for the approved task, with the approved masking rules.
+:::
+
+::: {.card .metric-card style="--accent: var(--amber)"}
+**Unsafe content and tool use**
+
+Treat outside content carefully, control tool use, and test for data leaks or manipulation.
+:::
+
+::: {.card .metric-card style="--accent: var(--violet)"}
+**Human review**
+
+Clinical, financial, denial-related, external, or system-changing actions require the right human approval.
+:::
+:::
+
+<table class="matrix">
+<thead><tr><th>Risk</th><th>Platform response</th></tr></thead>
+<tbody>
+<tr><td>Too much sensitive data</td><td>Clear data rules, use only what is needed, masking, and retention rules.</td></tr>
+<tr><td>Unauthorized action</td><td>Approved tools, access checks, narrow access, and approval gates.</td></tr>
+<tr><td>Unsafe release</td><td>Quality tests, security review, compliance signoff, monitoring, and rollback.</td></tr>
+</tbody>
+</table>
+
+## Release Gates Create One Path From Test To Scale {data-section="Security And Compliance" data-title="Shared Release Gates"}
+
+[Controlled growth]{.eyebrow}
+
+::: lead
+Release gates are checkpoints before an AI effort expands. Each gate asks whether the owner is clear, the data is approved, the human review is working, the controls are working, and there is a rollback plan.
+:::
+
+<div class="release-ladder" aria-label="Shared release path from dev to staging to production">
+<div class="release-stage theme-runtime">
+<h3>Explore</h3>
+<p>Use synthetic or non-production data. Show value, ownership, basic evidence, and safety assumptions.</p>
+<code>prototype</code>
+</div>
+<div class="release-stage theme-evidence">
+<h3>Pilot</h3>
+<p>Use stricter review, production-like controls, support plans, and failure tests before broader use.</p>
+<code>controlled</code>
+</div>
+<div class="release-stage theme-catalog">
+<h3>Scale</h3>
+<p>Run only approved versions with visible owners, monitoring, incident response, and rollback.</p>
+<code>production</code>
+</div>
+</div>
+
+::: promotion-rule
+The rule is shared. Each application brings its own facts, evidence, approvals, and business risk.
+:::
+
+## Reuse And Cooperation {.section-divider data-section="Reuse" data-title="Reuse And Cooperation"}
+
+[Reusable work]{.eyebrow}
+
+::: lead
+Reuse has two forms: teams reuse shared platform services, and agents reuse approved context, memory, and evidence from prior work.
+:::
+
+::: chip-row
+[Shared services]{.chip}[Context packs]{.chip}[Memory]{.chip}[Evidence]{.chip}[Human review patterns]{.chip}[Quality tests]{.chip}
+:::
+
+## Application Teams Focus On The Workflow {data-section="Reuse" data-title="Application Teams Focus On The Workflow"}
+
+[Delivery benefit]{.eyebrow}
+
+::: lead
+Reuse does not mean every application looks the same. Teams keep ownership of their workflow while <span class="platform-name">The Shared Platform</span> supplies the common services they should not rebuild.
+:::
+
+::: {.four-col .compact}
+::: {.card .metric-card .theme-profile}
+**Workflow ownership**
+
+Business teams own the users, rules, exceptions, and success measures for their work.
+:::
+
+::: {.card .metric-card .theme-runtime}
+**Reusable runtime**
+
+Run creation, model and tool calls, access checks, human review, and stop controls are shared.
+:::
+
+::: {.card .metric-card .theme-evidence}
+**Reusable evidence**
+
+Traces, approvals, test results, reviewer feedback, and audit records follow one pattern.
+:::
+
+::: {.card .metric-card .theme-catalog}
+**Reusable connections**
+
+Approved data, context packs, Teams and file sources, APIs, and platform services are cataloged.
+:::
+:::
+
+::: callout
+This is the practical reuse story: faster delivery for teams and a stronger control baseline for Security and Compliance.
+:::
+
+## Shared Context Makes Reuse Work {data-section="Reuse" data-title="Shared Context Makes Reuse Work"}
+
+[Context and memory]{.eyebrow}
+
+::: lead
+The catalog enables context and memory systems. When agents use approved material, the platform can remember what helped, keep the source and owner attached, and make the next project start faster.
+:::
+
+::: {.three-col .compact}
+::: {.card .metric-card .theme-catalog}
+**Context packs**
+
+Approved bundles of policies, source documents, examples, data definitions, and review rules for a job.
+:::
+
+::: {.card .metric-card .theme-runtime}
+**Memory system**
+
+The platform remembers useful decisions, fixes, patterns, and context from prior runs, with sources and owners attached.
+:::
+
+::: {.card .metric-card .theme-evidence}
+**Search indexes**
+
+Vector databases and trace indexes help agents and reviewers find related policies, past work, and prior decisions.
+:::
+:::
+
+::: callout
+This starts during the agent harness phase: Codex and Claude Code runs leave traces, those traces point back to context, and the catalog decides what becomes reusable.
+:::
+
+## Good Local Ideas Can Become Shared Assets {data-section="Reuse" data-title="Capabilities Can Be Reused Across Use Cases"}
+
+[Reuse path]{.eyebrow}
+
+::: lead
+A reusable asset can be a shared service, context pack, review pattern, quality test, evidence pattern, or prompt. The catalog records the owner, rules, inputs, outputs, and readiness.
+:::
+
+<div class="timeline">
+<div style="--accent: var(--rose)"><strong>Local idea</strong><span>A team shows a useful pattern in one workflow.</span></div>
+<div style="--accent: var(--amber)"><strong>Candidate</strong><span>Another team needs the same service, context, review step, test, prompt, or data.</span></div>
+<div class="theme-profile"><strong>Owned asset</strong><span>The company names the owner, rules, inputs, outputs, and quality checks.</span></div>
+<div class="theme-catalog"><strong>Shared release</strong><span>The asset becomes searchable, approved, monitored, and versioned.</span></div>
+<div style="--accent: var(--green)"><strong>Ready for reuse</strong><span>Multiple teams use it with visible value, cost, quality, risk, and evidence.</span></div>
+</div>
+
+::: chip-row
+[Shared platform service]{.chip}[Context pack]{.chip .theme-catalog}[Memory]{.chip .theme-runtime}[Evidence pattern]{.chip .theme-evidence}[Review routing]{.chip .theme-runtime}[Quality test]{.chip}
+:::
+
+## Simple For Users, Ready For Change {.section-divider data-section="Future Readiness" data-title="Simple For Users Ready For Change"}
+
+[Keep it usable]{.eyebrow}
+
+::: lead
+Users should not need to understand the platform. They should get a simple, approved way to request AI help, review work, and trust the result.
+:::
+
+::: chip-row
+[Simple request]{.chip}[Clear review]{.chip}[Reusable learning]{.chip}[Change tools safely]{.chip}[Controlled adoption]{.chip}
+:::
+
+## AI Will Change, But The Rules Stay Clear {data-section="Future Readiness" data-title="AI Will Change But The Rules Stay Clear"}
+
+[Future readiness]{.eyebrow}
+
+::: {.three-col .compact}
+::: {.card .metric-card style="--accent: var(--violet)"}
+**Delegated work**
+
+If one agent asks another agent for help, that added work still needs limits, budget, owner, and evidence.
+:::
+
+::: {.card .metric-card .theme-catalog}
+**Memory**
+
+Only approved past work should become reusable memory, and it must keep owner, privacy, and source links.
+:::
+
+::: {.card .metric-card .theme-evidence}
+**Improvement**
+
+Prompts and workflows should improve against approved examples and quality checks, not hidden experiments.
+:::
+
+::: {.card .metric-card style="--accent: var(--amber)"}
+**Summaries**
+
+Short summaries should link back to the original source and carry warnings when they are incomplete.
+:::
+
+::: {.card .metric-card .theme-runtime}
+**New platforms**
+
+Azure, Databricks, OpenAI, and future tools can change while the business rules stay consistent.
+:::
+
+::: {.card .metric-card .theme-evidence}
+**Feedback**
+
+Human feedback should become quality evidence, not disappear after the meeting or chat.
+:::
+:::
+
+## Trusted Enterprise Systems Can Carry The Platform {data-section="Technology Choices" data-title="Trusted Enterprise Systems Can Carry The Platform"}
+
+[Enterprise systems]{.eyebrow}
+
+::: lead
+The technology direction is to keep AI work inside trusted enterprise systems where they fit, and to make exceptions visible.
+:::
+
+::: {.three-col .compact}
+::: {.card .metric-card .theme-runtime}
+**Azure for enterprise control**
+
+Identity, app hosting, API management, monitoring, search, model oversight, and secrets should use approved enterprise services where they fit.
+:::
+
+::: {.card .metric-card .theme-catalog}
+**Databricks where the data lives**
+
+Data, analytics, machine learning work, and data rules should stay close to approved enterprise data when that is the right home.
+:::
+
+::: {.card .metric-card .theme-evidence}
+**Exceptions are deliberate**
+
+Special tools can be added when they solve a real gap, but they should not become hidden places where important decisions happen.
+:::
+:::
+
+::: {.callout .neutral}
+The architecture goal is simple: one visible set of rules, even when the tools underneath differ.
+:::
+
+## How The Work Builds Over Time {data-section="Roadmap" data-title="How The Work Builds Over Time"}
+
+[Roadmap]{.eyebrow}
+
+<div class="timeline">
+<div class="theme-runtime"><strong>Phase 1</strong><span>Build agent harnesses for Codex and Claude Code, plus catalog basics, human review, ownership records, and evidence capture.</span></div>
+<div class="theme-profile"><strong>Phase 2A</strong><span>Port DAIS, the legal redlining app, with profile, shared review, and evidence.</span></div>
+<div class="theme-evidence"><strong>Phase 2B</strong><span>Build Synthetic Benefits with synthetic data and benefits workflow checks.</span></div>
+<div class="theme-runtime"><strong>Phase 3</strong><span>Select two or three business pilots with clear value and manageable risk.</span></div>
+<div style="--accent: var(--green)"><strong>Phase 4</strong><span>Scale reusable services, operating model, dashboards, training, and support.</span></div>
+</div>
+
+::: callout
+Each phase earns the next one by showing value, evidence, adoption, control, and readiness.
+:::
+
+## Agent-Native Means AI Is Everywhere, Safely {data-section="Operating Model" data-title="Agent-Native Operating Model"}
+
+[Agent-native operating model]{.eyebrow}
+
+::: lead
+Agent-native means approved AI help is available where work already happens: in files, Teams channels, workflows, and business applications. People do not leave their work to find AI; AI is part of how the company works.
+:::
+
+<div class="story-bridge">
+<div class="theme-runtime"><strong>Easy to use</strong><span>AI help shows up in everyday places, not only in special experiments or separate tools.</span></div>
+<div class="theme-profile"><strong>Company rules travel with it</strong><span>Approved data, allowed actions, human review, and release stage stay attached to the work.</span></div>
+<div class="theme-evidence"><strong>Evidence and traces are built in</strong><span>Important work leaves a record that Security, Compliance, and business owners can inspect.</span></div>
+<div class="theme-catalog"><strong>Learning becomes reusable</strong><span>Useful prompts, review patterns, data packages, and lessons become shared company assets.</span></div>
+</div>
+
+::: {.callout .neutral}
+BBVA shows the direction: broad AI use across a regulated company, supported by approved access, training, measurement, and expansion. <span class="platform-name">The Shared Platform</span> gives Point32Health the controls needed to make that kind of broad use safe.
+:::
+
+## The Decision: Build The Shared Platform {data-section="Executive Decision" data-title="Build The Shared Platform"}
+
+[Executive decision]{.eyebrow}
+
+::: lead
+The recommended decision is to approve <span class="platform-name">The Shared Platform</span> program and hold it accountable to visible outcomes.
+:::
+
+::: {.three-col .compact}
+::: {.card .metric-card .theme-catalog}
+**Approve the program**
+
+Create <span class="platform-name">The Shared Platform</span> path for AI agent harnesses, ownership, runtime review, evidence, and release.
+:::
+
+::: {.card .metric-card .theme-runtime}
+**Staff the core team**
+
+Assign product, engineering, security, compliance, data, operations, and business experts.
+:::
+
+::: {.card .metric-card .theme-evidence}
+**Measure progress**
+
+Track adoption, value, quality, risk, reuse, incidents, review time, and release readiness.
+:::
+:::
+
+::: {.callout .theme-profile}
+This investment creates <span class="platform-name">The Shared Platform</span> path that many future AI efforts can use. Without it, every new pilot has to invent its own controls.
+:::

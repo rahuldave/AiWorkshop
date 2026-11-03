@@ -1,0 +1,4223 @@
+<!doctype html>
+<html lang="en" data-theme="univ-ai-p32-consulting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Point32Health Agentic AI Executive Briefing - Presenter</title>
+  <style>
+@import url("assets/univ-ai-theme.css");
+
+:root {
+      --bg: #f4f7f4;
+      --paper: #ffffff;
+      --ink: #162127;
+      --muted: #5c6970;
+      --line: #d9e1dc;
+      --teal: #0f7773;
+      --green: #5f8f3b;
+      --amber: #bd7b18;
+      --rose: #ad4455;
+      --violet: #6159a8;
+      --profile: #6159a8;
+      --profile-bg: #f1f0fa;
+      --profile-ink: #413a82;
+      --catalog: #0f7773;
+      --catalog-bg: #edf7f6;
+      --catalog-ink: #07514e;
+      --runtime: #bd7b18;
+      --runtime-bg: #fff5e3;
+      --runtime-ink: #71460b;
+      --evidence: #9b2f5f;
+      --evidence-bg: #fff0f5;
+      --evidence-ink: #68213e;
+      --shadow: 0 18px 48px rgba(22, 33, 39, 0.16);
+      --radius: 8px;
+      --slide-w: 1280px;
+      --slide-h: 720px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { overflow: hidden; }
+    button { font: inherit; }
+    .deck-shell { height: 100vh; height: 100dvh; display: grid; grid-template-columns: 232px 1fr; grid-template-rows: minmax(0, 1fr) 58px; overflow: hidden; }
+    .toc { grid-row: 1 / span 2; background: #eaf0ec; border-right: 1px solid var(--line); padding: 18px 14px; overflow: auto; }
+    .toc h1 { margin: 0 0 10px; font-size: 0.94rem; line-height: 1.22; letter-spacing: 0; }
+    .toc .hint { margin: 0 0 14px; color: var(--muted); font-size: 0.76rem; line-height: 1.42; }
+    .toc-list { display: grid; gap: 6px; }
+    .toc button { width: 100%; text-align: left; border: 1px solid transparent; background: transparent; color: #2c383e; border-radius: 6px; padding: 8px 9px; cursor: pointer; font-size: 0.76rem; line-height: 1.25; }
+    .toc button:hover, .toc button:focus-visible { outline: none; border-color: #b9c7bf; background: #fff; }
+    .toc button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .toc small { display: block; margin-bottom: 2px; color: inherit; opacity: .62; text-transform: uppercase; letter-spacing: .08em; font-size: .58rem; }
+
+    .stage-wrap { position: relative; display: grid; align-items: start; justify-items: center; min-width: 0; min-height: 0; padding: 14px 26px 8px; overflow: hidden; }
+    .slide-fit { width: var(--slide-w); height: var(--slide-h); position: relative; }
+    .slides { width: var(--slide-w); height: var(--slide-h); transform: scale(var(--deck-scale, 1)); transform-origin: top left; position: relative; border-radius: var(--radius); box-shadow: var(--shadow); background: var(--paper); overflow: hidden; }
+    .slide { position: absolute; inset: 0; display: none; padding: 38px 50px; background: var(--paper); overflow: hidden; }
+    .slide.active { display: block; }
+    .slide:has(> .source-line).active { display: flex; flex-direction: column; }
+    .slide.diagram-slide.active { display: grid; grid-template-rows: minmax(0, 1fr); }
+    .slide::after { content: attr(data-section); position: absolute; right: 34px; bottom: 27px; color: #7b878e; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+    .slide[data-kind="appendix"]::after { content: "Appendix"; }
+    .eyebrow { display: inline-block; margin: 0 0 13px; color: var(--teal); font-size: .78rem; font-weight: 760; letter-spacing: .1em; text-transform: uppercase; }
+    .slide > p:has(> .eyebrow) { margin: 0; }
+    h2 { margin: 0; max-width: 1120px; font-size: 2.08rem; line-height: 1.06; letter-spacing: 0; }
+    h3 { margin: 0 0 9px; font-size: 1.05rem; line-height: 1.2; letter-spacing: 0; }
+    p { color: var(--muted); line-height: 1.4; font-size: .92rem; }
+    code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .hero-title { margin-top: 20px; max-width: 980px; font-size: 2.95rem; line-height: 1.02; }
+    .hero-subtitle { margin-top: 18px; max-width: 850px; color: #35444b; font-size: 1.1rem; line-height: 1.38; }
+    .why-line { max-width: 1040px; margin: 18px 0 0; color: #203039; font-size: 1.24rem; line-height: 1.32; }
+    .why-line strong { font-weight: 780; }
+    .lead { max-width: 870px; color: #344249; font-size: 1.05rem; line-height: 1.4; }
+    .lead p, .hero-subtitle p, .why-line p, .callout p, .mini-note p, .diagram-caption p, .promotion-rule p { margin: 0; color: inherit; font-size: inherit; line-height: inherit; }
+    .source-line { margin-top: auto; padding-top: 14px; color: #6d7980; font-size: .72rem; line-height: 1.25; }
+    .source-line p { margin: 0; color: inherit; font-size: inherit; line-height: inherit; }
+    .source-line code { color: #405058; }
+    .semantic-summary { align-self: flex-end; width: min(760px, 100%); margin-top: 14px; border: 1px solid #b9c7bf; border-left: 5px solid #aebbb4; border-radius: 8px; background: #f8faf8; color: #2e3c42; padding: 10px 14px; text-align: center; font-size: .82rem; font-weight: 680; line-height: 1.25; }
+    .semantic-summary p { margin: 0; color: inherit; font-size: inherit; line-height: inherit; }
+    .section-divider { background: linear-gradient(135deg, #ffffff 0%, #eef7f6 48%, #f8faf8 100%); text-align: center; }
+    .slide.section-divider.active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .section-divider h2 { margin: 0 auto; max-width: 1040px; font-size: 3.25rem; line-height: 1.02; }
+    .section-divider .lead { margin: 24px auto 0; max-width: 870px; font-size: 1.18rem; }
+    .section-divider .chip-row { justify-content: center; margin: 34px auto 0; max-width: 900px; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; }
+    .two-col.wide-left { grid-template-columns: 1.16fr .84fr; }
+    .two-col.wide-right { grid-template-columns: .84fr 1.16fr; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; margin-top: 22px; }
+    .three-col.compact { gap: 13px; margin-top: 16px; }
+    .three-col.compact .card { min-height: 78px; padding: 12px 13px; }
+    .three-col.compact .card strong { margin-bottom: 5px; font-size: .96rem; }
+    .three-col.compact .card p { font-size: .78rem; line-height: 1.28; }
+    .four-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 20px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 16px 17px; background: #fbfcfb; min-height: 108px; }
+    .card strong { display: block; margin-bottom: 8px; color: var(--ink); font-size: 1.05rem; }
+    .card p { margin: 0; font-size: .9rem; }
+    .metric-card { border-top: 5px solid var(--accent, var(--teal)); }
+    .callout { margin-top: 22px; border-left: 5px solid var(--teal); padding: 14px 18px; background: #eef7f6; color: #274045; font-size: 1.02rem; line-height: 1.38; }
+    .callout.neutral { border-left-color: #aebbb4; background: #f8faf8; color: #2e3c42; }
+    .story-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 22px; margin-top: 20px; align-items: stretch; }
+    .story-panel { border: 1px solid var(--line); border-top: 6px solid var(--accent, var(--teal)); border-radius: 8px; background: linear-gradient(180deg, var(--accent-bg, #eef7f6) 0%, #ffffff 88%); padding: 18px 19px; }
+    .story-panel strong { display: block; color: var(--ink); font-size: 1.1rem; line-height: 1.16; margin-bottom: 9px; }
+    .story-panel p { margin: 0; font-size: .92rem; line-height: 1.38; }
+    .story-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .story-steps div { border-left: 5px solid var(--accent, var(--teal)); background: var(--accent-bg, #f7faf8); border-radius: 8px; padding: 13px 14px; min-height: 116px; }
+    .story-steps strong { display: block; color: var(--accent-ink, var(--ink)); font-size: .96rem; line-height: 1.18; margin-bottom: 7px; }
+    .story-steps span { color: #45545b; font-size: .8rem; line-height: 1.3; }
+    .story-stat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 18px; }
+    .story-stat { border: 1px solid var(--line); border-top: 5px solid var(--accent, var(--teal)); border-radius: 8px; background: #fbfcfb; padding: 13px 12px; min-height: 102px; }
+    .story-stat b { display: block; color: var(--accent, var(--teal)); font-size: 1.62rem; line-height: 1; margin-bottom: 8px; }
+    .story-stat span { color: var(--muted); font-size: .76rem; line-height: 1.25; }
+    .story-bridge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; margin-top: 18px; }
+    .story-bridge div { border-left: 5px solid var(--accent); background: var(--accent-bg); color: var(--accent-ink); border-radius: 8px; padding: 11px 12px; min-height: 76px; font-size: .78rem; line-height: 1.26; }
+    .story-bridge strong { display: block; color: var(--accent-ink); font-size: .88rem; margin-bottom: 5px; }
+    .mini-note { color: var(--muted); font-size: .82rem; line-height: 1.35; }
+    .diagram-frame { margin-top: 18px; height: 360px; border: 1px solid var(--line); border-radius: 8px; background: #fbfcfb; display: grid; place-items: center; overflow: hidden; }
+    .diagram-frame figure { width: 100%; height: 100%; margin: 0; display: grid; place-items: center; overflow: hidden; }
+    .diagram-frame figcaption { display: none; }
+    .diagram-frame img { display: block; width: 100%; height: 100%; object-fit: contain; cursor: zoom-in; }
+    .diagram-frame.tall { height: 335px; }
+    .diagram-frame.strip { height: 200px; }
+    .diagram-frame.security-strip { height: 185px; }
+    .diagram-frame.no-border { height: auto; border: none; background: transparent; place-items: stretch; overflow: visible; }
+    .diagram-caption { margin: 8px 0 0; color: #59676f; font-size: .8rem; }
+    .diagram-slide { padding: 18px 28px 26px; }
+    .diagram-slide figure { width: 100%; height: 100%; min-width: 0; min-height: 0; margin: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .slide.diagram-slide img.zoomable { display: block; width: auto; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; }
+    .diagram-slide figcaption { display: none; }
+    .diagram-slide::after { bottom: 12px; }
+    .four-col.compact { gap: 14px; margin-top: 14px; }
+    .four-col.compact .card { min-height: 78px; padding: 12px 13px; }
+    .four-col.compact .card strong { margin-bottom: 5px; font-size: .98rem; }
+    .four-col.compact .card p { font-size: .78rem; line-height: 1.28; }
+
+    .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 30px; align-items: stretch; }
+    .flow div { border: 1px solid var(--line); background: #fbfcfb; border-radius: 8px; padding: 16px 14px; min-height: 112px; }
+    .flow strong { display: block; margin-bottom: 7px; color: var(--ink); font-size: .98rem; }
+    .flow span { color: var(--muted); font-size: .86rem; line-height: 1.34; }
+    .timeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 28px; }
+    .timeline div { border-top: 5px solid var(--accent, var(--teal)); border-radius: 8px; background: #fbfcfb; border-left: 1px solid var(--line); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 13px; min-height: 126px; }
+    .timeline strong { display: block; margin-bottom: 7px; font-size: .96rem; }
+    .timeline span { color: var(--muted); font-size: .82rem; line-height: 1.33; }
+    .release-ladder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 26px; align-items: stretch; }
+    .release-stage { border: 1px solid var(--line); border-top: 6px solid var(--accent, var(--teal)); border-radius: 8px; background: #fbfcfb; padding: 16px 17px; min-height: 186px; }
+    .release-stage h3 { margin: 0 0 9px; font-size: 1.08rem; }
+    .release-stage p { margin: 0; font-size: .84rem; line-height: 1.34; }
+    .release-stage code { display: inline-block; margin-top: 12px; color: #34434a; background: #eef4f0; border: 1px solid #d7e1de; border-radius: 5px; padding: 5px 7px; font-size: .7rem; }
+    .promotion-rule { margin-top: 22px; border: 1px solid #b9c7bf; border-left: 5px solid #aebbb4; border-radius: 8px; background: #f8faf8; color: #2e3c42; padding: 13px 16px; font-size: .91rem; line-height: 1.35; }
+    .matrix { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: .78rem; }
+    .matrix th, .matrix td { border-bottom: 1px solid var(--line); padding: 7px 8px; text-align: left; vertical-align: top; }
+    .matrix th { color: #2e3c42; background: #eef4f0; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
+    .u-dense { padding-top: 34px; }
+    .u-tight { padding-top: 28px; }
+    .u-dense .lead { max-width: 1060px; margin-top: 4px; font-size: .95rem; line-height: 1.32; }
+    .u-dense .matrix { margin-top: 14px; font-size: .73rem; }
+    .u-dense .matrix th, .u-dense .matrix td { padding: 6px 8px; }
+    .u-dense .callout { margin-top: 12px; padding: 9px 13px; font-size: .82rem; line-height: 1.3; }
+    .u-tight .lead { max-width: 1060px; margin-top: 2px; font-size: .86rem; line-height: 1.22; }
+    .u-tight .profile-fragment-grid { gap: 9px; margin-top: 8px; }
+    .u-tight .profile-fragment { padding: 7px 9px; }
+    .u-tight .profile-fragment strong { font-size: .76rem; }
+    .u-tight .profile-fragment span { margin-bottom: 4px; font-size: .6rem; }
+    .u-tight .profile-fragment pre { padding: 6px 7px; font-size: .46rem; line-height: 1.1; }
+    .u-tight .callout { margin-top: 8px; padding: 7px 10px; font-size: .72rem; line-height: 1.22; }
+    .choice-table { table-layout: fixed; margin-top: 16px; font-size: .62rem; line-height: 1.16; }
+    .choice-table th:nth-child(1) { width: 26%; }
+    .choice-table th:nth-child(2) { width: 62%; }
+    .choice-table th:nth-child(3) { width: 12%; text-align: center; }
+    .choice-table td { color: #334249; padding: 6px 7px; }
+    .choice-table td:first-child { color: var(--ink); font-weight: 720; }
+    .choice-table td:last-child { text-align: center; }
+    .yes, .no { display: inline-grid; min-width: 42px; min-height: 22px; place-items: center; border-radius: 999px; font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
+    .yes { border: 1px solid var(--catalog); background: var(--catalog-bg); color: var(--catalog-ink); }
+    .no { border: 1px solid var(--rose); background: #fbecf0; color: #79313c; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chip { border: 1px solid #bac9c0; background: #f7faf8; color: #26373e; border-radius: 999px; padding: 7px 11px; font-size: .78rem; }
+    .theme-profile { --accent: var(--profile); --accent-bg: var(--profile-bg); --accent-ink: var(--profile-ink); }
+    .theme-catalog { --accent: var(--catalog); --accent-bg: var(--catalog-bg); --accent-ink: var(--catalog-ink); }
+    .theme-runtime { --accent: var(--runtime); --accent-bg: var(--runtime-bg); --accent-ink: var(--runtime-ink); }
+    .theme-evidence { --accent: var(--evidence); --accent-bg: var(--evidence-bg); --accent-ink: var(--evidence-ink); }
+    .chip.theme-profile, .chip.theme-catalog, .chip.theme-runtime, .chip.theme-evidence { border-color: var(--accent); background: var(--accent-bg); color: var(--accent-ink); font-weight: 720; }
+    .card.theme-profile, .card.theme-catalog, .card.theme-runtime, .card.theme-evidence, .flow div.theme-profile, .flow div.theme-catalog, .flow div.theme-runtime, .flow div.theme-evidence, .timeline div.theme-profile, .timeline div.theme-catalog, .timeline div.theme-runtime, .timeline div.theme-evidence, .aside-panel.theme-profile, .aside-panel.theme-catalog, .aside-panel.theme-runtime, .aside-panel.theme-evidence, .kpi.theme-profile, .kpi.theme-catalog, .kpi.theme-runtime, .kpi.theme-evidence { border-top: 5px solid var(--accent); background: linear-gradient(180deg, var(--accent-bg) 0%, #ffffff 88%); }
+    .callout.theme-profile, .callout.theme-catalog, .callout.theme-runtime, .callout.theme-evidence { border-left-color: var(--accent); background: var(--accent-bg); color: var(--accent-ink); }
+    .core-cycle-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 30px; align-items: center; margin-top: 18px; }
+    .core-cycle { position: relative; height: 430px; }
+    .core-cycle::before { content: ""; position: absolute; left: 50%; top: 50%; width: 374px; height: 374px; transform: translate(-50%, -50%); border-radius: 50%; background: conic-gradient(from -45deg, var(--profile) 0 23%, transparent 23% 27%, var(--catalog) 27% 48%, transparent 48% 52%, var(--runtime) 52% 73%, transparent 73% 77%, var(--evidence) 77% 98%, transparent 98% 100%); -webkit-mask: radial-gradient(farthest-side, transparent 66%, #000 68%); mask: radial-gradient(farthest-side, transparent 66%, #000 68%); opacity: .92; }
+    .cycle-center { position: absolute; left: 50%; top: 50%; width: 210px; min-height: 106px; transform: translate(-50%, -50%); display: grid; place-items: center; text-align: center; border: 1px solid var(--line); border-radius: 999px; background: #fff; padding: 16px; box-shadow: 0 10px 28px rgba(22, 33, 39, .1); z-index: 2; }
+    .cycle-center strong { display: block; color: var(--ink); font-size: 1.02rem; line-height: 1.12; }
+    .cycle-center span { display: block; margin-top: 7px; color: var(--muted); font-size: .78rem; line-height: 1.25; }
+    .cycle-node { position: absolute; z-index: 3; width: 250px; min-height: 124px; border: 1px solid var(--line); border-top: 8px solid var(--accent); border-radius: 8px; background: linear-gradient(180deg, var(--accent-bg) 0%, #ffffff 86%); padding: 13px 15px 14px; box-shadow: 0 12px 28px rgba(22, 33, 39, .1); }
+    .cycle-node.profile { top: 0; left: 50%; transform: translateX(-50%); }
+    .cycle-node.catalog { right: 0; top: 144px; }
+    .cycle-node.runtime { left: 50%; bottom: 0; transform: translateX(-50%); }
+    .cycle-node.evidence { left: 0; top: 144px; }
+    .cycle-node b { display: inline-grid; place-items: center; width: 30px; height: 30px; margin-bottom: 7px; border-radius: 50%; background: var(--accent); color: #fff; font-size: .82rem; }
+    .cycle-node strong { display: block; color: var(--ink); font-size: 1.22rem; line-height: 1.12; }
+    .cycle-node span { display: block; margin-top: 7px; color: #46565d; font-size: .76rem; line-height: 1.25; }
+    .cycle-arrow { position: absolute; z-index: 4; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1px solid var(--accent); border-radius: 50%; background: var(--accent-bg); color: var(--accent-ink); font-size: .72rem; font-weight: 780; box-shadow: 0 7px 18px rgba(22, 33, 39, .1); }
+    .cycle-arrow span { display: none; }
+    .cycle-arrow b { color: var(--accent); font-size: 1.18rem; line-height: 1; }
+    .cycle-arrow.pc { right: 225px; top: 96px; transform: rotate(28deg); }
+    .cycle-arrow.cr { right: 224px; bottom: 94px; transform: rotate(-28deg); }
+    .cycle-arrow.re { left: 224px; bottom: 94px; transform: rotate(28deg); }
+    .cycle-arrow.ep { left: 225px; top: 96px; transform: rotate(-28deg); }
+    .mini-cycle-list { display: grid; gap: 10px; margin-top: 14px; }
+    .mini-cycle-list div { border-left: 5px solid var(--accent); background: var(--accent-bg); border-radius: 8px; padding: 10px 12px; color: var(--accent-ink); font-size: .84rem; line-height: 1.3; }
+    .kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+    .kpi { border-radius: 8px; padding: 16px; background: #f6f9f8; border: 1px solid var(--line); }
+    .kpi b { display: block; color: var(--teal); font-size: 2rem; line-height: 1; }
+    .kpi span { color: var(--muted); font-size: .88rem; }
+    .code-card { margin-top: 16px; border-radius: 8px; background: #142127; color: #e8f2ef; padding: 14px 16px; overflow: auto; max-height: 370px; border: 1px solid #31454d; }
+    .code-card pre { margin: 0; font-size: .72rem; line-height: 1.28; white-space: pre; }
+    .code-card.small pre { font-size: .68rem; }
+    .code-card.url-card pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .64rem; line-height: 1.34; }
+    .url-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+    .url-pair .code-card { margin-top: 0; }
+    .code-label { display: block; margin-bottom: 8px; color: #9fcbc8; font-size: .68rem; font-weight: 760; letter-spacing: .08em; text-transform: uppercase; }
+    .code-card mark { background: rgba(90, 183, 176, .28); color: inherit; padding: 0 2px; border-radius: 3px; }
+    .aside-panel { border-radius: 8px; background: #f8faf8; border: 1px solid var(--line); padding: 18px; }
+    .profile-fragment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
+    .profile-fragment { border: 1px solid var(--line); border-top: 5px solid var(--accent, var(--profile)); border-radius: 8px; background: linear-gradient(180deg, var(--accent-bg, #f4eff9) 0%, #ffffff 86%); padding: 10px 12px; }
+    .profile-fragment strong { display: block; color: var(--ink); font-size: .88rem; line-height: 1.12; }
+    .profile-fragment span { display: block; margin: 3px 0 7px; color: var(--muted); font-size: .72rem; line-height: 1.2; }
+    .profile-fragment pre { margin: 0; border-radius: 6px; background: #142127; color: #e8f2ef; padding: 8px 9px; font-size: .63rem; line-height: 1.24; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .axis-map { display: grid; gap: 14px; margin-top: 30px; }
+    .axis-map.six { grid-template-columns: repeat(3, 1fr); }
+    .axis-node { border-top: 6px solid var(--accent, var(--teal)); border-radius: 8px; background: #fbfcfb; border-left: 1px solid var(--line); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 15px; min-height: 112px; }
+    .axis-node b { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-bottom: 10px; border-radius: 50%; background: var(--accent, var(--teal)); color: #fff; font-size: .8rem; }
+    .axis-node strong { display: block; color: var(--ink); font-size: 1rem; line-height: 1.16; }
+    .axis-node span { display: block; margin-top: 6px; color: var(--muted); font-size: .78rem; line-height: 1.25; }
+    .axis { display: grid; grid-template-columns: 160px 1fr; gap: 12px; align-items: center; margin-top: 24px; }
+    .axis .label { color: #536168; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; }
+    .axis .bar { height: 34px; border-radius: 4px; background: linear-gradient(90deg, #d9ece8, #cce3c5, #ffe2af, #f1bcc6); border: 1px solid #cdd7d2; display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; text-align: center; font-size: .78rem; color: #34434a; }
+
+    .footer-controls { grid-column: 2; display: flex; align-items: center; gap: 10px; padding: 8px 26px 12px; }
+    .progress { flex: 1; height: 7px; border-radius: 999px; background: #d9e1dc; overflow: hidden; }
+    .progress span { display: block; height: 100%; width: 0%; background: var(--teal); }
+    .counter { min-width: 95px; text-align: right; color: var(--muted); font-size: .82rem; }
+    .nav-btn { border: 1px solid var(--line); background: #fff; color: #24343b; border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+    .nav-btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .nav-btn:hover, .nav-btn:focus-visible { outline: none; border-color: #9aa9a2; }
+    .notes { display: none; position: absolute; left: 46px; right: 46px; bottom: 24px; max-height: 170px; overflow: auto; border: 1px solid #b9c7bf; border-radius: 8px; background: rgba(255, 255, 255, .97); box-shadow: var(--shadow); padding: 16px 18px; color: #24333a; z-index: 3; font-size: .92rem; line-height: 1.4; }
+    .notes.visible { display: block; }
+    .overview { position: fixed; inset: 0; display: none; background: rgba(10, 18, 22, .84); z-index: 10; padding: 34px; overflow: auto; }
+    .overview.visible { display: block; }
+    .overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+    .overview-card { background: #fff; color: var(--ink); border-radius: 8px; padding: 13px; cursor: pointer; min-height: 112px; border: 3px solid transparent; }
+    .overview-card.active { border-color: var(--teal); }
+    .overview-card small { display: block; color: var(--teal); text-transform: uppercase; letter-spacing: .08em; font-size: .62rem; margin-bottom: 6px; }
+    .overview-card strong { display: block; font-size: .95rem; line-height: 1.2; }
+    .zoom { position: fixed; inset: 0; display: none; background: rgba(9, 17, 21, .9); z-index: 20; align-items: center; justify-content: center; padding: 28px; }
+    .zoom.visible { display: flex; }
+    .zoom img { max-width: 96vw; max-height: 94vh; background: #fff; border-radius: 8px; box-shadow: var(--shadow); }
+    .zoom button { position: fixed; top: 18px; right: 20px; border: 1px solid #fff; background: #fff; color: var(--ink); border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+
+    @media (max-width: 980px) {
+      body { overflow: auto; }
+      .deck-shell { min-height: 100vh; display: block; }
+      .toc { display: none; }
+      .stage-wrap { padding: 0; }
+      .slides { min-height: 100vh; border-radius: 0; box-shadow: none; }
+      .slide { min-height: 100vh; padding: 34px 24px 72px; overflow: auto; }
+      h2 { font-size: 2rem; }
+      .hero-title { font-size: 2.35rem; }
+      .core-cycle-layout { grid-template-columns: 1fr; }
+      .core-cycle { height: auto; display: grid; gap: 12px; }
+      .core-cycle::before, .cycle-center, .cycle-arrow { display: none; }
+      .cycle-node, .cycle-node.profile, .cycle-node.catalog, .cycle-node.runtime, .cycle-node.evidence { position: static; width: auto; min-height: 0; transform: none; }
+      .footer-controls { position: fixed; left: 0; right: 0; bottom: 0; background: #f4f7f4; }
+      .slide::after, .semantic-summary { position: static; display: block; margin-top: 16px; }
+      .diagram-slide img { height: auto; }
+    }
+
+    @media print {
+      body { overflow: visible; background: #fff; }
+      .deck-shell, .stage-wrap, .slide-fit, .slides { display: block; height: auto; max-height: none; width: auto; box-shadow: none; }
+      .slides { transform: none; }
+      .toc, .footer-controls, .notes, .overview, .zoom { display: none !important; }
+      .slide { position: relative; display: block !important; page-break-after: always; width: 1280px; height: 720px; border: 1px solid #ddd; }
+      .slide.section-divider { display: flex !important; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    }
+
+
+
+/* Custom htmpres runtime overrides generated after the source deck CSS. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+body.audience-mode .slide .notes {
+  display: none !important;
+}
+
+.htmpres-filter-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.slide div.sourceCode,
+.slide pre {
+  max-width: 100%;
+  overflow: auto;
+}
+
+.slide > div.sourceCode,
+.slide > pre {
+  margin-top: 24px;
+  border: 1px solid var(--htmpres-code-border, rgba(15, 23, 42, 0.16));
+  border-radius: var(--htmpres-code-radius, 8px);
+  background: var(--htmpres-code-bg, #172127);
+  color: var(--htmpres-code-ink, #eff6f4);
+  padding: var(--htmpres-code-pad, 18px);
+}
+
+.slide div.sourceCode > pre,
+.slide pre.sourceCode {
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  box-shadow: none;
+}
+
+.slide pre.sourceCode,
+.slide pre.sourceCode code {
+  white-space: pre;
+}
+
+.slide pre code {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.slide pre.numberSource code {
+  counter-reset: source-line;
+}
+
+.slide pre.numberSource code > span,
+.slide code > .code-line {
+  display: inline-block;
+  min-width: 100%;
+  min-height: 1.45em;
+  box-sizing: border-box;
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+  transition: background 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
+}
+
+.slide pre.numberSource code > span {
+  counter-increment: source-line;
+  position: relative;
+  padding-left: 3.1rem;
+}
+
+.slide pre.numberSource code > span > a:first-child {
+  position: absolute;
+  left: 0;
+  width: 2.35rem;
+  padding-right: 0.5rem;
+  color: var(--htmpres-code-line-number, rgba(226, 232, 240, 0.46));
+  text-align: right;
+  text-decoration: none;
+  user-select: none;
+}
+
+.slide pre.numberSource code > span > a:first-child::before {
+  content: counter(source-line);
+}
+
+.slide .code-line-highlight {
+  background: var(--htmpres-code-highlight-bg, rgba(193, 131, 34, 0.22));
+  box-shadow: inset var(--htmpres-code-highlight-bar-width, 4px) 0 0 var(--htmpres-code-highlight-bar, rgba(193, 131, 34, 0.9));
+}
+
+.slide .code-step-active .code-line-dim {
+  opacity: 0.42;
+}
+
+.slide.transition-fade.active,
+.slide.transition-slide.active,
+.slide.transition-zoom.active {
+  animation-duration: var(--slide-transition-duration, 220ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+.slide.transition-fade.active {
+  animation-name: htmpres-slide-fade;
+}
+
+.slide.transition-slide.active {
+  animation-name: htmpres-slide-next;
+}
+
+html[data-slide-direction="prev"] .slide.transition-slide.active {
+  animation-name: htmpres-slide-prev;
+}
+
+.slide.transition-zoom.active {
+  animation-name: htmpres-slide-zoom;
+}
+
+.slide.transition-none.active,
+html[data-slide-direction="none"] .slide.transition-fade.active,
+html[data-slide-direction="none"] .slide.transition-slide.active,
+html[data-slide-direction="none"] .slide.transition-zoom.active {
+  animation: none;
+}
+
+@keyframes htmpres-slide-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes htmpres-slide-next {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes htmpres-slide-prev {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes htmpres-slide-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slide .fragment {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(var(--fragment-offset, 12px));
+  transition:
+    opacity var(--fragment-duration, 180ms) ease,
+    transform var(--fragment-duration, 180ms) ease,
+    filter var(--fragment-duration, 180ms) ease,
+    background-color var(--fragment-duration, 180ms) ease,
+    box-shadow var(--fragment-duration, 180ms) ease;
+}
+
+.slide .fragment.fragment-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.slide .fragment.fragment-none {
+  transition: none;
+  transform: none;
+}
+
+.slide .fragment.fragment-scale:not(.fragment-visible) {
+  transform: scale(0.96);
+}
+
+.slide .fragment.fragment-left:not(.fragment-visible) {
+  transform: translateX(-18px);
+}
+
+.slide .fragment.fragment-right:not(.fragment-visible) {
+  transform: translateX(18px);
+}
+
+.slide .fragment.fragment-rise:not(.fragment-visible),
+.slide .fragment.fragment-slide:not(.fragment-visible) {
+  transform: translateY(18px);
+}
+
+.slide .fragment.fragment-blur:not(.fragment-visible) {
+  filter: blur(4px);
+}
+
+.slide .fragment.fragment-highlight.fragment-current {
+  background: var(--htmpres-fragment-highlight-bg, rgba(193, 131, 34, 0.14));
+  box-shadow: inset var(--htmpres-fragment-highlight-bar-width, 4px) 0 0 var(--htmpres-fragment-highlight-bar, rgba(193, 131, 34, 0.75));
+}
+
+.slide .fragment.fragment-dim.fragment-past {
+  opacity: 0.42;
+}
+
+.slide .fragment.fragment-dim.fragment-current {
+  opacity: 1;
+}
+
+.slide.htmpres-text-fit-active {
+  --htmpres-text-fit-scale: 1;
+}
+
+.slide.htmpres-text-fit-active h2 {
+  font-size: calc(var(--htmpres-h2-size, 2.35rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active .hero-title h2 {
+  font-size: calc(var(--htmpres-hero-title-size, 3rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active h3 {
+  font-size: calc(var(--htmpres-h3-size, 1.18rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active p,
+.slide.htmpres-text-fit-active li,
+.slide.htmpres-text-fit-active .card,
+.slide.htmpres-text-fit-active .callout {
+  font-size: calc(var(--htmpres-body-size, 1rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active .eyebrow,
+.slide.htmpres-text-fit-active .source-line {
+  font-size: calc(var(--htmpres-small-size, 0.78rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active pre {
+  font-size: calc(var(--htmpres-code-size, 0.9rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide[data-overflow="scroll"],
+html[data-overflow="scroll"] .slide,
+.slide[data-overflow="fit-scroll"].htmpres-text-fit-overflow,
+html[data-overflow="fit-scroll"] .slide.htmpres-text-fit-overflow {
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.slide[data-overflow="hidden"],
+html[data-overflow="hidden"] .slide,
+.slide[data-overflow="fit"],
+html[data-overflow="fit"] .slide {
+  overflow: hidden;
+}
+
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 9;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.82);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.24);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 6px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.scroll-cue[hidden] {
+  display: none;
+}
+
+.slides.scroll-cue-visible .scroll-cue {
+  opacity: 0.92;
+  transform: translate(-50%, 0);
+}
+
+.scroll-cue::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  margin-top: -4px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+  animation: htmpres-scroll-cue 1300ms ease-in-out infinite;
+}
+
+@keyframes htmpres-scroll-cue {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(-2px) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(3px) rotate(45deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide.transition-fade.active,
+  .slide.transition-slide.active,
+  .slide.transition-zoom.active {
+    animation: none;
+  }
+
+  .slide .fragment {
+    transition: none;
+    transform: none;
+  }
+
+  .scroll-cue::before {
+    animation: none;
+  }
+}
+
+@media print {
+  .slide .fragment {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+.slide .sourceCode .al,
+.slide .sourceCode .er {
+  color: var(--htmpres-code-token-alert, #fecdd3);
+}
+
+.slide .sourceCode .kw,
+.slide .sourceCode .cf,
+.slide .sourceCode .im {
+  color: var(--htmpres-code-token-keyword, #7dd3fc);
+  font-weight: 700;
+}
+
+.slide .sourceCode .dt,
+.slide .sourceCode .at {
+  color: var(--htmpres-code-token-type, #c4b5fd);
+}
+
+.slide .sourceCode .st,
+.slide .sourceCode .ss,
+.slide .sourceCode .ch {
+  color: var(--htmpres-code-token-string, #a7f3d0);
+}
+
+.slide .sourceCode .dv,
+.slide .sourceCode .bn,
+.slide .sourceCode .fl {
+  color: var(--htmpres-code-token-number, #fcd34d);
+}
+
+.slide .sourceCode .co {
+  color: var(--htmpres-code-token-comment, #94a3b8);
+  font-style: italic;
+}
+
+.slide .sourceCode .fu,
+.slide .sourceCode .bu,
+.slide .sourceCode .ot {
+  color: var(--htmpres-code-token-function, #f9a8d4);
+}
+
+.slide .sourceCode .op,
+.slide .sourceCode .sc,
+.slide .sourceCode .va {
+  color: var(--htmpres-code-token-base, #f8fafc);
+}
+
+.slide > :not(.ds-full):not(.ds-left):not(.ds-right) {
+  position: relative;
+  z-index: 1;
+}
+
+.slide .ds-full,
+.slide .ds-left,
+.slide .ds-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  align-content: center;
+  justify-items: stretch;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 48px 58px;
+}
+
+.slide .ds-full {
+  left: 0;
+  right: 0;
+}
+
+.slide .ds-global-background {
+  pointer-events: none;
+  opacity: var(--ds-bg-opacity, 1);
+}
+
+.slide .ds-left {
+  left: 0;
+  width: 50%;
+  padding-right: 29px;
+}
+
+.slide .ds-right {
+  right: 0;
+  width: 50%;
+  padding-left: 29px;
+}
+
+.slide .ds-layer {
+  position: relative;
+  z-index: 1;
+}
+
+.slide .ds-no-pad {
+  padding: 0 !important;
+}
+
+.slide .ds-center {
+  place-items: center;
+  text-align: center;
+}
+
+.slide .ds-top {
+  align-content: start;
+}
+
+.slide .ds-bottom {
+  align-content: end;
+}
+
+.slide .ds-split {
+  display: grid;
+  grid-template-columns: repeat(var(--ds-columns, 2), minmax(0, 1fr));
+  gap: var(--ds-gap, 0);
+  min-height: var(--ds-height, 420px);
+  margin-top: var(--ds-margin-top, 24px);
+  overflow: hidden;
+}
+
+.slide .ds-pane,
+.slide .ds-media {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.slide .ds-pane {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  padding: var(--ds-pad, 28px);
+  background: var(--ds-bg, transparent);
+  border: var(--ds-border, 0);
+  border-radius: var(--ds-radius, 0);
+}
+
+.slide .ds-media {
+  display: grid;
+  place-items: center;
+}
+
+.slide .ds-frame {
+  border: 1px solid var(--ds-frame-border, rgba(15, 23, 42, 0.14));
+  border-radius: var(--ds-radius, 8px);
+  background: var(--ds-frame-bg, #ffffff);
+}
+
+.slide .ds-no-border {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.slide .ds-hide {
+  display: none !important;
+}
+
+.slide .ds-media > p,
+.slide .ds-media > figure,
+.slide .ds-media.ds-fit > p,
+.slide .ds-media.ds-fit > figure,
+.slide .ds-media.ds-fill > p,
+.slide .ds-media.ds-fill > figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+.slide .ds-media img,
+.slide .ds-media video,
+.slide .ds-media iframe,
+.slide .ds-media object,
+.slide .ds-media embed,
+.slide img.ds-fit,
+.slide video.ds-fit,
+.slide iframe.ds-fit,
+.slide object.ds-fit,
+.slide embed.ds-fit,
+.slide img.ds-fill,
+.slide video.ds-fill,
+.slide iframe.ds-fill,
+.slide object.ds-fill,
+.slide embed.ds-fill,
+.slide .ds-media.ds-fit img,
+.slide .ds-media.ds-fit video,
+.slide .ds-media.ds-fit iframe,
+.slide .ds-media.ds-fit object,
+.slide .ds-media.ds-fit embed,
+.slide .ds-media.ds-fill img,
+.slide .ds-media.ds-fill video,
+.slide .ds-media.ds-fill iframe,
+.slide .ds-media.ds-fill object,
+.slide .ds-media.ds-fill embed {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.slide .ds-media img,
+.slide .ds-media video,
+.slide .ds-media iframe,
+.slide .ds-media object,
+.slide .ds-media embed {
+  object-fit: contain;
+}
+
+.slide .ds-global-background img,
+.slide .ds-global-background video,
+.slide .ds-global-background iframe,
+.slide .ds-global-background object,
+.slide .ds-global-background embed {
+  object-position: var(--ds-bg-position, center);
+}
+
+.slide img.ds-fit,
+.slide video.ds-fit,
+.slide iframe.ds-fit,
+.slide object.ds-fit,
+.slide embed.ds-fit,
+.slide .ds-media.ds-fit img,
+.slide .ds-media.ds-fit video,
+.slide .ds-media.ds-fit iframe,
+.slide .ds-media.ds-fit object,
+.slide .ds-media.ds-fit embed {
+  object-fit: contain;
+}
+
+.slide img.ds-fill,
+.slide video.ds-fill,
+.slide iframe.ds-fill,
+.slide object.ds-fill,
+.slide embed.ds-fill,
+.slide .ds-media.ds-fill img,
+.slide .ds-media.ds-fill video,
+.slide .ds-media.ds-fill iframe,
+.slide .ds-media.ds-fill object,
+.slide .ds-media.ds-fill embed {
+  object-fit: cover;
+}
+
+.slide audio.ds-fit,
+.slide audio.ds-fill,
+.slide .ds-media audio {
+  width: 100%;
+  height: auto;
+}
+
+.slide .ds-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ds-gap, 14px);
+}
+
+.slide .ds-inline > p,
+.slide .ds-inline > figure {
+  margin: 0;
+}
+
+.slide .ds-inline img,
+.slide .ds-inline video,
+.slide .ds-inline iframe {
+  width: var(--ds-inline-size, 160px);
+  height: auto;
+  max-width: 100%;
+}
+
+.slide .ds-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--ds-columns, 3), minmax(0, 1fr));
+  gap: var(--ds-gap, 12px);
+}
+
+.slide .ds-grid > * {
+  min-width: 0;
+}
+
+.slide .ds-grid > p,
+.slide .ds-grid > figure {
+  margin: 0;
+}
+
+.slide img.ds-rounded,
+.slide video.ds-rounded,
+.slide iframe.ds-rounded,
+.slide object.ds-rounded,
+.slide embed.ds-rounded,
+.slide .ds-rounded img,
+.slide .ds-rounded video,
+.slide .ds-rounded iframe,
+.slide .ds-rounded object,
+.slide .ds-rounded embed {
+  border-radius: var(--ds-radius, 16px);
+}
+
+.slide img.ds-bn,
+.slide video.ds-bn,
+.slide iframe.ds-bn,
+.slide object.ds-bn,
+.slide embed.ds-bn,
+.slide img.ds-bw,
+.slide video.ds-bw,
+.slide iframe.ds-bw,
+.slide object.ds-bw,
+.slide embed.ds-bw,
+.slide .ds-bn img,
+.slide .ds-bn video,
+.slide .ds-bn iframe,
+.slide .ds-bn object,
+.slide .ds-bn embed,
+.slide .ds-bw img,
+.slide .ds-bw video,
+.slide .ds-bw iframe,
+.slide .ds-bw object,
+.slide .ds-bw embed {
+  --ds-filter-preset: var(--ds-bn-filter, grayscale(1));
+}
+
+.slide img.ds-vivid,
+.slide video.ds-vivid,
+.slide iframe.ds-vivid,
+.slide object.ds-vivid,
+.slide embed.ds-vivid,
+.slide .ds-vivid img,
+.slide .ds-vivid video,
+.slide .ds-vivid iframe,
+.slide .ds-vivid object,
+.slide .ds-vivid embed {
+  --ds-filter-preset: var(--ds-vivid-filter, saturate(1.35) contrast(1.12));
+}
+
+.slide img.ds-noir,
+.slide video.ds-noir,
+.slide iframe.ds-noir,
+.slide object.ds-noir,
+.slide embed.ds-noir,
+.slide .ds-noir img,
+.slide .ds-noir video,
+.slide .ds-noir iframe,
+.slide .ds-noir object,
+.slide .ds-noir embed {
+  --ds-filter-preset: var(--ds-noir-filter, grayscale(1) contrast(1.36) brightness(0.9));
+}
+
+.slide img.ds-chrome,
+.slide video.ds-chrome,
+.slide iframe.ds-chrome,
+.slide object.ds-chrome,
+.slide embed.ds-chrome,
+.slide .ds-chrome img,
+.slide .ds-chrome video,
+.slide .ds-chrome iframe,
+.slide .ds-chrome object,
+.slide .ds-chrome embed {
+  --ds-filter-preset: var(--ds-chrome-filter, saturate(1.45) contrast(1.16) brightness(1.06));
+}
+
+.slide img.ds-fade,
+.slide video.ds-fade,
+.slide iframe.ds-fade,
+.slide object.ds-fade,
+.slide embed.ds-fade,
+.slide .ds-fade img,
+.slide .ds-fade video,
+.slide .ds-fade iframe,
+.slide .ds-fade object,
+.slide .ds-fade embed {
+  --ds-filter-preset: var(--ds-fade-filter, saturate(0.62) contrast(0.92) brightness(1.12) opacity(0.82));
+}
+
+.slide img.ds-filter,
+.slide video.ds-filter,
+.slide iframe.ds-filter,
+.slide object.ds-filter,
+.slide embed.ds-filter,
+.slide .ds-filter img,
+.slide .ds-filter video,
+.slide .ds-filter iframe,
+.slide .ds-filter object,
+.slide .ds-filter embed {
+  --ds-filter-custom:
+    grayscale(var(--ds-grayscale, 0))
+    sepia(var(--ds-sepia, 0))
+    saturate(var(--ds-saturation, 1))
+    contrast(var(--ds-contrast, 1))
+    brightness(clamp(0, calc(var(--ds-brightness, 1) + var(--ds-exposure, 0)), 3))
+    hue-rotate(var(--ds-hue, 0deg))
+    blur(var(--ds-blur, 0))
+    opacity(var(--ds-opacity, 1));
+}
+
+.slide img.ds-alpha,
+.slide video.ds-alpha,
+.slide iframe.ds-alpha,
+.slide object.ds-alpha,
+.slide embed.ds-alpha,
+.slide .ds-alpha img,
+.slide .ds-alpha video,
+.slide .ds-alpha iframe,
+.slide .ds-alpha object,
+.slide .ds-alpha embed {
+  opacity: var(--ds-opacity, 0.6);
+}
+
+.slide img.ds-zoom,
+.slide video.ds-zoom,
+.slide iframe.ds-zoom,
+.slide object.ds-zoom,
+.slide embed.ds-zoom,
+.slide .ds-zoom img,
+.slide .ds-zoom video,
+.slide .ds-zoom iframe,
+.slide .ds-zoom object,
+.slide .ds-zoom embed {
+  transform: scale(var(--ds-scale, 1.2));
+}
+
+.slide img.ds-theme-filter,
+.slide video.ds-theme-filter,
+.slide iframe.ds-theme-filter,
+.slide object.ds-theme-filter,
+.slide embed.ds-theme-filter,
+.slide .ds-theme-filter img,
+.slide .ds-theme-filter video,
+.slide .ds-theme-filter iframe,
+.slide .ds-theme-filter object,
+.slide .ds-theme-filter embed {
+  --ds-filter-preset: var(--ds-theme-filter, );
+}
+
+.slide img.ds-sharpen,
+.slide video.ds-sharpen,
+.slide iframe.ds-sharpen,
+.slide object.ds-sharpen,
+.slide embed.ds-sharpen,
+.slide .ds-sharpen img,
+.slide .ds-sharpen video,
+.slide .ds-sharpen iframe,
+.slide .ds-sharpen object,
+.slide .ds-sharpen embed {
+  --ds-filter-sharpen: var(--ds-sharpen-filter, url("#htmpres-sharpen"));
+}
+
+.slide img.ds-bn,
+.slide video.ds-bn,
+.slide iframe.ds-bn,
+.slide object.ds-bn,
+.slide embed.ds-bn,
+.slide img.ds-bw,
+.slide video.ds-bw,
+.slide iframe.ds-bw,
+.slide object.ds-bw,
+.slide embed.ds-bw,
+.slide img.ds-vivid,
+.slide video.ds-vivid,
+.slide iframe.ds-vivid,
+.slide object.ds-vivid,
+.slide embed.ds-vivid,
+.slide img.ds-noir,
+.slide video.ds-noir,
+.slide iframe.ds-noir,
+.slide object.ds-noir,
+.slide embed.ds-noir,
+.slide img.ds-chrome,
+.slide video.ds-chrome,
+.slide iframe.ds-chrome,
+.slide object.ds-chrome,
+.slide embed.ds-chrome,
+.slide img.ds-fade,
+.slide video.ds-fade,
+.slide iframe.ds-fade,
+.slide object.ds-fade,
+.slide embed.ds-fade,
+.slide img.ds-filter,
+.slide video.ds-filter,
+.slide iframe.ds-filter,
+.slide object.ds-filter,
+.slide embed.ds-filter,
+.slide img.ds-theme-filter,
+.slide video.ds-theme-filter,
+.slide iframe.ds-theme-filter,
+.slide object.ds-theme-filter,
+.slide embed.ds-theme-filter,
+.slide img.ds-sharpen,
+.slide video.ds-sharpen,
+.slide iframe.ds-sharpen,
+.slide object.ds-sharpen,
+.slide embed.ds-sharpen,
+.slide .ds-bn img,
+.slide .ds-bn video,
+.slide .ds-bn iframe,
+.slide .ds-bn object,
+.slide .ds-bn embed,
+.slide .ds-bw img,
+.slide .ds-bw video,
+.slide .ds-bw iframe,
+.slide .ds-bw object,
+.slide .ds-bw embed,
+.slide .ds-vivid img,
+.slide .ds-vivid video,
+.slide .ds-vivid iframe,
+.slide .ds-vivid object,
+.slide .ds-vivid embed,
+.slide .ds-noir img,
+.slide .ds-noir video,
+.slide .ds-noir iframe,
+.slide .ds-noir object,
+.slide .ds-noir embed,
+.slide .ds-chrome img,
+.slide .ds-chrome video,
+.slide .ds-chrome iframe,
+.slide .ds-chrome object,
+.slide .ds-chrome embed,
+.slide .ds-fade img,
+.slide .ds-fade video,
+.slide .ds-fade iframe,
+.slide .ds-fade object,
+.slide .ds-fade embed,
+.slide .ds-filter img,
+.slide .ds-filter video,
+.slide .ds-filter iframe,
+.slide .ds-filter object,
+.slide .ds-filter embed,
+.slide .ds-theme-filter img,
+.slide .ds-theme-filter video,
+.slide .ds-theme-filter iframe,
+.slide .ds-theme-filter object,
+.slide .ds-theme-filter embed,
+.slide .ds-sharpen img,
+.slide .ds-sharpen video,
+.slide .ds-sharpen iframe,
+.slide .ds-sharpen object,
+.slide .ds-sharpen embed {
+  filter: var(--ds-filter-preset, ) var(--ds-filter-custom, ) var(--ds-filter-sharpen, );
+}
+
+.slide img.ds-original,
+.slide video.ds-original,
+.slide iframe.ds-original,
+.slide object.ds-original,
+.slide embed.ds-original,
+.slide .ds-original img,
+.slide .ds-original video,
+.slide .ds-original iframe,
+.slide .ds-original object,
+.slide .ds-original embed {
+  filter: none !important;
+  opacity: 1;
+}
+
+.slide .ds-readable,
+.slide .ds-vignette {
+  position: relative;
+  isolation: isolate;
+}
+
+.slide .ds-readable::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    var(--ds-readable-angle, 90deg),
+    rgba(0, 0, 0, var(--ds-readable-start, 0.5)),
+    rgba(0, 0, 0, var(--ds-readable-end, 0.16))
+  );
+}
+
+.slide .ds-vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: inset 0 0 var(--ds-vignette-size, 160px) var(--ds-vignette-color, rgba(0, 0, 0, var(--ds-vignette, 0.35)));
+}
+
+.slide .ds-vignette-light {
+  --ds-vignette-color: rgba(255, 255, 255, var(--ds-vignette, 0.35));
+}
+
+.slide .ds-readable .ds-layer,
+.slide .ds-vignette .ds-layer {
+  z-index: 2;
+}
+
+body.presenter-mode .deck-shell {
+  grid-template-columns: minmax(180px, 220px) minmax(0, 1fr) minmax(280px, 360px) !important;
+  grid-template-rows: minmax(0, 1fr) 58px !important;
+  column-gap: 12px;
+}
+
+body.presenter-mode .stage-wrap {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+body.presenter-mode .footer-controls {
+  grid-column: 2 / 4 !important;
+  grid-row: 2 !important;
+}
+
+.presenter-notes {
+  grid-column: 3;
+  grid-row: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+  border-left: 1px solid var(--htmpres-panel-border, rgba(15, 23, 42, 0.14));
+  background: var(--htmpres-panel-bg, #fff);
+  color: var(--htmpres-panel-ink, #172033);
+  padding: 18px 20px;
+  overflow: auto;
+}
+
+.presenter-notes h2 {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--htmpres-panel-muted, #64748b);
+}
+
+.presenter-note-body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.presenter-note-body p {
+  margin: 0 0 0.85rem;
+}
+
+.presenter-note-empty {
+  color: var(--htmpres-panel-muted, #64748b);
+  font-style: italic;
+}
+
+@media (max-width: 980px) {
+  .slide-fit {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .slides {
+    width: 100% !important;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    transform: none !important;
+  }
+
+  .two-col,
+  .two-col.wide-left,
+  .two-col.wide-right,
+  .three-col,
+  .four-col,
+  .five-col,
+  .flow,
+  .timeline,
+  .release-ladder,
+  .story-layout,
+  .story-steps,
+  .story-stat-grid,
+  .story-bridge,
+  .url-pair,
+  .profile-fragment-grid,
+  .axis-map,
+  .axis-map.six,
+  .axis-map.eight,
+  .kpi-grid,
+  .mini-diagram,
+  .checklist,
+  .mixed-transition,
+  .transition-strip,
+  .feature-status {
+    grid-template-columns: 1fr !important;
+  }
+
+  .two-col > *,
+  .three-col > *,
+  .four-col > *,
+  .five-col > *,
+  .flow > *,
+  .timeline > *,
+  .release-ladder > *,
+  .story-layout > *,
+  .story-steps > *,
+  .story-stat-grid > *,
+  .story-bridge > *,
+  .url-pair > *,
+  .profile-fragment-grid > *,
+  .axis-map > *,
+  .kpi-grid > *,
+  .mini-diagram > *,
+  .checklist > *,
+  .mixed-transition > *,
+  .transition-strip > *,
+  .feature-status > *,
+  .code-card,
+  .lead,
+  .callout,
+  .source-line,
+  .axis,
+  .matrix {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .chip-row > p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 0;
+  }
+
+  .chip-row .chip {
+    display: inline-flex;
+    max-width: 100%;
+  }
+
+  .source-line {
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    display: block;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .source-line code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .slide .code-card pre,
+  .slide .code-card pre.sourceCode,
+  .slide .code-card pre.sourceCode code,
+  .slide .code-card code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .slide code,
+  .scheme-row code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .axis {
+    grid-template-columns: 1fr !important;
+  }
+
+  .axis .bar {
+    min-width: 0;
+  }
+
+  body.presenter-mode .deck-shell {
+    position: fixed;
+    inset: 0;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: minmax(104px, 32vh) minmax(0, 1fr) var(--htmpres-mobile-footer-row, 64px) !important;
+    width: 100%;
+    height: max(360px, calc(var(--htmpres-viewport-height, 100dvh) - var(--htmpres-mobile-browser-clearance, 0px))) !important;
+    max-height: max(360px, calc(var(--htmpres-viewport-height, 100dvh) - var(--htmpres-mobile-browser-clearance, 0px))) !important;
+    min-height: 0;
+    overflow: hidden;
+    column-gap: 0;
+  }
+
+  body.presenter-mode .stage-wrap {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+
+  body.presenter-mode .footer-controls {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+  }
+
+  .presenter-notes {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+    min-height: 0;
+    max-height: none;
+    padding: 14px 16px;
+    overflow: auto;
+  }
+}
+
+  </style>
+</head>
+<body class="presenter-mode">
+  <div class="deck-shell">
+    <aside class="toc" aria-label="Slide list">
+      <h1>Point32Health Agentic AI Executive Briefing</h1>
+      <p class="hint">Presenter view: notes sit beside or above the slide. Arrow keys or Space advance. O opens overview. Click diagrams to zoom.</p>
+      <div class="toc-list" id="tocList"></div>
+    </aside>
+
+    <main class="stage-wrap">
+      <div class="slide-fit" id="slideFit">
+        <div class="slides" id="slides">
+          <section class="slide section-divider active" data-section="Opening" data-title="Point32Health Agentic AI Executive Briefing">
+
+            <h2>Point32Health Agentic AI</h2>
+            <p><span class="eyebrow">Executive briefing</span></p>
+            <div class="lead">
+            <p>Rahul Dave (Univ.Ai)</p>
+            </div>
+            <div class="lead">
+            <p>A governed platform approach to move from scattered pilots to safe, reusable enterprise capability.</p>
+            </div>
+            <div class="why-line">
+            <p><strong>How do we let adoption move quickly and co-operatively while security, compliance, evidence, humans in the loop, evals, and reuse are managed once?</strong></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Managed Adoption" data-title="BBVA Turned Shadow AI Into Managed Adoption">
+
+            <h2>BBVA escaped pilot purgatory by giving AI demand a managed path</h2>
+            <p><span class="eyebrow">Pre-story: regulated-bank example</span></p>
+            <div class="lead">
+            <p>The bank saw that employees were already using AI. The safer move was not to freeze demand; it was to channel it into a secure tool, a fast approval path, and a social adoption system that employees wanted to join.</p>
+            </div>
+            <div class="story-layout">
+            <div class="story-panel theme-catalog">
+            <p><strong>A big-bank context, not a startup exception</strong></p>
+            <p>BBVA operated across 25 countries, served more than 77 million clients, employed about 125,000 workers, and worked under heavy regulation. Yet leaders compressed risk, legal, and compliance review into two months to avoid unmanaged shadow AI becoming the default.</p>
+            </div>
+            <div class="story-steps" aria-label="BBVA adoption moves">
+            <div style="--accent: var(--rose); --accent-bg: #fbecf0; --accent-ink: #79313c;">
+            <strong>Shadow usage was the risk</strong><span>Unmanaged AI already existed, so doing nothing would have left leaders blind to data, usage, and quality.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Speed bypassed veto points</strong><span>The team moved before friction could accumulate, with a managed enterprise interface and bank-hosted services.</span>
+            </div>
+            <div style="--accent: var(--green); --accent-bg: #f1f8eb; --accent-ink: #426829;">
+            <strong>Status pulled adoption</strong><span>Scarce licenses, champions, and use-it-or-lose-it incentives made participation feel valuable rather than mandated.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Trust made sharing possible</strong><span>Prompt privacy, human ownership, quality scoring, and compliance-only access reduced resistance while keeping outputs accountable.</span>
+            </div>
+            </div>
+            </div>
+            <div class="source-line">
+            <p>Source: Garicano, Li &amp; Wu, <em>Messy Jobs</em>, ch. 7, "BBVA: escaping pilot purgatory"; user-provided screenshots.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Managed Adoption" data-title="Managed Adoption Beats Pilot Purgatory">
+
+            <h2>Managed adoption beats pilot purgatory</h2>
+            <p><span class="eyebrow">Pre-story: the lesson</span></p>
+            <div class="lead">
+            <p>Adoption, governance, peer learning, human ownership, and evidence moved together.</p>
+            </div>
+            <div class="story-stat-grid" aria-label="BBVA reported adoption outcomes">
+            <div class="story-stat" style="--accent: var(--green);">
+            <b>3k-&gt;11k</b><span>Active users scaled from roughly three thousand to eleven thousand.</span>
+            </div>
+            <div class="story-stat" style="--accent: var(--teal);">
+            <b>&gt;83%</b><span>Enterprise users worked with AI tools each week.</span>
+            </div>
+            <div class="story-stat" style="--accent: var(--runtime);">
+            <b>4,800</b><span>Active internal GPTs were created by employees.</span>
+            </div>
+            <div class="story-stat theme-evidence">
+            <b>99%</b><span>Auditors across countries became active AI users.</span>
+            </div>
+            <div class="story-stat" style="--accent: var(--violet);">
+            <b>3-4h</b><span>Estimated weekly time savings per auditor across more than 600 auditors.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>For Point32Health, the lesson is: do not make governance a brake. Build the platform that lets safe adoption move quickly while evidence, standards, security, compliance, HITL, and evals are managed once.</p>
+            </div>
+            <div class="story-bridge">
+            <div class="theme-profile">
+            <strong>Profiles</strong> give autonomy a safe contract.
+            </div>
+            <div class="theme-catalog">
+            <strong>Catalog</strong> makes adoption and reuse visible.
+            </div>
+            <div class="theme-runtime">
+            <strong>Runtime</strong> keeps execution inside controls.
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence</strong> proves what happened and improves the next turn.
+            </div>
+            </div>
+            <div class="semantic-summary">
+            <p>How to read it: profile declares intent; catalog makes it visible; runtime executes it; evidence proves and improves it.</p>
+            </div>
+            <div class="source-line">
+            <p>Source: Garicano, Li &amp; Wu, <em>Messy Jobs</em>, ch. 7, "BBVA: escaping pilot purgatory"; user-provided screenshots.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Managed Adoption" data-title="Managed Rollout Builds Governed Evidence">
+
+            <h2>Managed rollout creates the evidence base for governed reuse</h2>
+            <p><span class="eyebrow">Bank adoption + managed path</span></p>
+            <div class="lead">
+            <p>BBVA shows why hidden demand needs a trusted path; the managed-adoption lesson is that useful work should happen where evidence, review, and reuse can be attached.</p>
+            </div>
+            <div class="story-bridge">
+            <div class="theme-runtime">
+            <strong>Work happens</strong><span>Chats, products, harnesses, batch jobs, and reviews run through durable sessions.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence remains</strong><span>Decisions, prompts, tool calls, approvals, evals, outputs, and lessons stay inspectable.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>Patterns can graduate</strong><span>Good work can later become profiles, prompts, context packs, eval cases, and capabilities.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Reuse stays governed</strong><span>The catalog makes approved artifacts searchable, permissioned, reusable, and productized.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>The goal is not a raw transcript archive. The goal is governed company memory: approved run residue that can become reusable assets without losing security, privacy, or owner control.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>conceptspec.md</code>, <code>catalog.md</code>, <code>agent_harnesses.md</code>, <code>evals.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Package Story" data-title="The 13-Document Package Is A Decision Package">
+
+            <h2>The 13-document package is now a decision package</h2>
+            <p><span class="eyebrow">Current package map</span></p>
+            <div class="lead">
+            <p>The planning package has grown from architecture description into a reviewable decision system: target architecture, implementation choices, profile contract, catalog product, security model, eval loop, future-practice stance, and SOW coverage.</p>
+            </div>
+            <div class="three-col compact">
+            <div class="card metric-card theme-profile">
+            <p><strong>Architecture contract</strong></p>
+            <p>Concept, implementation, profile, catalog, and identity/security documents define what every application must share.</p>
+            </div>
+            <div class="card metric-card theme-runtime">
+            <p><strong>Build sequence</strong></p>
+            <p>Harness intake and trace capture come first, then trace-fed memory, then the Synthetic Benefits full app proof.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Governance proof</strong></p>
+            <p>Evidence, evals, release gates, technology choices, future practices, and SOW traceability show how the package will be reviewed.</p>
+            </div>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>readmefirst.md</code>, <code>Deliverables.md</code>, <code>sow_crosscut_traceability.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Package Story" data-title="Harness Intake Comes Before The Full App MVP">
+
+            <h2>Build the intake spine before the first full application proof</h2>
+            <p><span class="eyebrow">Updated build sequence</span></p>
+            <div class="lead">
+            <p>The first platform proof is not the Synthetic Benefits application. The first proof is that approved agent work can be captured, reviewed in richer surfaces than chat, archived, normalized, evidenced, and turned into governed memory without broad credentials or PHI exposure.</p>
+            </div>
+            <div class="timeline">
+            <div class="theme-catalog">
+            <strong>Thin intake spine</strong><span>Project, run, raw trace, canonical trace, evidence, agent-client, and instrumentation records.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Managed harness capture</strong><span>Codex and Claude Code-style sessions copied into raw evidence, review surfaces, and normalized traces.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Review and memory seed</strong><span>Specs, outputs, HTML artifacts, feedback, summaries, cache records, context-pack candidates, and simple indexes.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>Synthetic Benefits MVP</strong><span>First full application proof using synthetic data, profile binding, broker, resolver, HITL, evals, and evidence.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>Pilots and AI-native scale</strong><span>DAIS, payer pilots, shared capabilities, and tenant-scoped organizational memory.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>This distinction matters: intake proves managed adoption; Synthetic Benefits proves the full application loop.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>readmefirst.md</code>, <code>implspec.md</code> roadmap, <code>agent_harnesses.md</code>, <code>evals.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide diagram-slide title-hidden" data-section="Agent Primer" data-title="How An LLM Agent Run Works">
+
+            <h2 class="visually-hidden">How An LLM Agent Run Works</h2>
+            <figure>
+            <img src="assets/llm-agent-run.svg" class="zoomable" alt="Diagram explaining sources, model turns, tool runs, evals, human review, and evidence outputs in an LLM agent run" />
+            <figcaption aria-hidden="true">Diagram explaining sources, model turns, tool runs, evals, human review, and evidence outputs in an LLM agent run</figcaption>
+            </figure>
+          </section>
+
+          <section class="slide hero-title" data-section="Platform Case" data-title="Point32Health Needs A Platform">
+
+            <h2>Point32Health Needs A Platform</h2>
+            <p><span class="eyebrow">Managed platform rationale</span></p>
+            <div class="why-line">
+            <p><strong>Because agentic AI only scales when evidence, reuse, cooperation, security, compliance, HITL, evals, user simplicity, and standards are managed once for every team.</strong></p>
+            </div>
+            <div class="axis-map six" aria-label="Executive deck axes">
+            <div class="axis-node" style="--accent: var(--teal)">
+            <b>1</b><strong>Uniform Standards</strong><span>One operating contract across the enterprise.</span>
+            </div>
+            <div class="axis-node theme-evidence">
+            <b>2</b><strong>Evidence Traces</strong><span>Durable records for runs, approvals, evals, and outcomes.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--green)">
+            <b>3</b><strong>Reuse And Cooperation</strong><span>Shared capabilities and workflows compound across teams.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--rose)">
+            <b>4</b><strong>Security And Compliance</strong><span>Run-scoped access, PHI controls, signoff, and release gates.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--violet)">
+            <b>5</b><strong>HITL And Easy Evals</strong><span>Human review and quality checks become shared services.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--amber)">
+            <b>6</b><strong>User Simplicity And Future Readiness</strong><span>Users get protection while the platform absorbs technical change.</span>
+            </div>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>securityspec.md</code>, <code>future_practices.md</code>, <code>catalog.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide section-divider" data-section="Platform Case" data-title="Axis 1: Uniform Standards">
+
+            <h2>Uniform Standards</h2>
+            <p><span class="eyebrow">Axis 1</span></p>
+            <div class="lead">
+            <p>The platform gives every agentic application the same contract for purpose, ownership, authority, evidence, evals, release state, and security posture.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip theme-profile">Profile contract</span><span class="chip theme-catalog">Catalog visibility</span><span class="chip theme-runtime">Runtime enforcement</span><span class="chip theme-evidence">Evidence proof layer</span><span class="chip">Shared release gates</span></p>
+            </div>
+          </section>
+
+          <section class="slide hero-title" data-section="Platform Model" data-title="What This Project Is Trying To Build">
+
+            <h2>A governed enterprise platform for agentic AI work</h2>
+            <p><span class="eyebrow">Point32Health agentic architecture</span></p>
+            <div class="hero-subtitle">
+            <p>The project is building the operating model and technical substrate for many agentic applications: visible, reusable, secure, auditable, and ready to move from prototype to controlled production.</p>
+            </div>
+            <div class="flow" aria-label="Core operating loop">
+            <div class="theme-profile">
+            <strong>Profiles</strong><span>Declare purpose, owners, authority, data, tools, evidence, evals, release stage.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Catalog</strong><span>Shows complete portfolio, governance, risk, evidence, and operational state.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Runtime</strong><span>Executes profile-bound runs through brokered access and shared services.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence</strong><span>Records what happened so work can be audited, evaluated, optimized, and reused.</span>
+            </div>
+            </div>
+            <div class="semantic-summary">
+            <p>How to read it: profile declares intent; catalog makes it visible; runtime executes it; evidence proves and improves it.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>conceptspec.md</code>, <code>catalog.md</code>, <code>implspec.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Platform Model" data-title="Why Point32Health Needs A Common Approach">
+
+            <h2>Agentic work will span the company; each team should not rebuild the control stack</h2>
+            <p><span class="eyebrow">Enterprise need</span></p>
+            <div class="three-col">
+            <div class="card metric-card" style="--accent: var(--rose)">
+            <p><strong>Local bots create blind spots</strong></p>
+            <p>Executives and governance teams cannot see the full inventory, maturity, risk, cost, quality, and release posture.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--amber)">
+            <p><strong>Controls get reimplemented</strong></p>
+            <p>Identity, data access, evidence, evals, approvals, prompt controls, and incident handling become inconsistent by app.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--teal)">
+            <p><strong>Learning fails to compound</strong></p>
+            <p>Useful tools, retrievers, prompts, approval patterns, and evidence services mature locally but do not become reusable assets.</p>
+            </div>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">Benefits</span><span class="chip">Claims</span><span class="chip">Provider</span><span class="chip">Utilization management</span><span class="chip">Quality</span><span class="chip">Legal</span><span class="chip">Product</span><span class="chip">Operations</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Platform Model" data-title="The Core Idea: Profiles, Catalog, Runtime, Evidence">
+
+            <h2>Profiles define the intent, catalog makes it shared, runtime enforces it, and evidence proves and improves it</h2>
+            <p><span class="eyebrow">Operating model</span></p>
+            <div class="core-cycle-layout">
+            <div class="core-cycle" aria-label="Profile to catalog to runtime to evidence continuous platform cycle">
+            <div class="cycle-center">
+            <div>
+            <strong>One managed platform loop</strong><span>Evidence is the proof and learning layer that improves each next turn.</span>
+            </div>
+            </div>
+            <div class="cycle-node profile theme-profile">
+            <b>1</b><strong>Profile</strong><span>Purpose, owner, authority, data/tools, eval expectations, release stage, and risk posture.</span>
+            </div>
+            <div class="cycle-node catalog theme-catalog">
+            <b>2</b><strong>Catalog</strong><span>Resolved contract visible across ownership, maturity, bindings, review surfaces, reuse, and release state.</span>
+            </div>
+            <div class="cycle-node runtime theme-runtime">
+            <b>3</b><strong>Runtime</strong><span>Profile-bound runs broker access, resolve context, invoke tools, and route HITL feedback.</span>
+            </div>
+            <div class="cycle-node evidence theme-evidence">
+            <b>4</b><strong>Evidence</strong><span>Trace, audit, review feedback, artifact archive, eval, compliance, and learning records.</span>
+            </div>
+            <div class="cycle-arrow pc theme-profile">
+            <span>declare</span><b>→</b>
+            </div>
+            <div class="cycle-arrow cr theme-catalog">
+            <span>publish controls</span><b>→</b>
+            </div>
+            <div class="cycle-arrow re theme-runtime">
+            <span>write proof</span><b>→</b>
+            </div>
+            <div class="cycle-arrow ep theme-evidence">
+            <span>learn and gate</span><b>→</b>
+            </div>
+            </div>
+            <section id="why-this-matters" class="aside-panel theme-evidence">
+            <h3>Why this matters</h3>
+            <p>Business teams get speed without bypassing controls. Security and compliance get proof, not promises. Platform teams get reusable learning instead of one-off app telemetry.</p>
+            <div class="mini-cycle-list">
+            <div class="theme-profile">
+            <strong>Profile</strong> makes the promise explicit.
+            </div>
+            <div class="theme-catalog">
+            <strong>Catalog</strong> makes the promise shared.
+            </div>
+            <div class="theme-runtime">
+            <strong>Runtime</strong> makes the promise enforceable.
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence</strong> makes the promise auditable and improvable.
+            </div>
+            </div>
+            </section>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Profile Contract" data-title="Profiles Make Governance Concrete">
+
+            <h2>A profile turns governance from prose into a reviewable application contract</h2>
+            <p><span class="eyebrow">Profile contract</span></p>
+            <div class="two-col wide-left">
+            <div class="code-card small">
+            <pre><code>metadata:
+  name: synthetic_benefits_navigator_app
+  lifecycle_status: prototype
+inheritance:
+  parent: enterprise_healthcare_agent_base
+surfaces:
+  allowed_surface_types: [react_app, api, cli, teams, hitl_console]
+authority:
+  default_level: L1_DRAFT
+  prohibited_actions:
+    - use_real_phi
+    - perform_real_writeback
+data:
+  data_classification: internal
+access:
+  access_broker_required: true
+  ambient_credentials_allowed: false
+evidence:
+  bundle_required: true
+evals:
+  release_gate_required: true</code></pre>
+            </div>
+            <div>
+            <div class="lead">
+            <p>Application teams declare what is specific. The enterprise base profile supplies inherited controls for authority, access, sandboxing, evidence, evals, observability, release, and compliance.</p>
+            </div>
+            <div class="axis">
+            <div class="label">
+            Maturity path
+            </div>
+            <div class="bar">
+            <span>prototype</span><span>shadow</span><span>assistive</span><span>supervised</span>
+            </div>
+            </div>
+            <div class="callout theme-profile">
+            <p>Governance review can happen before deployment because the contract exists before the run.</p>
+            </div>
+            </div>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Profile Contract" data-title="Executives Review Profile Decisions">
+
+            <h2>Executives review profile decisions, not schema fields</h2>
+            <p><span class="eyebrow">Profile review</span></p>
+            <div class="lead">
+            <p>The YAML example matters because it turns abstract governance into visible decisions. The executive question is not “what is every field?” It is whether the declared contract is acceptable for the business, data, authority, and release stage.</p>
+            </div>
+            <div class="three-col compact">
+            <div class="card metric-card theme-profile">
+            <p><strong>Can this app exist?</strong></p>
+            <p>Owner, business purpose, users, surface, value hypothesis, maturity stage, and unresolved risks.</p>
+            </div>
+            <div class="card metric-card theme-runtime">
+            <p><strong>Can it touch this data or tool?</strong></p>
+            <p>Allowed data class, logical source names, access mode, broker requirement, tool risk, sandbox boundary.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Can it advance?</strong></p>
+            <p>Required evidence events, human approvals, eval suites, release gates, monitoring, rollback, and signoff.</p>
+            </div>
+            </div>
+            <div class="callout theme-profile">
+            <p>The base profile carries enterprise defaults. A child profile should make exceptions and application-specific choices obvious enough to approve, reject, or send back.</p>
+            </div>
+            <div class="source-line">
+            <p>Source: <code>profilespec.md</code> catalog mapping and Synthetic Benefits overlay</p>
+            </div>
+          </section>
+
+          <section class="slide u-dense" data-section="Profile Contract" data-title="Profile Fragments Show Different Guardrails">
+
+            <h2>Profiles make the control contract inspectable before an agent runs</h2>
+            <p><span class="eyebrow">Profile examples</span></p>
+            <div class="lead">
+            <p>Each child profile inherits enterprise defaults, then declares the few facts that change risk: surface, authority, data class, approval triggers, writeback posture, and catalog URLs.</p>
+            </div>
+            <div class="profile-fragment-grid" aria-label="Profile YAML fragments across application types">
+            <div class="profile-fragment theme-profile">
+            <strong>Benefits explanation</strong><span>Draft-only call-center assist</span>
+            <pre>name: benefits_explanation_app
+surface: call_center_console
+authority: L1_DRAFT
+data: phi_pii
+source: datasource://point32health/benefits/prod/plan_documents
+approval: formal_determination</pre>
+            </div>
+            <div class="profile-fragment theme-profile">
+            <strong>Provider directory integrity</strong><span>Batch audit with review gates</span>
+            <pre>name: provider_directory_integrity_app
+surface: ops_dashboard, batch
+authority: L2_RECOMMEND
+data: confidential
+source: datasource://point32health/providers/prod/directory
+gate: provider_removal</pre>
+            </div>
+            <div class="profile-fragment theme-profile">
+            <strong>Medical necessity review</strong><span>Reviewer assist, human decision</span>
+            <pre>name: medical_necessity_review_app
+surface: reviewer_workbench
+authority: L2_RECOMMEND
+data: highly_restricted
+sandbox: deny_by_default
+approval: adverse_determination</pre>
+            </div>
+            <div class="profile-fragment theme-profile">
+            <strong>Claims exception resolution</strong><span>Pended-claim recommendation</span>
+            <pre>name: claims_exception_resolution_app
+surface: claims_workbench
+authority: L2_RECOMMEND
+data: highly_restricted
+writeback: approval_required
+gate: payment_or_denial_change</pre>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>The profile names logical resources and policies; catalog binding records decide which concrete source, tool, model, prompt, index, or route is approved for the environment and release.</p>
+            </div>
+            <div class="source-line">
+            <p>Source: <code>profiles.md</code> application-profile examples</p>
+            </div>
+          </section>
+
+          <section class="slide u-tight" data-section="Profile Contract" data-title="Synthetic Benefits Shows The Profile Shape">
+
+            <h2>Business purpose, runtime shape, data bindings, and release evidence</h2>
+            <p><span class="eyebrow">Profiles carry multi-purpose information</span></p>
+            <div class="lead">
+            <p>Here is the Synthetic Benefits profile. It is useful because it is safe, synthetic, and still exercises the real control contract leaders will review for production applications.</p>
+            </div>
+            <div class="profile-fragment-grid" aria-label="Synthetic Benefits profile slices">
+            <div class="profile-fragment theme-profile">
+            <strong>Purpose and authority</strong><span>What the app may and may not do</span>
+            <pre>metadata:
+name: synthetic_benefits_navigator_app
+display_name: Synthetic Benefits Navigator
+inheritance:
+parent: enterprise_healthcare_agent_base
+authority:
+default_level: L1_DRAFT
+allowed_actions: [retrieve_context, call_tools, draft_response]
+prohibited_actions: [use_real_phi, perform_real_writeback]</pre>
+            </div>
+            <div class="profile-fragment theme-runtime">
+            <strong>Runtime composition</strong><span>Lead agent plus reusable candidates</span>
+            <pre>composition:
+component_policy: single_lead_agent
+components:
+- synthetic_benefits_domain_agent
+- synthetic_plan_document_retriever
+- synthetic_eligibility_lookup
+- synthetic_accumulator_lookup
+- evidence_bundle_writer
+- approval_router</pre>
+            </div>
+            <div class="profile-fragment theme-catalog">
+            <strong>Catalog-addressed data</strong><span>Logical URLs, not hidden source paths</span>
+            <pre>data:
+data_classification: internal
+logical_reference_required: true
+sources:
+- logical_id: datasource://point32health/synthetic/dev/plan_documents
+access_mode: retrieval
+- logical_id: datasource://point32health/synthetic/dev/eligibility
+access_mode: database_readonly
+context_resources:
+- index://point32health/synthetic/dev/plan_documents/fulltext?at=build:1</pre>
+            </div>
+            <div class="profile-fragment theme-evidence">
+            <strong>Review, evidence, and gates</strong><span>How the run becomes auditable</span>
+            <pre>human_in_loop:
+reviewer_roles: [demo_reviewer, benefits_sme]
+escalation_triggers: [missing_plan_document, low_confidence]
+evidence:
+bundle_required: true
+required_events: [run_created, access_decision, retrieval, tool_call, approval, eval_result]
+evals:
+release_gate_required: true
+implementation_bindings:
+prompt_registry_refs: [prompts/synthetic_benefits/domain_agent/v0.1]</pre>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>This is why a profile is more than metadata: it binds intent, allowed behavior, catalog resources, review gates, evidence, and release readiness into one inspectable contract.</p>
+            </div>
+            <div class="source-line">
+            <p>Source: <code>profilespec.md</code> Synthetic Benefits overlay and resolved value view</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Catalog Control" data-title="The Catalog Becomes The Enterprise Map">
+
+            <h2>The catalog is the control product for agentic AI work</h2>
+            <p><span class="eyebrow">Complete visibility</span></p>
+            <div class="two-col wide-right">
+            <section id="it-answers-the-questions-leaders-compliance-it-and-developers-need" class="aside-panel theme-catalog">
+            <h3>It answers the questions leaders, compliance, IT, and developers need</h3>
+            <p>What exists? Who owns it? Which workflows does it touch? Which data, tools, models, prompts, and capabilities are used? What did it do? What risks remain? Is it safe to advance?</p>
+            <div class="callout">
+            <p>The catalog is both a portfolio lens and an operating control surface.</p>
+            </div>
+            </section>
+            <div class="diagram-frame tall">
+            <figure>
+            <img src="assets/catalog-core.png" class="zoomable" alt="Catalog core diagram" />
+            <figcaption aria-hidden="true">Catalog core diagram</figcaption>
+            </figure>
+            </div>
+            </div>
+            <div class="diagram-caption">
+            <p>Current figure from <code>conceptspec.pdf</code> / <code>conceptspec.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Catalog Control" data-title="Catalog Writes Through Owning Controls">
+
+            <h2>The catalog is operational, but it does not become a shadow admin portal</h2>
+            <p><span class="eyebrow">Operational glass</span></p>
+            <div class="lead">
+            <p>The catalog should let leaders and teams see posture and request change, but every material action still goes through the owning service, approval workflow, queued job, policy API, or provider driver.</p>
+            </div>
+            <table class="matrix" aria-label="Catalog operational control model">
+            <thead>
+            <tr>
+            <th>
+            Action
+            </th>
+            <th>
+            What the catalog shows
+            </th>
+            <th>
+            How change happens
+            </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>
+            Provision or bind
+            </td>
+            <td>
+            Selected binding, rejected options, risks, approvals, external glass links
+            </td>
+            <td>
+            Preview, approval, queued provisioning worker, Azure or Databricks driver
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Access posture
+            </td>
+            <td>
+            Identity, policy, data class, TTL stance, access-decision evidence
+            </td>
+            <td>
+            Access/Credential Broker and provider IAM drivers
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Context refresh
+            </td>
+            <td>
+            Snapshot, index build, freshness, lineage, retrieval evidence
+            </td>
+            <td>
+            Context Resolver plus materialization and indexing workers
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Release gate
+            </td>
+            <td>
+            Eval results, human approvals, exceptions, rollback target
+            </td>
+            <td>
+            Eval/release control API and release workflow
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="callout theme-catalog">
+            <p>The catalog records intent, decisions, evidence, and job state. It should not bypass the owning runtime, broker, context, evidence, provisioning, or provider systems.</p>
+            </div>
+            <div class="source-line">
+            <p>Source: <code>catalog.md</code> Glass Read/Write Model</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Catalog Control" data-title="Catalog URLs Are Where Controls Attach">
+
+            <h2>Catalog URLs are where controls attach</h2>
+            <p><span class="eyebrow">Catalog URL format</span></p>
+            <div class="lead">
+            <p>The same pattern names applications, agents, data sources, prompts, tools, evals, releases, runs, review surfaces, archived artifacts, and evidence trails. Applications use these handles; the catalog attaches the policy facts.</p>
+            </div>
+            <div class="url-pair">
+            <div class="code-card url-card">
+            <p><span class="code-label">Dev examples</span></p>
+            <pre><code>app://point32health/member/dev/benefits_explanation
+capability://point32health/benefits/dev/domain_agent
+datasource://point32health/synthetic/dev/plan_documents
+prompt://point32health/benefits/dev/domain_agent/default?at=stage:draft
+eval://point32health/benefits/dev/smoke/v1
+review://point32health/benefits/dev/run_abc123/spec-review</code></pre>
+            </div>
+            <div class="code-card url-card">
+            <p><span class="code-label">Prod examples</span></p>
+            <pre><code>app://point32health/member/prod/benefits_explanation
+datasource://point32health/benefits/prod/plan_documents?at=snapshot:2026-06-01
+prompt://point32health/benefits/prod/domain_agent/default?at=stage:approved
+release://point32health/benefits/prod/benefits_explanation/2026_06
+trace://point32health/benefits/prod/run_abc123/evidence
+artifact://point32health/benefits/prod/run_abc123/html/verification-site</code></pre>
+            </div>
+            </div>
+            <div class="four-col compact">
+            <div class="card theme-catalog">
+            <p><strong>URL handle</strong></p>
+            <p>Stable catalog object the application can pass.</p>
+            </div>
+            <div class="card">
+            <p><strong>Time-bound permission</strong></p>
+            <p>Who can use it, for what purpose, scope, and duration.</p>
+            </div>
+            <div class="card theme-runtime">
+            <p><strong>Runtime binding</strong></p>
+            <p>Which source, route, index, model, or tool endpoint is approved.</p>
+            </div>
+            <div class="card theme-evidence">
+            <p><strong>Evidence gate</strong></p>
+            <p>Eval, review, archive, approval, release, rollback, and recording requirements.</p>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>Broker rule: compose the grants needed for the run, then narrow each one by every attached constraint: app/profile, agent, datasource, prompt, tool, eval, release, purpose, scope, expiry, and approval state.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>catalog.md</code> Universal Logical References, <code>securityspec.md</code> Access Envelope</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Runtime Control" data-title="Runtime Turns Intent Into A Governed Run">
+
+            <h2>Runtime turns intent into governed execution</h2>
+            <p><span class="eyebrow">Runtime plane</span></p>
+            <div class="lead">
+            <p>Executives do not need container details, but they do need to know what every run recomputes: access, approved context, model/tool use, human review, and evidence.</p>
+            </div>
+            <div class="flow runtime-flow" style="grid-template-columns: repeat(5, 1fr);">
+            <div class="theme-profile">
+            <strong>Resolve profile</strong><span>Confirm owner, purpose, authority, release state, and allowed surfaces.</span>
+            </div>
+            <div>
+            <strong>Compute access</strong><span>Broker builds required grants, then narrows them by scope, expiry, approval, and policy.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Resolve context</strong><span>Turn catalog URLs into approved snapshots, caches, indexes, and retrieval handles.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Execute safely</strong><span>Invoke model routes, tools, capabilities, HITL steps, and kill-switch rules.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Write evidence</strong><span>Record access, context, calls, outputs, evals, approvals, incidents, and metrics.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>Runtime gives speed without ambient authority: agents get scoped handles and approved context, not broad credentials or unmanaged source paths.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>implspec.md</code> runtime/access/context sections, <code>securityspec.md</code> Access Envelope</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Catalog Control" data-title="Executives Get Portfolio Visibility">
+
+            <h2>Executives see the agentic portfolio as a managed operating system, not scattered demos</h2>
+            <span class="eyebrow">Leadership visibility</span>
+            <div class="kpi-grid">
+            <div class="kpi theme-catalog">
+            <b>Inventory</b><span>Applications, capabilities, tools, data sources, owners, and maturity stages.</span>
+            </div>
+            <div class="kpi">
+            <b>Value</b><span>Expected value, adoption, active users, run volume, quality, and cost trend.</span>
+            </div>
+            <div class="kpi">
+            <b>Risk</b><span>PHI/PII exposure, authority level, writeback posture, vendor/model usage, open exceptions.</span>
+            </div>
+            <div class="kpi theme-evidence">
+            <b>Readiness</b><span>Eval status, approval state, release gate, incidents, rollback path, and security signoff.</span>
+            </div>
+            </div>
+            <table class="matrix" aria-label="Catalog panes">
+            <thead>
+            <tr>
+            <th>
+            Pane
+            </th>
+            <th>
+            Primary question
+            </th>
+            <th>
+            Example signal
+            </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>
+            Executive
+            </td>
+            <td>
+            Is this agentic work valuable and safe to scale?
+            </td>
+            <td>
+            Maturity, risk, adoption, cost, release posture
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Operations
+            </td>
+            <td>
+            What is live, what is failing, and what can be rolled back?
+            </td>
+            <td>
+            Latency, failures, incidents, kill switches
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Security and compliance
+            </td>
+            <td>
+            Is this allowed to run with this data and authority?
+            </td>
+            <td>
+            Policy, identity, PHI, evidence, signoff
+            </td>
+            </tr>
+            </tbody>
+            </table>
+          </section>
+
+          <section class="slide diagram-slide title-hidden" data-section="Platform Vocabulary" data-title="Anatomy Of An AI Application">
+
+            <h2 class="visually-hidden">Anatomy Of An AI Application</h2>
+            <figure>
+            <img src="assets/ai-application-anatomy.svg" class="zoomable" alt="Diagram defining profile, catalog, runtime, and evidence terms used in an enterprise AI application" />
+            <figcaption aria-hidden="true">Diagram defining profile, catalog, runtime, and evidence terms used in an enterprise AI application</figcaption>
+            </figure>
+          </section>
+
+          <section class="slide section-divider" data-section="Evidence" data-title="Axis 2: Evidence Traces">
+
+            <h2>Evidence Traces</h2>
+            <p><span class="eyebrow">Axis 2</span></p>
+            <div class="lead">
+            <p>Runs, access decisions, retrieved context, model/tool calls, approvals, evals, incidents, and release gates become a durable trail that leaders, operators, security, compliance, and auditors can inspect.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip theme-evidence">Auditability</span><span class="chip theme-evidence">Debugging</span><span class="chip theme-evidence">Replay</span><span class="chip theme-evidence">Regression tests</span><span class="chip theme-evidence">Release signoff</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Evidence" data-title="Evidence Turns Agent Work Into Auditable Work">
+
+            <h2>Every important run should leave a durable, navigable evidence trail</h2>
+            <span class="eyebrow">Auditability</span>
+            <div class="timeline">
+            <div class="theme-profile">
+            <strong>Profile resolved</strong><span>App version, inherited controls, release state.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Access decided</strong><span>Broker policy, scope, expiry, approval requirement.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>Context used</strong><span>Source snapshot, cache, index, retrieval event, citation.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Action recorded</strong><span>Model call, tool call, sandbox event, output artifact.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Gate applied</strong><span>Approval, eval result, release decision, exception.</span>
+            </div>
+            </div>
+            <div class="callout theme-evidence">
+            <p>Evidence supports audit, compliance, debugging, replay, regression tests, release gates, prompt optimization, RL-style learning, and executive visibility into risk and quality.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Evidence And Evals" data-title="Evals Turn Traces Into Release Decisions">
+
+            <h2>Evals turn captured work into release decisions</h2>
+            <p><span class="eyebrow">Trace-based evaluation</span></p>
+            <div class="lead">
+            <p>Evaluation is not a detached scorecard. It is the loop that turns real traces, human critique, known risks, and release candidates into a visible pass/fail decision.</p>
+            </div>
+            <div class="timeline">
+            <div class="theme-evidence">
+            <strong>Inspect traces</strong><span>Prompts, context, citations, tools, approvals, outputs, costs, and failures.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>Name criteria</strong><span>Domain experts convert critiques into owned criteria, cases, and review queues.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Run checks</strong><span>Local evals, Foundry evals, safety checks, citation checks, and calibrated judges.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Compare baseline</strong><span>Candidate release versus approved baseline, with row-level failures visible.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Gate release</strong><span>Safety, privacy, access, compliance, and critical quality failures can veto promotion.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>The first eval proof should test harness intake itself before Synthetic Benefits carries the first application-specific eval suite.</p>
+            </div>
+            <div class="source-line">
+            <p>Source: <code>evals.md</code> release gates and prototype path</p>
+            </div>
+          </section>
+
+          <section class="slide section-divider" data-section="Reuse" data-title="Axis 3: Reuse And Cooperation">
+
+            <h2>Reuse And Cooperation</h2>
+            <p><span class="eyebrow">Axis 3</span></p>
+            <div class="lead">
+            <p>The architecture lets teams share capabilities, context packs, approval patterns, evals, evidence services, and integration bindings while still preserving local workflow ownership.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">Shared capabilities</span><span class="chip">Typed contracts</span><span class="chip">Context packs</span><span class="chip">Owner-visible reuse</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Reuse" data-title="Business Teams Get Faster, Safer Delivery">
+
+            <h2>Application teams focus on workflows while shared services handle enterprise obligations</h2>
+            <p><span class="eyebrow">Delivery benefit</span></p>
+            <div class="three-col">
+            <div class="card metric-card theme-runtime">
+            <p><strong>Reusable runtime</strong></p>
+            <p>Run creation, durable state, tool calls, model routing, approvals, broker handoffs, and kill switches become common services.</p>
+            </div>
+            <div class="card metric-card theme-profile">
+            <p><strong>Reusable governance</strong></p>
+            <p>Profile inheritance carries enterprise controls into each application without making teams restate every rule.</p>
+            </div>
+            <div class="card metric-card theme-catalog">
+            <p><strong>Reusable integration</strong></p>
+            <p>Catalog bindings connect profile intent to Azure, Databricks, APIM, Graph, Search, Key Vault, and enterprise APIs.</p>
+            </div>
+            </div>
+            <div class="callout">
+            <p>The platform should lower delivery friction and raise the control baseline at the same time.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Reuse" data-title="Capabilities Can Be Reused Across Use Cases">
+
+            <h2>Useful app-local work can graduate into shared enterprise capabilities</h2>
+            <span class="eyebrow">Reuse</span>
+            <div class="timeline">
+            <div style="--accent: var(--rose)">
+            <strong>Local component</strong><span>Built inside one app to prove a workflow.</span>
+            </div>
+            <div style="--accent: var(--amber)">
+            <strong>Reuse candidate</strong><span>Another app needs the same pattern or service.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>Typed capability</strong><span>Input/output contract, owner, allowed callers, evals, evidence.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Shared release</strong><span>Versioned, monitored, reviewed, and bound through the catalog.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>Platform primitive</strong><span>Multiple consumers, runbooks, cost/quality/risk visibility.</span>
+            </div>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip theme-evidence">Evidence writer</span><span class="chip theme-runtime">Approval router</span><span class="chip theme-catalog">Retrieval with provenance</span><span class="chip">Document understanding</span><span class="chip">Provider lookup</span><span class="chip">Claims explanation</span><span class="chip theme-catalog">Context resolver</span></p>
+            </div>
+          </section>
+
+          <section class="slide section-divider" data-section="Security" data-title="Axis 4: Security And Compliance">
+
+            <h2>Security And Compliance</h2>
+            <p><span class="eyebrow">Axis 4</span></p>
+            <div class="lead">
+            <p>The security design composes Entra, RBAC, Databricks, profile policy, purpose, data classification, approval state, environment, release state, and evidence before access is granted.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">Run-scoped identity</span><span class="chip">Short-lived handles</span><span class="chip">Prompt/tool guardrails</span><span class="chip">Compliance signoff</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Security" data-title="Security Improves Because Access Is Run-Scoped">
+
+            <h2>Entra ID and RBAC remain foundational, but agent access is decided per run</h2>
+            <span class="eyebrow">Security benefit</span>
+            <div class="flow" style="grid-template-columns: repeat(5, 1fr);">
+            <div>
+            <strong>Identity</strong><span>Human, app, service principal, managed identity, group, surface.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>Profile</strong><span>Application, capability, authority, data class, allowed tool.</span>
+            </div>
+            <div>
+            <strong>Purpose</strong><span>Task, environment, maturity, release, approval state.</span>
+            </div>
+            <div>
+            <strong>Decision</strong><span>Grant, deny, narrow scope, or require approval.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence</strong><span>Record decision, exchange, retrieval, tool call, output, approval.</span>
+            </div>
+            </div>
+            <div class="callout">
+            <p>The platform adds profile-aware access policy above identity and RBAC facts, so a user or service account cannot silently hand broad authority to an agent.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Security" data-title="Agents Do Not Receive Broad Credentials">
+
+            <h2>The broker gives agents bounded handles, not reusable enterprise credentials</h2>
+            <p><span class="eyebrow">Credential boundary</span></p>
+            <div class="diagram-frame strip security-strip">
+            <figure>
+            <img src="assets/security-flow.png" class="zoomable" alt="Run-scoped access flow" />
+            <figcaption aria-hidden="true">Run-scoped access flow</figcaption>
+            </figure>
+            </div>
+            <div class="diagram-caption">
+            <p>Current figure from <code>securityspec.pdf</code> / <code>securityspec.md</code></p>
+            </div>
+            <div class="four-col compact">
+            <div class="card">
+            <p><strong>Short lived</strong></p>
+            <p>Tokens, handles, snapshots, or sessions expire and can be revoked.</p>
+            </div>
+            <div class="card theme-profile">
+            <p><strong>Purpose bound</strong></p>
+            <p>Access is tied to profile, task, source, operation, and release state.</p>
+            </div>
+            <div class="card">
+            <p><strong>Server side</strong></p>
+            <p>Secrets remain in broker, Key Vault, APIM, managed identity, or source systems.</p>
+            </div>
+            <div class="card theme-evidence">
+            <p><strong>Audited</strong></p>
+            <p>Every decision and exchange becomes evidence for review.</p>
+            </div>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Security" data-title="PHI, Prompt Injection, And Tool Risk Are First-Class Controls">
+
+            <h2>Healthcare-specific risks are designed into the platform rather than patched onto apps</h2>
+            <p><span class="eyebrow">Healthcare guardrails</span></p>
+            <div class="three-col">
+            <div class="card metric-card" style="--accent: var(--rose)">
+            <p><strong>Data minimization</strong></p>
+            <p>Retrieve the minimum necessary context at the approved redaction level before model calls.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--amber)">
+            <p><strong>Prompt and tool injection</strong></p>
+            <p>Treat retrieved content as data, gate tools, label source trust, and test injection/exfiltration paths.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--violet)">
+            <p><strong>Human review</strong></p>
+            <p>High-impact clinical, financial, adverse, external, or writeback actions require role-qualified approval.</p>
+            </div>
+            </div>
+            <table class="matrix">
+            <thead>
+            <tr>
+            <th>
+            Risk
+            </th>
+            <th>
+            Platform control
+            </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>
+            PHI/PII overexposure
+            </td>
+            <td>
+            Data classification, minimum necessary retrieval, redaction, evidence retention policy
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Unauthorized tool use
+            </td>
+            <td>
+            Tool registry, APIM/MCP gateway, Access Broker, approval gates
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Unsafe promotion
+            </td>
+            <td>
+            Evals, red-team tests, release gates, security signoff, rollback path
+            </td>
+            </tr>
+            </tbody>
+            </table>
+          </section>
+
+          <section class="slide" data-section="Security" data-title="Compliance Signoff Is Tied To Release State">
+
+            <h2>A release is not production-ready until evidence, owners, exceptions, and rollback are visible</h2>
+            <p><span class="eyebrow">Compliance and signoff</span></p>
+            <div class="three-col">
+            <div class="card metric-card theme-evidence">
+            <p><strong>Evidence completeness</strong></p>
+            <p>Profile, release, access, credential exchange, guardrails, evals, approvals, and exceptions must be present.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--amber)">
+            <p><strong>Required reviewers</strong></p>
+            <p>Product, data, IT/IAM, security, compliance, privacy, RAI, operations, and accountable executives approve bounded areas.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--rose)">
+            <p><strong>Fail-closed gate</strong></p>
+            <p>Missing evidence, unresolved high-risk findings, unclear PHI reuse, or unowned exceptions block promotion.</p>
+            </div>
+            </div>
+            <div class="callout">
+            <p>Executive approval is additive: it accepts enterprise accountability, but it does not override missing data, security, compliance, tool, or production approval.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Release Gates" data-title="Shared Release Gates Mean One Promotion Path">
+
+            <h2>Shared release gates mean every app follows the same controlled path to production</h2>
+            <p><span class="eyebrow">Dev to production</span></p>
+            <div class="lead">
+            <p>A release gate is the common promotion checkpoint between environments. It lets different teams move quickly, but only after the catalog shows the right owner, bindings, evals, approvals, evidence, monitoring, and rollback plan for that stage.</p>
+            </div>
+            <div class="release-ladder" aria-label="Shared release path from dev to staging to production">
+            <div class="release-stage theme-runtime">
+            <h3>
+            Dev
+            </h3>
+            <p>
+            Prototype with synthetic or non-production paths. Prove the profile, logical IDs, baseline evals, and evidence events work.
+            </p>
+            <p><code>/dev/</code></p>
+            </div>
+            <div class="release-stage theme-evidence">
+            <h3>
+            Staging
+            </h3>
+            <p>
+            Exercise production-like bindings, reviewers, guardrails, runbooks, and failure modes before a wider audience sees the workflow.
+            </p>
+            <p><code>/staging/</code></p>
+            </div>
+            <div class="release-stage theme-catalog">
+            <h3>
+            Production
+            </h3>
+            <p>
+            Run only the approved release version, with catalog-visible owners, access, monitoring, incident response, and rollback.
+            </p>
+            <p><code>/prod/</code></p>
+            </div>
+            </div>
+            <div class="promotion-rule">
+            <p>The gate is shared because the platform owns the promotion rule once; each application supplies its own evidence, approvals, and environment-specific bindings.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>catalog.md</code> release page, governance workflows, maturity states</p>
+            </div>
+          </section>
+
+          <section class="slide section-divider" data-section="Evals And HITL" data-title="Axis 5: HITL And Easy Evals">
+
+            <h2>HITL And Easy Evals</h2>
+            <p><span class="eyebrow">Axis 5</span></p>
+            <div class="lead">
+            <p>The platform separates draft work from high-impact action, captures reviewer decisions as evidence, and turns known failures into reusable eval and release-gate assets.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">Approval routing</span><span class="chip">Golden sets</span><span class="chip">Regression cases</span><span class="chip">Safety tests</span><span class="chip">Reviewer feedback</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Evals And HITL" data-title="HITL And Evals Become Shared Platform Services">
+
+            <h2>High-impact actions stay human-approved while routine quality checks get easier to reuse</h2>
+            <p><span class="eyebrow">HITL and evals</span></p>
+            <div class="two-col">
+            <section id="human-in-the-loop" class="aside-panel">
+            <h3>Human-in-the-loop</h3>
+            <p>Clinical, financial, adverse-action, external communication, source-system writeback, and material exception paths route to role-qualified reviewers before action.</p>
+            <div class="callout theme-evidence">
+            <p>Reviewer decisions become evidence, not informal comments lost outside the system.</p>
+            </div>
+            </section>
+            <section id="evaluation-loop" class="aside-panel theme-evidence">
+            <h3>Evaluation loop</h3>
+            <p>Golden sets, citation checks, prompt/tool-injection tests, PHI leakage checks, red-team scans, and reviewer feedback become reusable release-gate material.</p>
+            <div class="callout">
+            <p>Teams can improve quality without inventing a new eval harness for every app.</p>
+            </div>
+            </section>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Evals And HITL" data-title="Review Surfaces Turn Agent Work Into Governed Artifacts">
+
+            <h2>Review surfaces turn agent work into governed artifacts</h2>
+            <p><span class="eyebrow">Richer human feedback</span></p>
+            <div class="lead">
+            <p>When chat is too narrow, the catalog gives reviewers a real surface: a spec with inline comments, an output draft with citations, a static HTML explanation, a browser-test replay, or a temporary live app.</p>
+            </div>
+            <div class="four-col compact">
+            <div class="card theme-catalog">
+            <p><strong>Catalog endpoint</strong></p>
+            <p>Humans open <code>app://...</code>, not raw local ports or unmanaged share links.</p>
+            </div>
+            <div class="card theme-runtime">
+            <p><strong>HITL packet</strong></p>
+            <p>Runtime controls reviewer actions, TTLs, kill switches, and agent messages.</p>
+            </div>
+            <div class="card theme-evidence">
+            <p><strong>Feedback evidence</strong></p>
+            <p>Comments, suggestions, decisions, and accepted edits become <code>reviewevent://...</code>.</p>
+            </div>
+            <div class="card">
+            <p><strong>Artifact archive</strong></p>
+            <p>Source, rendered view, feedback, screenshot, and logs stay under <code>artifact://...</code>.</p>
+            </div>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>catalog.md</code>, <code>implspec.md</code> Section 13, <code>securityspec.md</code> review-surface controls</p>
+            </div>
+          </section>
+
+          <section class="slide section-divider" data-section="Future Readiness" data-title="Axis 6: User Simplicity And Future Readiness">
+
+            <h2>User Simplicity And Future Readiness</h2>
+            <p><span class="eyebrow">Axis 6</span></p>
+            <div class="lead">
+            <p>Stable profiles, catalog records, runtime APIs, evidence bundles, and release gates let Point32Health adopt new agent frameworks, memory, subagents, optimization, and RL patterns without changing the business-facing contract.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">No technical burden on users</span><span class="chip theme-runtime">Swappable implementations</span><span class="chip">Future practices</span><span class="chip theme-catalog">Controlled adoption</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Future Readiness" data-title="Future Practices Plug Into The Same Control Model">
+
+            <h2>New agent patterns should be adopted through experiments, not one-off production shortcuts</h2>
+            <p><span class="eyebrow">Future work</span></p>
+            <div class="three-col compact">
+            <div class="card metric-card" style="--accent: var(--violet)">
+            <p><strong>Subagents</strong></p>
+            <p>Use bounded delegation, typed capabilities, context packets, budget limits, and parent/child evidence.</p>
+            </div>
+            <div class="card metric-card theme-catalog">
+            <p><strong>Memory</strong></p>
+            <p>Start with hybrid retrieval, context packs, key-file packs, and trace-derived memory only after redaction and approval.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Optimization</strong></p>
+            <p>Run prompt/program optimization and RL-style learning offline against approved benchmarks and release gates.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--amber)">
+            <p><strong>Compaction</strong></p>
+            <p>Treat summaries as derivative artifacts with source links, validation, warnings, retention, and reuse policy.</p>
+            </div>
+            <div class="card metric-card theme-catalog">
+            <p><strong>Managed platforms</strong></p>
+            <p>Use Azure, Databricks, OpenAI, or future services where they fit, then mirror traces into the catalog.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Governed feedback</strong></p>
+            <p>Trace reuse, eval corpora, optimizer inputs, and learning datasets need classification and approval.</p>
+            </div>
+            </div>
+            <div class="source-line">
+            <p>Source: <code>future_practices.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide u-dense" data-section="Technology Choices" data-title="Default Software Choices Are Azure-First">
+
+            <h2>The default implementation stack is Azure where Azure is the enterprise control point</h2>
+            <p><span class="eyebrow">Software choices</span></p>
+            <div class="lead">
+            <p>The software plan turns the platform model into concrete defaults: use Azure for enterprise application surfaces, identity, API control, managed hosting, monitoring, search, owned operational state, and model governance where it fits.</p>
+            </div>
+            <table class="matrix choice-table" aria-label="Azure-first software choices">
+            <thead>
+            <tr>
+            <th>
+            Kind
+            </th>
+            <th>
+            Software to use
+            </th>
+            <th>
+            Azure?
+            </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>
+            Catalog and profile registry
+            </td>
+            <td>
+            Azure App Service or equivalent, PostgreSQL or Azure SQL, Entra ID, and imports from Databricks.
+            </td>
+            <td>
+            <span class="yes">Yes</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Agent Runtime API
+            </td>
+            <td>
+            Point32Health Runtime API on App Service or Functions behind APIM, with canonical evidence hooks.
+            </td>
+            <td>
+            <span class="yes">Yes</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Managed agents and LLMs
+            </td>
+            <td>
+            Azure AI Foundry Agent Service, Foundry model catalog, and Azure OpenAI as the Azure-managed default.
+            </td>
+            <td>
+            <span class="yes">Yes</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Model, tool, API, and MCP gateway
+            </td>
+            <td>
+            Azure API Management AI gateway, API Center, Azure Functions, and App Service MCP endpoints.
+            </td>
+            <td>
+            <span class="yes">Yes</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Identity, access, and secrets
+            </td>
+            <td>
+            Entra ID, managed identities, Azure RBAC, Key Vault, and APIM credential manager.
+            </td>
+            <td>
+            <span class="yes">Yes</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Enterprise retrieval
+            </td>
+            <td>
+            Azure AI Search for enterprise application retrieval, vector, hybrid, and full-text search.
+            </td>
+            <td>
+            <span class="yes">Yes</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Hosting, jobs, and sandboxes
+            </td>
+            <td>
+            App Service, Functions, Logic Apps, and Container Apps for APIs, integration jobs, and selected sandbox jobs.
+            </td>
+            <td>
+            <span class="yes">Yes</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Evidence, traces, and artifacts
+            </td>
+            <td>
+            PostgreSQL or Azure SQL for metadata, ADLS or Blob for artifacts, Azure Monitor and App Insights for operations.
+            </td>
+            <td>
+            <span class="yes">Yes</span>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="source-line">
+            <p>Source: <code>implspec.md</code> Section 23 software-choice appendix</p>
+            </div>
+          </section>
+
+          <section class="slide u-dense" data-section="Technology Choices" data-title="Databricks And External Choices Stay Bounded">
+
+            <h2>Databricks and external tools are deliberate exceptions, not the default control plane</h2>
+            <p><span class="eyebrow">Software choices</span></p>
+            <div class="lead">
+            <p>Use Databricks where the work is lakehouse-native or data/ML-centered. Use external tools only as pressure valves after native Azure and Databricks options are mapped.</p>
+            </div>
+            <table class="matrix choice-table" aria-label="Databricks and non-Azure software choices">
+            <thead>
+            <tr>
+            <th>
+            Kind
+            </th>
+            <th>
+            Software to use
+            </th>
+            <th>
+            Azure?
+            </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>
+            Lakehouse governance
+            </td>
+            <td>
+            Databricks Unity Catalog and Unity AI Gateway for Databricks data, model, MCP, and usage governance.
+            </td>
+            <td>
+            <span class="no">No</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Data-side tools and MCP
+            </td>
+            <td>
+            Databricks MCP, Genie, SQL, notebooks, and custom Databricks-side tools where governed data lives there.
+            </td>
+            <td>
+            <span class="no">No</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Data and ML pipelines
+            </td>
+            <td>
+            Databricks Jobs, Workflows, Lakeflow, Delta, and Runtime API handoff at the agent boundary.
+            </td>
+            <td>
+            <span class="no">No</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Data-side model serving and evals
+            </td>
+            <td>
+            Databricks Model Serving, MLflow 3, Delta, and Unity Catalog for classifiers, experiments, and data-side agents.
+            </td>
+            <td>
+            <span class="no">No</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Delta-native retrieval and analytics
+            </td>
+            <td>
+            Databricks AI Search plus Delta trace, evidence, eval, and cost mirrors for lakehouse analysis.
+            </td>
+            <td>
+            <span class="no">No</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Prompt, eval, and trace pressure valves
+            </td>
+            <td>
+            LangSmith, Braintrust, Arize Phoenix, OpenTelemetry collectors, or similar only for validated gaps.
+            </td>
+            <td>
+            <span class="no">No</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Workflow pressure valves
+            </td>
+            <td>
+            Temporal, Prefect, Dagster, or Airflow only when Azure and Databricks basics are not enough.
+            </td>
+            <td>
+            <span class="no">No</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Specialized parsers and AI security
+            </td>
+            <td>
+            Docling, LlamaParse, HiddenLayer, Lakera, Protect AI, or similar after document/security gap review.
+            </td>
+            <td>
+            <span class="no">No</span>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="source-line">
+            <p>Source: <code>implspec.md</code> Section 23 software-choice appendix</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Roadmap" data-title="Synthetic Benefits Is The First Full App Proof">
+
+            <h2>Synthetic Benefits is the first full application proof, after intake works</h2>
+            <p><span class="eyebrow">Prototype proof</span></p>
+            <div class="lead">
+            <p>Synthetic Benefits remains the right first full application MVP because it is safe, synthetic, and still exercises the real control contract. It should come after the intake spine can already name, capture, normalize, and evidence managed agent work.</p>
+            </div>
+            <div class="two-col">
+            <section id="prototype-question" class="aside-panel">
+            <h3>Prototype question</h3>
+            <p>Is physical therapy covered for this synthetic member, and what would they likely pay if they use this provider?</p>
+            <div class="chip-row">
+            <p><span class="chip">Synthetic plan docs</span><span class="chip">Eligibility table</span><span class="chip">Accumulator table</span><span class="chip">Provider directory</span><span class="chip">Benefit config</span></p>
+            </div>
+            </section>
+            <div class="flow" style="grid-template-columns: 1fr; margin-top: 0;">
+            <div class="theme-profile">
+            <strong>Profile</strong><span>Allowed surfaces, inherited controls, synthetic data, prohibited actions, evidence, and evals.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Catalog</strong><span>Application page, profile lineage, logical IDs, binding preview, run timeline, approval, eval, and metrics.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Runtime</strong><span>Resolve profile, broker synthetic access, resolve context, call tools, compose answer, and route approval.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence</strong><span>Capture access, context, retrieval, tool calls, output, approval, evals, citations, and improvement candidates.</span>
+            </div>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>The proof value is not the benefits question itself. The proof value is that the full governed loop works before real PHI or source-system writeback.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>prototype.md</code>, <code>profilespec.md</code>, <code>catalog.md</code>, <code>evals.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Roadmap" data-title="Updated Roadmap Starts With Managed Adoption">
+
+            <h2>The roadmap starts with managed adoption, not production automation</h2>
+            <p><span class="eyebrow">Updated roadmap</span></p>
+            <div class="timeline">
+            <div class="theme-catalog">
+            <strong>1. Intake spine</strong><span>Minimal catalog/project/run IDs, agent-client records, profile binding, evidence writing, and trace storage.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>2. Harness MVP</strong><span>Codex and Claude Code-style sessions captured through managed launch context, hooks, telemetry, and normalizers.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>3. Review and memory seed</strong><span>Spec/output review surfaces, archived artifacts, project memory files, trace summaries, context-pack candidates, and simple indexes.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>4. Synthetic Benefits</strong><span>First full app MVP with broker, resolver, HITL, evals, observability, and synthetic data.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>5. Pilots and capabilities</strong><span>DAIS, benefits, provider, claims, HEDIS, and reusable platform capabilities.</span>
+            </div>
+            <div style="--accent: var(--violet)">
+            <strong>6. AI-native scale</strong><span>Tenant-scoped memory across Teams, Excel, OneDrive, Databricks, apps, and project spaces.</span>
+            </div>
+            </div>
+            <div class="callout">
+            <p>Maturity states stay explicit in the catalog: proposed, design, prototype, shadow, assistive, supervised action, limited automation, and scaled automation.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>readmefirst.md</code>, <code>implspec.md</code> roadmap, <code>catalog.md</code> maturity states</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Executive Decisions" data-title="Executive Decisions To Close">
+
+            <h2>The next decisions are about ownership, gates, and sequence</h2>
+            <p><span class="eyebrow">Executive alignment</span></p>
+            <div class="lead">
+            <p>The technology stack is now specific enough to review. The open executive questions are mostly operating-model questions: who owns the shared control product, which gates are mandatory, and which use cases move after the intake proof.</p>
+            </div>
+            <div class="two-col compact">
+            <div class="card">
+            <p><strong>Confirm the catalog as the control product</strong></p>
+            <p>Inventory, approvals, release state, evidence, security posture, and external glass links should converge there.</p>
+            </div>
+            <div class="card">
+            <p><strong>Name accountable owners</strong></p>
+            <p>Business, platform, security, compliance, data governance, operations, and reusable capability ownership must be visible.</p>
+            </div>
+            <div class="card">
+            <p><strong>Approve the staged gates</strong></p>
+            <p>Harness intake, Synthetic Benefits, controlled pilots, production hardening, and AI-native expansion each need different evidence.</p>
+            </div>
+            <div class="card">
+            <p><strong>Choose the first pilot lane</strong></p>
+            <p>After Synthetic Benefits proves the full loop, choose DAIS or a payer pilot based on value, risk, data readiness, and reviewer capacity.</p>
+            </div>
+            </div>
+            <div class="callout">
+            <p>The executive value is fast managed adoption, reusable platform capability, and stronger security/compliance posture, not simply more AI usage.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Operating Model" data-title="River-Like Operating Model">
+
+            <h2>A River-like operating model turns managed work into governed memory</h2>
+            <p><span class="eyebrow">AI-native operating model</span></p>
+            <div class="lead">
+            <p>The long-term goal is not a chatbot on every screen. It is work that becomes capturable, searchable, reusable, and governed inside the right tenant-like boundary.</p>
+            </div>
+            <div class="story-bridge">
+            <div class="theme-runtime">
+            <strong>Work runs</strong><span>Teams, Excel, apps, notebooks, harnesses, batch jobs, and reviews call the shared runtime envelope.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence remains</strong><span>Prompts, decisions, tool calls, approvals, evals, outputs, and exceptions stay inspectable.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Memory is promoted</strong><span>Approved residue becomes prompts, context packs, capabilities, eval cases, runbooks, and release evidence.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>Reuse stays bounded</strong><span>Tenant scope, identity, classification, redaction, retention, owner approval, and release gates decide reuse.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>Point32Health becomes AI-native when the next team can start from approved prior work without flattening privacy, security, compliance, or ownership boundaries.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: <code>riverness.md</code>, <code>agent_harnesses.md</code>, <code>catalog.md</code>, <code>evals.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Appendix" data-title="Appendix: Five-Plane Architecture">
+
+            <h2>Five surrounding platform planes and the governed runtime</h2>
+            <p><span class="eyebrow">Appendix figure</span></p>
+            <div class="diagram-frame tall">
+            <figure>
+            <img src="assets/five-plane-architecture.png" class="zoomable" alt="Five-plane architecture" />
+            <figcaption aria-hidden="true">Five-plane architecture</figcaption>
+            </figure>
+            </div>
+            <div class="diagram-caption">
+            <p>Current figure from <code>conceptspec.pdf</code></p>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Appendix" data-title="Appendix: Logical Context Resolver">
+
+            <h2>Logical references keep context stable while backing stores change</h2>
+            <p><span class="eyebrow">Appendix figure</span></p>
+            <div class="diagram-frame strip">
+            <figure>
+            <img src="assets/context-resolver.png" class="zoomable" alt="Context resolver and memory plane" />
+            <figcaption aria-hidden="true">Context resolver and memory plane</figcaption>
+            </figure>
+            </div>
+            <div class="callout">
+            <p>Catalog-owned logical IDs such as <code>policy://</code>, <code>datasource://</code>, <code>index://</code>, and <code>contextpack://</code> resolve into approved snapshots, caches, indexes, retrieval handles, and evidence.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Appendix" data-title="Appendix: Identity Layers">
+
+            <h2>Identity and authorization layers compose under the broker</h2>
+            <p><span class="eyebrow">Appendix figure</span></p>
+            <div class="diagram-frame tall">
+            <figure>
+            <img src="assets/identity-layers.png" class="zoomable" alt="Identity layers diagram" />
+            <figcaption aria-hidden="true">Identity layers diagram</figcaption>
+            </figure>
+            </div>
+            <div class="diagram-caption">
+            <p>Current figure from <code>identity_auth_layers.pdf</code></p>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Appendix" data-title="Appendix: Synthetic Benefits Profile Excerpt">
+
+            <h2>Example profile excerpt: Synthetic Benefits Navigator</h2>
+            <p><span class="eyebrow">Appendix YAML</span></p>
+            <div class="code-card">
+            <pre><code>metadata:
+  name: synthetic_benefits_navigator_app
+  lifecycle_status: prototype
+inheritance:
+  parent: enterprise_healthcare_agent_base
+business:
+  domain: member
+  business_metrics: [answer_accuracy, citation_fidelity, approval_flow_success, eval_pass_rate]
+surfaces:
+  allowed_surface_types: [react_app, api, cli, teams, hitl_console]
+authority:
+  default_level: L1_DRAFT
+  prohibited_actions: [use_real_phi, use_real_member_data, perform_real_writeback]
+data:
+  data_classification: internal
+  sources:
+    - name: synthetic_plan_documents
+      logical_id: datasource://point32health/synthetic/dev/plan_documents
+    - name: synthetic_accumulators
+      logical_id: datasource://point32health/synthetic/dev/accumulators
+evidence:
+  required_events: [run_created, profile_resolved, access_decision, context_resolved,
+    retrieval, tool_call, model_call, output_artifact, approval, eval_result]</code></pre>
+            </div>
+            <div class="source-line">
+            <p>Excerpted from <code>profiles.md</code> and <code>profilespec.md</code></p>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Appendix" data-title="Appendix: Azure and Databricks Implementation">
+
+            <h2>Azure-first implementation with Databricks where data and ML live</h2>
+            <p><span class="eyebrow">Appendix figure</span></p>
+            <div class="diagram-frame strip">
+            <figure>
+            <img src="assets/azure-databricks-implementation.png" class="zoomable" alt="Azure and Databricks implementation map" />
+            <figcaption aria-hidden="true">Azure and Databricks implementation map</figcaption>
+            </figure>
+            </div>
+            <div class="callout">
+            <p>The implementation can evolve. The durable contract is profile-bound runtime, catalog visibility, brokered access, logical context, evidence, evals, and release gates.</p>
+            </div>
+          </section>
+
+          <section class="slide section-divider" data-kind="appendix" data-section="Old Slides" data-title="Old Slides For Review">
+
+            <h2>Old Slides For Review</h2>
+            <p><span class="eyebrow">Second appendix</span></p>
+            <div class="lead">
+            <p>The following slides were removed from the main executive flow during the 13-document refresh. They are preserved here so reviewers can pull back useful language, examples, or layout patterns before deletion.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">Retired from main flow</span><span class="chip">Available for reuse</span><span class="chip">Safe to delete after review</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Old Slides" data-title="Old Slide: Profiles Cover The Whole Lifecycle">
+
+            <h2>Old Slide: A profile covers the decisions that make an agentic application safe to run</h2>
+            <p><span class="eyebrow">Old slide</span></p>
+            <div class="lead">
+            <p>The profile is not just an owner line or a YAML example. It is the enterprise contract for purpose, users, authority, data, runtime behavior, controls, release posture, and operating accountability.</p>
+            </div>
+            <div class="three-col compact">
+            <div class="card theme-profile">
+            <p><strong>Who and why</strong></p>
+            <p><code>metadata</code>, <code>business</code>, <code>users</code>, <code>maturity</code>, <code>risks</code>.</p>
+            </div>
+            <div class="card theme-profile">
+            <p><strong>Where it appears</strong></p>
+            <p><code>catalog</code>, <code>surfaces</code>, owner views, portfolio views, observability views.</p>
+            </div>
+            <div class="card theme-runtime">
+            <p><strong>What it may do</strong></p>
+            <p><code>authority</code>, <code>data</code>, <code>access</code>, <code>tools</code>, <code>composition</code>.</p>
+            </div>
+            <div class="card theme-runtime">
+            <p><strong>How it runs</strong></p>
+            <p><code>execution</code>, <code>sandbox</code>, brokered credentials, context handles.</p>
+            </div>
+            <div class="card theme-evidence">
+            <p><strong>How it is checked</strong></p>
+            <p><code>human_in_loop</code>, <code>evidence</code>, <code>evals</code>, <code>observability</code>.</p>
+            </div>
+            <div class="card">
+            <p><strong>How it goes live</strong></p>
+            <p><code>security</code>, <code>regulatory</code>, <code>release</code>, <code>operations</code>, <code>implementation_bindings</code>.</p>
+            </div>
+            </div>
+            <div class="callout theme-profile">
+            <p>The base profile supplies inherited enterprise defaults; each child profile declares the application-specific choices and exceptions leaders can review.</p>
+            </div>
+            <div class="source-line">
+            <p>Source: <code>profilespec.md</code> base profile walkthrough and catalog mapping</p>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Old Slides" data-title="Old Slide: Synthetic Benefits Is The Safe First Proof">
+
+            <h2>Old Slide: Synthetic Benefits proves the full loop without real PHI or source-system writeback</h2>
+            <p><span class="eyebrow">Old slide</span></p>
+            <div class="two-col">
+            <section id="prototype-question" class="aside-panel">
+            <h3>Prototype question</h3>
+            <p>Is physical therapy covered for this synthetic member, and what would they likely pay if they use this provider?</p>
+            <div class="chip-row">
+            <p><span class="chip">Synthetic plan docs</span><span class="chip">Eligibility table</span><span class="chip">Accumulator table</span><span class="chip">Provider directory</span><span class="chip">Benefit config</span></p>
+            </div>
+            </section>
+            <div class="flow" style="grid-template-columns: 1fr; margin-top: 0;">
+            <div class="theme-profile">
+            <strong>Profile</strong><span>Allowed surfaces, authority, tools, synthetic data, evidence, evals.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Catalog</strong><span>Display profile, run, evidence timeline, approval, eval result, and observability metrics.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Runtime</strong><span>Resolve profile, broker synthetic access, retrieve context, call tools, compose answer.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence</strong><span>Capture timeline, approvals, eval outcomes, citations, and improvement candidates.</span>
+            </div>
+            </div>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Old Slides" data-title="Old Slide: The Roadmap Moves From Prototype To Pilots To Production">
+
+            <h2>Old Slide: Start safe, then move through controlled maturity gates</h2>
+            <p><span class="eyebrow">Old slide</span></p>
+            <div class="timeline">
+            <div class="theme-catalog">
+            <strong>Foundation</strong><span>Catalog MVP, schemas, profiles, runtime skeleton, evidence, broker, resolver.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Synthetic Benefits</strong><span>Full loop with synthetic data, approval, evals, and observability.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>DAIS / documents</strong><span>SharePoint snapshots, DOCX/PDF sandbox, redlines, writeback approval.</span>
+            </div>
+            <div style="--accent: var(--amber)">
+            <strong>Payer pilots</strong><span>Benefits assist, provider audit, HEDIS shadow, MNG, claims assistant.</span>
+            </div>
+            <div style="--accent: var(--violet)">
+            <strong>Production hardening</strong><span>Release gates, prompt/PHI tests, incident runbooks, dashboards, DR.</span>
+            </div>
+            </div>
+            <div class="callout">
+            <p>Maturity states stay explicit in the catalog: idea, design, prototype, shadow, assistive, supervised action, limited automation, scaled automation.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Old Slides" data-title="Old Slide: What Executives Need To Align On">
+
+            <h2>Old Slide: The next decisions are operating-model decisions, not only technology decisions</h2>
+            <p><span class="eyebrow">Old slide</span></p>
+            <div class="two-col">
+            <div class="card">
+            <p><strong>Confirm catalog-centered visibility</strong></p>
+            <p>Agentic work should be inventoried, governed, operated, and reviewed through a shared catalog.</p>
+            </div>
+            <div class="card">
+            <p><strong>Assign accountable owners</strong></p>
+            <p>Business, platform, security, compliance, data governance, and operations ownership must be visible per app and capability.</p>
+            </div>
+            <div class="card">
+            <p><strong>Approve staged maturity gates</strong></p>
+            <p>Prototype, shadow, assistive, supervised, and automation stages need evidence and release criteria.</p>
+            </div>
+            <div class="card">
+            <p><strong>Choose the post-prototype pilot path</strong></p>
+            <p>Use Synthetic Benefits to prove the contract, then select DAIS or a payer pilot based on value, risk, and readiness.</p>
+            </div>
+            </div>
+            <div class="callout">
+            <p>The executive value is complete visibility, faster safe delivery, reusable capabilities, and a stronger security/compliance posture for agentic AI.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-kind="appendix" data-section="Old Slides" data-title="Old Slide: Riverbed Makes Managed Work Compound">
+
+            <h2>Old Slide: Riverbed makes managed work compound into an AI-native organization</h2>
+            <p><span class="eyebrow">Old slide</span></p>
+            <div class="lead">
+            <p>The platform is not only a safer way to run AI projects. It is the substrate that lets managed work become reusable organizational memory.</p>
+            </div>
+            <div class="story-bridge">
+            <div class="theme-runtime">
+            <strong>Work runs</strong><span>Managed chats, products, harnesses, workflows, and reviews happen inside profile-bound sessions.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence stays</strong><span>Prompts, decisions, tool calls, approvals, evals, outputs, and exceptions remain inspectable.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Memory becomes usable</strong><span>The catalog turns approved residue into prompts, context packs, capabilities, eval cases, and release evidence.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>The org learns</strong><span>Future teams start from governed prior work, not a blank prompt or private chat history.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>That is the Riverbed goal: Point32Health becomes AI-native when every approved run can leave behind something the next team can safely trust, reuse, and improve.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: Shopify Engineering, “Under the River”; <code>riverness.md</code>, <code>agent_harnesses.md</code>, <code>catalog.md</code>, <code>evals.md</code></p>
+            </div>
+          </section>
+          <div class="scroll-cue" id="scrollCue" hidden aria-hidden="true"></div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="presenter-notes" aria-label="Presenter notes">
+      <h2>Presenter Notes</h2>
+      <div class="presenter-note-body" id="presenterNotes"></div>
+    </aside>
+
+    <footer class="footer-controls">
+      <div class="progress" aria-label="Deck progress"><span id="progressBar"></span></div>
+      <div class="counter" id="counter">1 / 56</div>
+      <button class="nav-btn" id="overviewBtn" aria-label="Open overview">O</button>
+      <button class="nav-btn" id="prevBtn" aria-label="Previous slide">Prev</button>
+      <button class="nav-btn primary" id="nextBtn" aria-label="Next slide">Next</button>
+    </footer>
+  </div>
+
+  <div class="overview" id="overview"><div class="overview-grid" id="overviewGrid"></div></div>
+  <div class="zoom zoom-modal" id="zoom" aria-modal="true" role="dialog" aria-label="Diagram zoom">
+    <button class="zoom-close" id="zoomClose" type="button">Close</button>
+    <img id="zoomImg" alt="Zoomed diagram">
+  </div>
+  <svg class="htmpres-filter-defs" aria-hidden="true" focusable="false" width="0" height="0">
+    <filter id="htmpres-sharpen">
+      <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0"></feConvolveMatrix>
+    </filter>
+  </svg>
+
+  <script id="deckNotes" type="application/json">["\u003cp\u003eOpen by positioning the deck as an operating-model briefing. The BBVA example comes next as the regulated-enterprise proof point before the Point32Health platform model.\u003c/p\u003e","\u003cp\u003eUse this as the executive hook: BBVA is useful because it is regulated, complex, and still moved quickly by managing adoption instead of letting local AI experiments harden invisibly.\u003c/p\u003e","\u003cp\u003eTransition to the next slide by saying: BBVA is the external proof that a managed platform can increase adoption and control together. The remaining deck translates that pattern into Point32Health's platform model.\u003c/p\u003e","\u003cp\u003eUse this early slide to connect the bank rollout story to managed adoption and evidence. Save the explicit River-like and AI-native organization point for the end.\u003c/p\u003e","\u003cp\u003eUse this as the update since the older deck: this is no longer only a concept deck. It is the executive map for a 13-source package with decisions, build sequence, and proof obligations.\u003c/p\u003e","","\u003cp\u003eUse this as the vocabulary primer before introducing the Point32Health platform model. The diagram intentionally keeps the terms generic: source, model turn, tool result, human-in-the-loop, eval or guardrail, and final answer.\u003c/p\u003e","\u003cp\u003eUse this slide as the map for the deck: the case is that managed platform behavior keeps agentic work governable, reusable, secure, and understandable across the enterprise.\u003c/p\u003e","","\u003cp\u003eOpen by making clear this is an internal enterprise platform initiative, not a vendor pitch or a single-app demo.\u003c/p\u003e","\u003cp\u003eThe message is not that local experimentation is bad. It is that enterprise scaling requires a common substrate before local experiments become production systems.\u003c/p\u003e","","","","","","","","\u003cp\u003eThe key point is that the catalog URL is the stable attachment point. Permissions are not broad app-level permission blobs; the broker composes required grants and every relevant catalog object can narrow or deny the run.\u003c/p\u003e","\u003cp\u003eUse this to make runtime concrete for executives: it is the place where profile and catalog intent become per-run decisions, not just infrastructure hosting.\u003c/p\u003e","","\u003cp\u003eUse this as the close of Axis 1: the point is shared vocabulary. The same four semantic colors carry forward through the deck: profile, catalog, runtime, and evidence.\u003c/p\u003e","","","","","","","","","","","","\u003cp\u003eUse this to explain why shared release gates are not another committee. The point is a common dev-to-prod control path: each app has its own facts and risks, but the promotion rule, evidence expectations, and catalog record are standardized.\u003c/p\u003e","","","","","","","","","","","\u003cp\u003eUse this as the end-of-deck operating-model slide. It normalizes the River-like idea into healthcare-grade tenant-scoped sharing and governed company memory.\u003c/p\u003e","","","","","","","","","","",""]</script>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const tocList = document.getElementById("tocList");
+    const overview = document.getElementById("overview");
+    const overviewGrid = document.getElementById("overviewGrid");
+    const slidesViewport = document.getElementById("slides");
+    const scrollCue = document.getElementById("scrollCue");
+    const notesBox = document.getElementById("notesBox");
+    const presenterNotes = document.getElementById("presenterNotes");
+    const counter = document.getElementById("counter");
+    const progressBar = document.getElementById("progressBar");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const overviewBtn = document.getElementById("overviewBtn");
+    const slideFit = document.getElementById("slideFit");
+    const zoom = document.getElementById("zoom");
+    const zoomImg = document.getElementById("zoomImg");
+    const zoomClose = document.getElementById("zoomClose");
+    let current = 0;
+    let hasRendered = false;
+    let textFitFrame = 0;
+    let viewportFrame = 0;
+    const deckNotes = readDeckNotes();
+    const slideFragmentStates = new WeakMap();
+    const slideCodeStates = new WeakMap();
+    const mobileDeckFlowQuery = "(max-width: 980px)";
+
+    function buildNav() {
+      slides.forEach((slide, index) => {
+        const title = slide.dataset.title || slide.querySelector("h2")?.textContent || `Slide ${index + 1}`;
+        const section = slide.dataset.section || "";
+        const nav = document.createElement("button");
+        nav.textContent = `${index + 1}. ${title}`;
+        nav.addEventListener("click", () => goTo(index));
+        tocList?.appendChild(nav);
+
+        const card = document.createElement("button");
+        card.className = "overview-card";
+        card.innerHTML = `<small>${index + 1} / ${slides.length}${section ? ` - ${section}` : ""}</small><strong>${title}</strong>`;
+        card.addEventListener("click", () => {
+          overview?.classList.remove("visible");
+          goTo(index);
+        });
+        overviewGrid?.appendChild(card);
+      });
+    }
+
+    function scaleDeck() {
+      if (!slideFit) return;
+      const stage = slideFit.parentElement;
+      if (!stage) return;
+      if (mobileDeckFlowActive()) {
+        document.documentElement.style.setProperty("--deck-scale", "1");
+        slideFit.style.removeProperty("width");
+        slideFit.style.removeProperty("height");
+        return;
+      }
+      const width = 1280;
+      const height = 720;
+      const rect = stage.getBoundingClientRect();
+      const stageStyle = getComputedStyle(stage);
+      const availableWidth = Math.max(0, rect.width - cssPixels(stageStyle.paddingLeft) - cssPixels(stageStyle.paddingRight));
+      const availableHeight = Math.max(0, rect.height - cssPixels(stageStyle.paddingTop) - cssPixels(stageStyle.paddingBottom));
+      const scale = Math.min(availableWidth / width, availableHeight / height, 1);
+      document.documentElement.style.setProperty("--deck-scale", scale.toString());
+      slideFit.style.width = `${width * scale}px`;
+      slideFit.style.height = `${height * scale}px`;
+    }
+
+    function mobileDeckFlowActive() {
+      return window.matchMedia?.(mobileDeckFlowQuery)?.matches || false;
+    }
+
+    function cssPixels(value) {
+      const parsed = Number.parseFloat(value);
+      return Number.isFinite(parsed) ? parsed : 0;
+    }
+
+    function updateViewportHeight() {
+      const height = window.visualViewport?.height || window.innerHeight || document.documentElement.clientHeight;
+      if (!height) return;
+      document.documentElement.style.setProperty("--htmpres-viewport-height", `${Math.floor(height)}px`);
+      document.documentElement.style.setProperty(
+        "--htmpres-mobile-browser-clearance",
+        `${mobileBrowserChromeClearance(height)}px`,
+      );
+    }
+
+    function mobileBrowserChromeClearance(height) {
+      const isMobileTouch = window.matchMedia?.("(max-width: 980px) and (pointer: coarse)")?.matches;
+      const isPortrait = window.matchMedia?.("(orientation: portrait)")?.matches;
+      const isStandalone = window.navigator.standalone || window.matchMedia?.("(display-mode: standalone)")?.matches;
+      const screenHeight = Math.max(window.screen?.height || 0, window.screen?.availHeight || 0);
+      if (!isMobileTouch || !isPortrait || isStandalone || !screenHeight) return 0;
+      return height >= screenHeight * 0.9 ? 112 : 0;
+    }
+
+    function scheduleViewportLayout() {
+      if (viewportFrame) cancelAnimationFrame(viewportFrame);
+      viewportFrame = requestAnimationFrame(() => {
+        viewportFrame = 0;
+        updateViewportHeight();
+        scaleDeck();
+        scheduleTextFit();
+      });
+    }
+
+    function scheduleTextFit() {
+      if (textFitFrame) cancelAnimationFrame(textFitFrame);
+      textFitFrame = requestAnimationFrame(() => {
+        textFitFrame = 0;
+        fitSlideText(slides[current]);
+      });
+    }
+
+    function fitSlideText(slide) {
+      if (!slide) {
+        updateScrollCue();
+        return;
+      }
+      slide.classList.remove("htmpres-text-fit-overflow");
+      if (!slideTextFitEnabled(slide)) {
+        resetTextFit(slide);
+        updateScrollCue();
+        return;
+      }
+      if (!slide.classList.contains("active")) {
+        updateScrollCue();
+        return;
+      }
+
+      const minScale = textFitMinimum(slide);
+      let scale = 1;
+      slide.classList.add("htmpres-text-fit-active");
+      slide.style.setProperty("--htmpres-text-fit-scale", "1");
+
+      let overflow = slideOverflowRatio(slide);
+      for (let attempt = 0; attempt < 8 && overflow > 1.01 && scale > minScale; attempt += 1) {
+        const nextScale = Math.max(minScale, Math.min((scale / overflow) * 0.985, scale - 0.01));
+        if (Math.abs(nextScale - scale) < 0.002) break;
+        scale = nextScale;
+        slide.style.setProperty("--htmpres-text-fit-scale", scale.toFixed(4));
+        overflow = slideOverflowRatio(slide);
+      }
+
+      slide.dataset.textFitScale = scale.toFixed(3);
+      slide.classList.toggle("htmpres-text-fit-overflow", overflow > 1.02 && scale <= minScale + 0.002);
+      updateScrollCue();
+    }
+
+    function resetTextFit(slide) {
+      slide.classList.remove("htmpres-text-fit-active", "htmpres-text-fit-overflow");
+      slide.style.removeProperty("--htmpres-text-fit-scale");
+      delete slide.dataset.textFitScale;
+    }
+
+    function slideTextFitEnabled(slide) {
+      if (truthy(slide.dataset.textFit) || truthy(slide.dataset.autoscale) || slide.classList.contains("autoscale")) return true;
+      if (falsy(slide.dataset.textFit) || falsy(slide.dataset.autoscale) || slide.classList.contains("no-autoscale")) return false;
+      if (fitOverflowPolicy(slide)) return true;
+      return truthy(document.documentElement.dataset.textFit) || truthy(document.documentElement.dataset.autoscale);
+    }
+
+    function fitOverflowPolicy(slide) {
+      const mode = String(slide.dataset.overflow || document.documentElement.dataset.overflow || "").trim().toLowerCase();
+      return mode === "fit" || mode === "fit-scroll";
+    }
+
+    function textFitMinimum(slide) {
+      const style = getComputedStyle(slide);
+      return clampNumber(
+        slide.dataset.textFitMin ||
+          slide.dataset.autoscaleMin ||
+          document.documentElement.dataset.textFitMin ||
+          style.getPropertyValue("--htmpres-text-fit-min"),
+        0.45,
+        1,
+        0.62,
+      );
+    }
+
+    function slideOverflowRatio(slide) {
+      if (!slide.clientWidth || !slide.clientHeight) return 1;
+      return Math.max(slide.scrollWidth / slide.clientWidth, slide.scrollHeight / slide.clientHeight);
+    }
+
+    function wireScrollCue() {
+      slides.forEach((slide) => slide.addEventListener("scroll", updateScrollCue, { passive: true }));
+    }
+
+    function updateScrollCue() {
+      const slide = slides[current];
+      if (!slidesViewport || !scrollCue || !slide) return;
+      const overflowY = getComputedStyle(slide).overflowY;
+      const scrollOverflow = slide.scrollHeight - slide.clientHeight;
+      const canScroll = /(auto|scroll)/.test(overflowY) && scrollOverflow > 12;
+      const atEnd = !canScroll || slide.scrollTop + slide.clientHeight >= slide.scrollHeight - 12;
+      slide.classList.toggle("htmpres-slide-scrollable", canScroll);
+      slide.classList.toggle("htmpres-slide-scrolled-end", atEnd);
+      slidesViewport.classList.toggle("scroll-cue-visible", canScroll && !atEnd);
+      scrollCue.hidden = !(canScroll && !atEnd);
+    }
+
+    function resetInactiveScrollState(activeSlide) {
+      slides.forEach((slide) => {
+        if (slide === activeSlide) return;
+        slide.classList.remove("htmpres-slide-scrollable", "htmpres-slide-scrolled-end");
+      });
+    }
+
+    function truthy(value) {
+      return /^(1|true|yes|on)$/i.test(String(value || "").trim());
+    }
+
+    function falsy(value) {
+      return /^(0|false|no|off)$/i.test(String(value || "").trim());
+    }
+
+    function clampNumber(value, min, max, fallback) {
+      const number = Number.parseFloat(String(value || "").trim());
+      if (!Number.isFinite(number)) return fallback;
+      return Math.max(min, Math.min(max, number));
+    }
+
+    function goTo(index) {
+      const next = Math.max(0, Math.min(slides.length - 1, index));
+      const direction = !hasRendered || next === current ? "none" : next > current ? "next" : "prev";
+      const shouldResetSteps = !hasRendered || next !== current;
+      current = next;
+      document.documentElement.dataset.slideDirection = direction;
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+      if (shouldResetSteps) {
+        slides[current].scrollTop = 0;
+        slides[current].scrollLeft = 0;
+      }
+      resetInactiveScrollState(slides[current]);
+      updateScrollCue();
+      Array.from(tocList?.children || []).forEach((btn, i) => btn.classList.toggle("active", i === current));
+      Array.from(overviewGrid?.children || []).forEach((card, i) => card.classList.toggle("active", i === current));
+      if (counter) counter.textContent = `${current + 1} / ${slides.length}`;
+      if (progressBar) progressBar.style.width = `${((current + 1) / slides.length) * 100}%`;
+      if (shouldResetSteps) resetSlideSteps(slides[current]);
+      updateNotes();
+      syncSlideMedia();
+      scheduleTextFit();
+      hasRendered = true;
+      if (location.hash !== `#/${current + 1}`) history.replaceState(null, "", `#/${current + 1}`);
+    }
+
+    function prepareSlideTransitions() {
+      slides.forEach((slide) => {
+        const transition = sanitizeClassToken(slide.dataset.transition || "");
+        if (transition) slide.classList.add(`transition-${transition}`);
+      });
+    }
+
+    function prepareFragments() {
+      slides.forEach((slide) => {
+        const fragments = [];
+        const seen = new Set();
+
+        slide.querySelectorAll(".fragment").forEach((fragment) => addFragment(fragments, seen, fragment));
+        slide.querySelectorAll(".incremental > li, .incremental > ol > li, .incremental > ul > li, ol.incremental > li, ul.incremental > li").forEach((item) => {
+          item.classList.add("fragment");
+          const owner = item.closest(".incremental");
+          if (owner?.dataset.fragmentEffect && !item.dataset.fragmentEffect) {
+            item.dataset.fragmentEffect = owner.dataset.fragmentEffect;
+          }
+          addFragment(fragments, seen, item);
+        });
+
+        if (!fragments.length) return;
+        slide.classList.add("has-fragments");
+        fragments.sort((a, b) => {
+          if (a.element === b.element) return 0;
+          return a.element.compareDocumentPosition(b.element) & Node.DOCUMENT_POSITION_PRECEDING ? 1 : -1;
+        });
+        let nextIndex = 1;
+        fragments.forEach((fragment) => {
+          const explicit = Number(fragment.element.dataset.fragmentIndex);
+          if (Number.isFinite(explicit)) {
+            fragment.index = Math.max(0, Math.floor(explicit));
+            nextIndex = Math.max(nextIndex, fragment.index + 1);
+          } else {
+            fragment.index = nextIndex;
+            nextIndex += 1;
+          }
+          const effect = sanitizeClassToken(fragment.element.dataset.fragmentEffect || "");
+          if (effect) fragment.element.classList.add(`fragment-${effect}`);
+        });
+        slideFragmentStates.set(slide, {
+          fragments,
+          maxSteps: Math.max(...fragments.map((fragment) => fragment.index)),
+          step: 0,
+        });
+      });
+    }
+
+    function addFragment(fragments, seen, element) {
+      if (seen.has(element)) return;
+      seen.add(element);
+      fragments.push({ element, index: 0 });
+    }
+
+    function sanitizeClassToken(value) {
+      return value.trim().toLowerCase().replace(/[^a-z0-9_-]+/g, "-").replace(/^-+|-+$/g, "");
+    }
+
+    function resetSlideSteps(slide) {
+      resetFragmentStep(slide);
+      resetCodeStep(slide);
+    }
+
+    function resetFragmentStep(slide) {
+      const state = slideFragmentStates.get(slide);
+      if (!state) return;
+      state.step = 0;
+      applyFragmentStep(slide);
+    }
+
+    function advanceFragmentStep() {
+      const state = slideFragmentStates.get(slides[current]);
+      if (!state || state.step >= state.maxSteps) return false;
+      state.step += 1;
+      applyFragmentStep(slides[current]);
+      return true;
+    }
+
+    function retreatFragmentStep() {
+      const state = slideFragmentStates.get(slides[current]);
+      if (!state || state.step <= 0) return false;
+      state.step -= 1;
+      applyFragmentStep(slides[current]);
+      return true;
+    }
+
+    function applyFragmentStep(slide) {
+      const state = slideFragmentStates.get(slide);
+      if (!state) return;
+      state.fragments.forEach((fragment) => {
+        const visible = fragment.index <= state.step;
+        const currentFragment = fragment.index === state.step && state.step > 0;
+        fragment.element.classList.toggle("fragment-visible", visible);
+        fragment.element.classList.toggle("fragment-current", currentFragment);
+        fragment.element.classList.toggle("fragment-past", visible && fragment.index < state.step);
+        fragment.element.setAttribute("aria-hidden", visible ? "false" : "true");
+      });
+    }
+
+    function settleFragmentStep(slide) {
+      const state = slideFragmentStates.get(slide);
+      if (!state || state.step < state.maxSteps) return;
+      state.fragments.forEach((fragment) => {
+        fragment.element.classList.remove("fragment-current");
+        fragment.element.classList.toggle("fragment-past", fragment.index <= state.step);
+      });
+    }
+
+    function prepareCodeSteppers() {
+      slides.forEach((slide) => {
+        const blocks = [];
+        slide.querySelectorAll("div.sourceCode, pre, code").forEach((root) => {
+          if (!hasCodeDirective(root)) return;
+          if (root.matches("pre, code") && root.closest("div.sourceCode[data-highlight], div.sourceCode[data-steps], div.sourceCode[data-highlight-steps]")) return;
+
+          const code = root.matches("code") ? root : root.querySelector("code");
+          if (!code) return;
+
+          const lines = codeLineNodes(code);
+          if (!lines.length) return;
+
+          const highlight = getCodeData(root, code, "highlight");
+          const steps = getCodeData(root, code, "steps") || getCodeData(root, code, "highlightSteps");
+          const staticLines = parseLineSelection(highlight, lines.length);
+          const stepLines = parseStepSelections(steps, lines.length);
+          if (!staticLines.size && !stepLines.length) return;
+
+          root.classList.add("code-stepper");
+          blocks.push({ root, lines, staticLines, stepLines });
+        });
+
+        if (!blocks.length) return;
+        slideCodeStates.set(slide, {
+          blocks,
+          maxSteps: Math.max(...blocks.map((block) => block.stepLines.length)),
+          step: 0,
+        });
+      });
+    }
+
+    function hasCodeDirective(root) {
+      return Boolean(root.dataset.highlight || root.dataset.steps || root.dataset.highlightSteps);
+    }
+
+    function getCodeData(root, code, key) {
+      const pre = code.closest("pre");
+      return root.dataset[key] || pre?.dataset[key] || code.dataset[key] || "";
+    }
+
+    function codeLineNodes(code) {
+      const pandocLines = Array.from(code.children).filter((child) => {
+        if (child.tagName !== "SPAN") return false;
+        return Boolean(child.dataset.line || /-\d+$/.test(child.id || ""));
+      });
+
+      const lines = pandocLines.length ? pandocLines : wrapPlainCodeLines(code);
+      lines.forEach((line, index) => {
+        line.classList.add("code-line");
+        line.dataset.line = String(lineNumber(line, index));
+      });
+      return lines;
+    }
+
+    function wrapPlainCodeLines(code) {
+      const text = code.textContent || "";
+      const hadTrailingNewline = /\n$/.test(text);
+      const parts = text.replace(/\n$/, "").split("\n");
+      code.textContent = "";
+      const lines = parts.map((part, index) => {
+        const line = document.createElement("span");
+        line.textContent = part || "\u200b";
+        code.appendChild(line);
+        if (index < parts.length - 1 || hadTrailingNewline) code.appendChild(document.createTextNode("\n"));
+        return line;
+      });
+      return lines;
+    }
+
+    function lineNumber(line, index) {
+      const dataLine = Number(line.dataset.line);
+      if (Number.isFinite(dataLine) && dataLine > 0) return dataLine;
+      const match = /-(\d+)$/.exec(line.id || "");
+      return match ? Number(match[1]) : index + 1;
+    }
+
+    function parseStepSelections(value, lineCount) {
+      if (!value) return [];
+      return value.split("|").map((part) => parseLineSelection(part, lineCount));
+    }
+
+    function parseLineSelection(value, lineCount) {
+      const selected = new Set();
+      const raw = (value || "").trim().toLowerCase();
+      if (!raw || raw === "none") return selected;
+      if (raw === "all") {
+        for (let line = 1; line <= lineCount; line += 1) selected.add(line);
+        return selected;
+      }
+
+      raw.split(/[,\s]+/).forEach((part) => {
+        if (!part) return;
+        const range = /^(\d+)-(\d+)$/.exec(part);
+        if (range) {
+          const start = Math.max(1, Math.min(Number(range[1]), Number(range[2])));
+          const end = Math.min(lineCount, Math.max(Number(range[1]), Number(range[2])));
+          for (let line = start; line <= end; line += 1) selected.add(line);
+          return;
+        }
+        const line = Number(part);
+        if (Number.isInteger(line) && line >= 1 && line <= lineCount) selected.add(line);
+      });
+      return selected;
+    }
+
+    function resetCodeStep(slide) {
+      const state = slideCodeStates.get(slide);
+      if (!state) return;
+      state.step = 0;
+      applyCodeStep(slide);
+    }
+
+    function advanceCodeStep() {
+      const state = slideCodeStates.get(slides[current]);
+      if (!state || state.maxSteps < 2 || state.step >= state.maxSteps - 1) return false;
+      state.step += 1;
+      applyCodeStep(slides[current]);
+      return true;
+    }
+
+    function retreatCodeStep() {
+      const state = slideCodeStates.get(slides[current]);
+      if (!state || state.step <= 0) return false;
+      state.step -= 1;
+      applyCodeStep(slides[current]);
+      return true;
+    }
+
+    function applyCodeStep(slide) {
+      const state = slideCodeStates.get(slide);
+      if (!state) return;
+
+      state.blocks.forEach((block) => {
+        const stepSet = block.stepLines.length ? block.stepLines[Math.min(state.step, block.stepLines.length - 1)] : null;
+        const activeLines = new Set(block.staticLines);
+        if (stepSet) stepSet.forEach((line) => activeLines.add(line));
+        const shouldDim = Boolean(stepSet && activeLines.size);
+
+        block.lines.forEach((line) => {
+          const active = activeLines.has(Number(line.dataset.line));
+          line.classList.toggle("code-line-highlight", active);
+          line.classList.toggle("code-line-dim", shouldDim && !active);
+        });
+
+        block.root.classList.toggle("code-step-active", Boolean(block.stepLines.length));
+        if (block.stepLines.length) {
+          block.root.dataset.activeStep = String(Math.min(state.step + 1, block.stepLines.length));
+        } else {
+          delete block.root.dataset.activeStep;
+        }
+      });
+    }
+
+    function nextStepOrSlide() {
+      if (advanceFragmentStep()) return;
+      settleFragmentStep(slides[current]);
+      if (advanceCodeStep()) return;
+      goTo(current + 1);
+    }
+
+    function prevStepOrSlide() {
+      if (retreatCodeStep()) return;
+      if (retreatFragmentStep()) return;
+      goTo(current - 1);
+    }
+
+    function updateNotes() {
+      const noteHtml = deckNotes[current] || "";
+      if (presenterNotes) {
+        presenterNotes.innerHTML = noteHtml || '<p class="presenter-note-empty">No presenter notes for this slide.</p>';
+      }
+      if (!notesBox) return;
+      const note = slides[current]?.querySelector(".notes");
+      notesBox.innerHTML = noteHtml || (note ? note.innerHTML : "No speaker notes for this slide.");
+    }
+
+    function toggleNotes() {
+      if (!notesBox) return;
+      notesBox?.classList.toggle("visible");
+    }
+
+    function toggleOverview() {
+      overview?.classList.toggle("visible");
+    }
+
+    function closeOverlays() {
+      overview?.classList.remove("visible");
+      zoom?.classList.remove("visible");
+      notesBox?.classList.remove("visible");
+    }
+
+    function wireZoom() {
+      document.querySelectorAll(".zoomable").forEach((image) => {
+        image.addEventListener("click", () => {
+          if (!zoom || !zoomImg) return;
+          zoomImg.src = image.currentSrc || image.src;
+          zoomImg.alt = image.alt || "Zoomed diagram";
+          zoom.classList.add("visible");
+        });
+      });
+      zoomClose?.addEventListener("click", () => zoom?.classList.remove("visible"));
+      zoom?.addEventListener("click", (event) => {
+        if (event.target === zoom) zoom.classList.remove("visible");
+      });
+    }
+
+    function wireTapNavigation() {
+      if (!slideFit) return;
+
+      let touchStart = null;
+      let suppressClickUntil = 0;
+      const swipeDistance = 48;
+      const swipeVerticalTolerance = 0.8;
+      const swipeMaxDuration = 800;
+
+      slideFit.addEventListener("click", (event) => {
+        if (performance.now() < suppressClickUntil) return;
+        if (event.defaultPrevented || ("button" in event && event.button !== 0) || interactiveTapTarget(event.target)) return;
+        const rect = slideFit.getBoundingClientRect();
+        if (!rect.width) return;
+        const x = event.clientX - rect.left;
+        if (x < rect.width * 0.28) {
+          prevStepOrSlide();
+        } else {
+          nextStepOrSlide();
+        }
+      });
+
+      slideFit.addEventListener("touchstart", (event) => {
+        if (event.touches.length !== 1 || interactiveTapTarget(event.target)) {
+          touchStart = null;
+          return;
+        }
+        const touch = event.touches[0];
+        touchStart = {
+          x: touch.clientX,
+          y: touch.clientY,
+          time: performance.now(),
+        };
+      }, { passive: true });
+
+      slideFit.addEventListener("touchend", (event) => {
+        if (!touchStart || interactiveTapTarget(event.target)) {
+          touchStart = null;
+          return;
+        }
+        const touch = event.changedTouches[0];
+        if (!touch) {
+          touchStart = null;
+          return;
+        }
+        const dx = touch.clientX - touchStart.x;
+        const dy = touch.clientY - touchStart.y;
+        const duration = performance.now() - touchStart.time;
+        touchStart = null;
+        if (Math.abs(dx) < swipeDistance) return;
+        if (Math.abs(dy) > Math.abs(dx) * swipeVerticalTolerance) return;
+        if (duration > swipeMaxDuration) return;
+        suppressClickUntil = performance.now() + 650;
+        if (dx < 0) {
+          nextStepOrSlide();
+        } else {
+          prevStepOrSlide();
+        }
+      }, { passive: true });
+
+      slideFit.addEventListener("touchcancel", () => {
+        touchStart = null;
+      }, { passive: true });
+    }
+
+    function interactiveTapTarget(target) {
+      if (!(target instanceof Element)) return false;
+      return Boolean(target.closest(
+        "a, button, input, select, textarea, summary, label, pre, code, video, audio, iframe, object, embed, [contenteditable], [role='button'], .sourceCode, .zoomable, .no-tap-nav, .no-slide-nav, [data-no-tap-nav], [data-no-slide-nav]",
+      ));
+    }
+
+    function wireMediaDirectives() {
+      document.querySelectorAll("video, audio").forEach((media) => {
+        if (media.classList.contains("ds-controls")) media.setAttribute("controls", "");
+        if (media.classList.contains("ds-autoplay")) media.setAttribute("autoplay", "");
+        if (media.classList.contains("ds-loop")) media.setAttribute("loop", "");
+        if (media.classList.contains("ds-muted")) {
+          media.muted = true;
+          media.setAttribute("muted", "");
+        }
+        if (media.classList.contains("ds-hide")) media.setAttribute("aria-hidden", "true");
+        if (media.classList.contains("ds-autoadvance")) {
+          media.addEventListener("ended", () => {
+            if (slides[current]?.contains(media)) goTo(current + 1);
+          });
+        }
+      });
+    }
+
+    function syncSlideMedia() {
+      slides.forEach((slide, index) => {
+        slide.querySelectorAll("video, audio").forEach((media) => {
+          if (index === current) {
+            if (media.classList.contains("ds-autoplay")) media.play?.().catch(() => {});
+            return;
+          }
+          media.pause?.();
+          if (!media.classList.contains("ds-keep-time")) {
+            try {
+              media.currentTime = 0;
+            } catch {
+              // Some streaming sources do not allow seeking until metadata loads.
+            }
+          }
+        });
+      });
+    }
+
+    function readDeckNotes() {
+      const node = document.getElementById("deckNotes");
+      if (!node) return [];
+      try {
+        const parsed = JSON.parse(node.textContent || "[]");
+        return Array.isArray(parsed) ? parsed : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function initialSlideFromHash() {
+      const match = /^#\/(\d+)/.exec(location.hash);
+      if (!match) return 0;
+      return Number(match[1]) - 1;
+    }
+
+    prevBtn?.addEventListener("click", prevStepOrSlide);
+    nextBtn?.addEventListener("click", nextStepOrSlide);
+    overviewBtn?.addEventListener("click", toggleOverview);
+    overview?.addEventListener("click", (event) => {
+      if (event.target === overview) overview.classList.remove("visible");
+    });
+    window.addEventListener("resize", scheduleViewportLayout);
+    window.addEventListener("orientationchange", scheduleViewportLayout);
+    window.visualViewport?.addEventListener("resize", scheduleViewportLayout);
+    window.visualViewport?.addEventListener("scroll", scheduleViewportLayout);
+    window.addEventListener("load", scheduleTextFit);
+    document.fonts?.ready?.then(scheduleTextFit)?.catch(() => {});
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === " " || event.key === "PageDown") {
+        event.preventDefault();
+        nextStepOrSlide();
+      }
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        prevStepOrSlide();
+      }
+      if (event.key === "Home") goTo(0);
+      if (event.key === "End") goTo(slides.length - 1);
+      if (event.key.toLowerCase() === "o") toggleOverview();
+      if (event.key.toLowerCase() === "n") toggleNotes();
+      if (event.key === "Escape") closeOverlays();
+      if (event.key.toLowerCase() === "f" && document.fullscreenEnabled) {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+        else document.exitFullscreen();
+      }
+    });
+
+    updateViewportHeight();
+    buildNav();
+    wireZoom();
+    wireScrollCue();
+    wireTapNavigation();
+    wireMediaDirectives();
+    prepareSlideTransitions();
+    prepareFragments();
+    prepareCodeSteppers();
+    scaleDeck();
+    goTo(initialSlideFromHash());
+
+  </script>
+  <script>
+(() => {
+  function currentSlideFor(node) {
+    return node.closest(".slide") || node.closest(".reveal .slides section") || document;
+  }
+
+  function scopedQuery(node, selector) {
+    const slide = currentSlideFor(node);
+    return slide.querySelector(selector) || document.querySelector(selector);
+  }
+
+  function setActive(control) {
+    const group = control.closest(".pill-row") || control.closest("[data-choice-group]");
+    if (!group) return;
+    group.querySelectorAll(".active").forEach((item) => item.classList.remove("active"));
+    control.classList.add("active");
+  }
+
+  function writePanel(panel, title, text, html) {
+    if (!panel) return;
+    if (html) {
+      panel.innerHTML = html;
+      return;
+    }
+    panel.innerHTML = "";
+    if (title) {
+      const heading = document.createElement("h3");
+      heading.textContent = title;
+      panel.appendChild(heading);
+    }
+    if (text) {
+      const para = document.createElement("p");
+      para.textContent = text;
+      panel.appendChild(para);
+    }
+  }
+
+  function activateGeneric(control) {
+    const selector = control.dataset.target || control.dataset.updateTarget;
+    if (!selector) return false;
+    const panel = scopedQuery(control, selector);
+    writePanel(panel, control.dataset.title, control.dataset.text, control.dataset.html);
+    setActive(control);
+    return true;
+  }
+
+  function activateFilter(control) {
+    const filter = control.dataset.filter || control.dataset.itemFilter;
+    const selector = control.dataset.filterTarget;
+    if (!filter || !selector) return false;
+    const slide = currentSlideFor(control);
+    slide.querySelectorAll(selector).forEach((item) => {
+      const values = (item.dataset.filter || item.dataset.tags || "").split(/\s+/);
+      item.hidden = filter !== "all" && !values.includes(filter);
+    });
+    setActive(control);
+    return true;
+  }
+
+  function makeInteractive(control, handler) {
+    if (!control.matches("button")) {
+      control.setAttribute("role", control.getAttribute("role") || "button");
+      control.setAttribute("tabindex", control.getAttribute("tabindex") || "0");
+    }
+    control.addEventListener("click", handler);
+    control.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        handler(event);
+      }
+    });
+  }
+
+  function wirePanelControls() {
+    document.querySelectorAll("[data-target], [data-update-target]").forEach((control) => {
+      makeInteractive(control, () => activateGeneric(control));
+    });
+    document.querySelectorAll("[data-filter], [data-item-filter]").forEach((control) => {
+      makeInteractive(control, () => activateFilter(control));
+    });
+  }
+
+  function ensureZoomModal() {
+    let modal = document.getElementById("htmpresZoom");
+    if (modal) return modal;
+    modal = document.createElement("div");
+    modal.id = "htmpresZoom";
+    modal.className = "htmpres-zoom";
+    modal.innerHTML = '<button type="button" aria-label="Close zoom">Close</button><img alt="">';
+    document.body.appendChild(modal);
+    modal.querySelector("button").addEventListener("click", () => modal.classList.remove("visible"));
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) modal.classList.remove("visible");
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") modal.classList.remove("visible");
+    });
+    return modal;
+  }
+
+  function wireZoom() {
+    if (document.getElementById("zoom") || document.getElementById("zoomImg")) return;
+    const modal = ensureZoomModal();
+    const modalImage = modal.querySelector("img");
+    document.querySelectorAll("img.zoomable, .zoomable img").forEach((image) => {
+      image.addEventListener("click", () => {
+        modalImage.src = image.currentSrc || image.src;
+        modalImage.alt = image.alt || "Zoomed slide image";
+        modal.classList.add("visible");
+      });
+    });
+  }
+
+  function init() {
+    wirePanelControls();
+    wireZoom();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+</body>
+</html>

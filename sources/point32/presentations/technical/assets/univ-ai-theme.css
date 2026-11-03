@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+  --univ-blue-50: #eff3ff;
+  --univ-blue-100: #c6dbef;
+  --univ-blue-200: #9ecae1;
+  --univ-blue-300: #6baed6;
+  --univ-blue-400: #4292c6;
+  --univ-blue-500: #2171b5;
+  --univ-blue-600: #08519c;
+  --univ-blue-700: #084594;
+  --univ-blue-800: #08306b;
+  --univ-ink: #1a2634;
+  --univ-navy: #06111c;
+  --univ-logo-blue: #3b7cd1;
+  --univ-accent: #b16a2c;
+  --univ-accent-dark: #8a501f;
+  --univ-accent-light: #e0a15a;
+  --point32-purple: #4f05a8;
+  --point32-orange: #ff9800;
+  --univ-body-font: "Source Serif 4", Georgia, serif;
+  --univ-heading-font: Bitter, Georgia, serif;
+  --univ-mono-font: "IBM Plex Mono", Consolas, monospace;
+  --univ-logo-url: url("https://univ.ai/assets/bluelogo.svg");
+  --point32-logo-url: url("https://wwwassets.point32health.org/sites/point32health/files/2025-01/Point32Health_Logo_rgb.svg");
+  --univ-collab-photo: url("https://univ.ai/assets/Frame+1000006623.png");
+  --univ-learning-photo: url("https://univ.ai/assets/photo-of-man-holding-a-book-927022.png");
+  --univ-logo-aspect: 177 / 40;
+}
+
+html[data-theme|="univ-ai"] {
+  --font-body: var(--univ-body-font);
+  --font-display: var(--univ-heading-font);
+  --font-mono: var(--univ-mono-font);
+  --radius: 8px;
+  --htmpres-h2-size: 2.6rem;
+  --htmpres-hero-title-size: 4.2rem;
+  --htmpres-h3-size: 1.22rem;
+  --htmpres-body-size: 1.04rem;
+  --htmpres-small-size: 0.74rem;
+  --htmpres-code-size: 0.8rem;
+  --teal: var(--univ-blue-600);
+  --amber: var(--univ-accent);
+  --rose: #c2514a;
+  --indigo: var(--univ-blue-700);
+  --violet: #4758ab;
+  --ds-theme-filter: saturate(0.9) contrast(1.08) brightness(1.03);
+  --ds-bn-filter: grayscale(1) contrast(1.1);
+  --ds-vivid-filter: saturate(1.32) contrast(1.12) brightness(1.02);
+  --ds-noir-filter: grayscale(1) contrast(1.42) brightness(0.9);
+  --ds-chrome-filter: saturate(1.25) contrast(1.16) brightness(1.06);
+  --ds-fade-filter: saturate(0.58) contrast(0.94) brightness(1.12) opacity(0.84);
+  --ds-readable-start: 0.56;
+  --ds-readable-end: 0.2;
+  --univ-logo-bg-opacity: 0.065;
+  --univ-logo-bg-soft-opacity: 0.04;
+  --univ-logo-bg-strong-opacity: 0.12;
+  --univ-logo-bg-hero-opacity: 0.15;
+  --univ-logo-bg-filter: saturate(1.05) contrast(1.02);
+  --univ-logo-bg-image: var(--univ-logo-url);
+  --univ-logo-bg-inset: 0;
+  --univ-logo-bg-position: right 42px top 32px;
+  --univ-logo-bg-size: 208px auto;
+}
+
+html[data-theme="univ-ai"],
+html[data-theme="univ-ai-classic"] {
+  --bg: #f7faff;
+  --paper: #ffffff;
+  --surface: #f4f8fd;
+  --ink: var(--univ-ink);
+  --muted: #4a5c6a;
+  --line: #d8e3ee;
+  --shadow: 0 22px 52px rgba(8, 48, 107, 0.16);
+  --toc-bg: #eff3ff;
+  --toc-ink: #21374c;
+  --toc-hover-border: var(--univ-blue-300);
+  --footer-label: #7893a7;
+  --hero-copy: #30465a;
+  --source-copy: #63798c;
+  --callout-bg: #eff3ff;
+  --callout-ink: #23384c;
+  --code-card-bg: #06111c;
+  --code-card-ink: #e8eff5;
+  --control-border: #c7d7e7;
+  --control-bg: #ffffff;
+  --control-subtle-bg: #eff3ff;
+  --caption-bg: rgba(255, 255, 255, 0.9);
+  --caption-border: rgba(198, 219, 239, 0.72);
+  --caption-ink: #1a2634;
+  --caption-shadow: 0 18px 42px rgba(8, 48, 107, 0.24);
+  --progress-track: #d9e6f3;
+  --overview-bg: rgba(6, 17, 28, 0.82);
+  --overview-card-border: rgba(198, 219, 239, 0.5);
+  --zoom-bg: rgba(4, 12, 20, 0.92);
+  --zoom-close-border: rgba(232, 239, 245, 0.4);
+  --zoom-close-bg: rgba(232, 239, 245, 0.12);
+  --print-border: #d8e3ee;
+  --ds-frame-bg: #ffffff;
+  --ds-frame-border: rgba(8, 48, 107, 0.18);
+  --htmpres-panel-bg: #ffffff;
+  --htmpres-panel-ink: #1a2634;
+  --htmpres-panel-muted: #587084;
+  --htmpres-panel-border: rgba(8, 48, 107, 0.16);
+  --htmpres-code-bg: var(--code-card-bg);
+  --htmpres-code-ink: var(--code-card-ink);
+  --htmpres-code-border: rgba(107, 174, 214, 0.38);
+  --htmpres-code-token-alert: #fca5a5;
+  --htmpres-code-token-keyword: #9ecae1;
+  --htmpres-code-token-type: #c6dbef;
+  --htmpres-code-token-string: #b7e4c7;
+  --htmpres-code-token-number: #f6c47a;
+  --htmpres-code-token-comment: #8fa6b9;
+  --htmpres-code-token-function: #f0b3d2;
+  --htmpres-code-token-base: #f8fbff;
+  --htmpres-code-line-number: rgba(198, 219, 239, 0.52);
+  --htmpres-code-highlight-bg: rgba(107, 174, 214, 0.22);
+  --htmpres-code-highlight-bar: rgba(107, 174, 214, 0.9);
+  --htmpres-fragment-highlight-bg: rgba(8, 81, 156, 0.12);
+  --htmpres-fragment-highlight-bar: rgba(8, 81, 156, 0.7);
+}
+
+html[data-theme="univ-ai-lab"] {
+  --bg: var(--univ-navy);
+  --paper: #0d1f30;
+  --surface: #142a3f;
+  --ink: #e8eff5;
+  --muted: #a8bfcf;
+  --line: #1e3a52;
+  --teal: var(--univ-blue-300);
+  --amber: var(--univ-accent-light);
+  --shadow: 0 26px 58px rgba(0, 0, 0, 0.36);
+  --toc-bg: #081827;
+  --toc-ink: #d7e6f1;
+  --toc-hover-border: var(--univ-blue-400);
+  --footer-label: #7893a7;
+  --hero-copy: #cfe0ee;
+  --source-copy: #89a6ba;
+  --callout-bg: rgba(8, 69, 148, 0.34);
+  --callout-ink: #dcebf5;
+  --code-card-bg: #06111c;
+  --code-card-ink: #e8eff5;
+  --control-border: #254762;
+  --control-bg: #142a3f;
+  --control-subtle-bg: #0a1824;
+  --caption-bg: rgba(13, 31, 48, 0.86);
+  --caption-border: rgba(107, 174, 214, 0.36);
+  --caption-ink: #e8eff5;
+  --caption-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+  --progress-track: #163047;
+  --overview-bg: rgba(1, 6, 12, 0.9);
+  --overview-card-border: rgba(107, 174, 214, 0.32);
+  --zoom-bg: rgba(1, 6, 12, 0.94);
+  --zoom-close-border: rgba(232, 239, 245, 0.38);
+  --zoom-close-bg: rgba(232, 239, 245, 0.1);
+  --print-border: #1e3a52;
+  --ds-frame-bg: #0a1824;
+  --ds-frame-border: rgba(107, 174, 214, 0.28);
+  --htmpres-panel-bg: #10263a;
+  --htmpres-panel-ink: #e8eff5;
+  --htmpres-panel-muted: #9fb8cb;
+  --htmpres-panel-border: rgba(107, 174, 214, 0.26);
+  --htmpres-code-bg: var(--code-card-bg);
+  --htmpres-code-ink: var(--code-card-ink);
+  --htmpres-code-border: rgba(107, 174, 214, 0.3);
+  --htmpres-code-token-alert: #fca5a5;
+  --htmpres-code-token-keyword: #9ecae1;
+  --htmpres-code-token-type: #c6dbef;
+  --htmpres-code-token-string: #b7e4c7;
+  --htmpres-code-token-number: #f6c47a;
+  --htmpres-code-token-comment: #7f99ad;
+  --htmpres-code-token-function: #f0b3d2;
+  --htmpres-code-token-base: #f8fbff;
+  --htmpres-code-line-number: rgba(198, 219, 239, 0.45);
+  --htmpres-code-highlight-bg: rgba(107, 174, 214, 0.2);
+  --htmpres-code-highlight-bar: rgba(107, 174, 214, 0.92);
+  --htmpres-fragment-highlight-bg: rgba(107, 174, 214, 0.14);
+  --htmpres-fragment-highlight-bar: rgba(107, 174, 214, 0.72);
+  --univ-logo-bg-opacity: 0.105;
+  --univ-logo-bg-soft-opacity: 0.065;
+  --univ-logo-bg-strong-opacity: 0.18;
+  --univ-logo-bg-hero-opacity: 0.18;
+  --univ-logo-bg-filter: saturate(1.18) brightness(1.1);
+}
+
+html[data-theme="univ-ai-paper"] {
+  --bg: #f9fbfd;
+  --paper: #ffffff;
+  --surface: #fbfdff;
+  --ink: #172334;
+  --muted: #425568;
+  --line: #dfe8f1;
+  --teal: var(--univ-blue-600);
+  --amber: #9a5d28;
+  --shadow: 0 16px 36px rgba(20, 42, 63, 0.14);
+  --toc-bg: #f5f8fb;
+  --toc-ink: #24394d;
+  --toc-hover-border: #9ecae1;
+  --footer-label: #8094a6;
+  --hero-copy: #344a5e;
+  --source-copy: #667b8d;
+  --callout-bg: #f4f8fd;
+  --callout-ink: #263b4f;
+  --code-card-bg: #0a1824;
+  --code-card-ink: #edf6ff;
+  --control-border: #ccd9e4;
+  --control-bg: #ffffff;
+  --control-subtle-bg: #f2f6fa;
+  --caption-bg: rgba(255, 255, 255, 0.92);
+  --caption-border: rgba(216, 227, 238, 0.86);
+  --caption-ink: #1d2d3f;
+  --caption-shadow: 0 14px 32px rgba(20, 42, 63, 0.18);
+  --progress-track: #e1ebf4;
+  --overview-bg: rgba(23, 35, 52, 0.82);
+  --overview-card-border: rgba(255, 255, 255, 0.28);
+  --zoom-bg: rgba(4, 12, 20, 0.9);
+  --zoom-close-border: rgba(232, 239, 245, 0.4);
+  --zoom-close-bg: rgba(232, 239, 245, 0.12);
+  --print-border: #dfe8f1;
+  --ds-frame-bg: #ffffff;
+  --ds-frame-border: rgba(20, 42, 63, 0.16);
+  --htmpres-panel-bg: #ffffff;
+  --htmpres-panel-ink: #172334;
+  --htmpres-panel-muted: #617689;
+  --htmpres-panel-border: rgba(20, 42, 63, 0.15);
+  --htmpres-code-bg: var(--code-card-bg);
+  --htmpres-code-ink: var(--code-card-ink);
+  --htmpres-code-border: rgba(66, 146, 198, 0.36);
+  --htmpres-code-token-alert: #fca5a5;
+  --htmpres-code-token-keyword: #9ecae1;
+  --htmpres-code-token-type: #c6dbef;
+  --htmpres-code-token-string: #b7e4c7;
+  --htmpres-code-token-number: #f6c47a;
+  --htmpres-code-token-comment: #879bab;
+  --htmpres-code-token-function: #f0b3d2;
+  --htmpres-code-token-base: #f8fbff;
+  --htmpres-code-line-number: rgba(198, 219, 239, 0.5);
+  --htmpres-code-highlight-bg: rgba(66, 146, 198, 0.18);
+  --htmpres-code-highlight-bar: rgba(66, 146, 198, 0.86);
+  --htmpres-fragment-highlight-bg: rgba(66, 146, 198, 0.11);
+  --htmpres-fragment-highlight-bar: rgba(66, 146, 198, 0.68);
+  --univ-logo-bg-opacity: 0.045;
+  --univ-logo-bg-soft-opacity: 0.03;
+  --univ-logo-bg-strong-opacity: 0.09;
+  --univ-logo-bg-hero-opacity: 0.13;
+  --univ-logo-bg-size: 194px auto;
+}
+
+html[data-theme="univ-ai-p32-consulting"] {
+  --bg: #f7faff;
+  --paper: #ffffff;
+  --surface: #f4f8fd;
+  --ink: var(--univ-ink);
+  --muted: #4a5c6a;
+  --line: #d8e3ee;
+  --shadow: 0 22px 52px rgba(8, 48, 107, 0.16);
+  --toc-bg: #eff3ff;
+  --toc-ink: #21374c;
+  --toc-hover-border: var(--univ-blue-300);
+  --footer-label: #7893a7;
+  --hero-copy: #30465a;
+  --source-copy: #63798c;
+  --callout-bg: #eff3ff;
+  --callout-ink: #23384c;
+  --code-card-bg: #06111c;
+  --code-card-ink: #e8eff5;
+  --control-border: #c7d7e7;
+  --control-bg: #ffffff;
+  --control-subtle-bg: #eff3ff;
+  --caption-bg: rgba(255, 255, 255, 0.9);
+  --caption-border: rgba(198, 219, 239, 0.72);
+  --caption-ink: #1a2634;
+  --caption-shadow: 0 18px 42px rgba(8, 48, 107, 0.24);
+  --progress-track: #d9e6f3;
+  --overview-bg: rgba(6, 17, 28, 0.82);
+  --overview-card-border: rgba(198, 219, 239, 0.5);
+  --zoom-bg: rgba(4, 12, 20, 0.92);
+  --zoom-close-border: rgba(232, 239, 245, 0.4);
+  --zoom-close-bg: rgba(232, 239, 245, 0.12);
+  --print-border: #d8e3ee;
+  --ds-frame-bg: #ffffff;
+  --ds-frame-border: rgba(8, 48, 107, 0.18);
+  --htmpres-panel-bg: #ffffff;
+  --htmpres-panel-ink: #1a2634;
+  --htmpres-panel-muted: #587084;
+  --htmpres-panel-border: rgba(8, 48, 107, 0.16);
+  --htmpres-code-bg: var(--code-card-bg);
+  --htmpres-code-ink: var(--code-card-ink);
+  --htmpres-code-border: rgba(107, 174, 214, 0.38);
+  --htmpres-code-token-alert: #fca5a5;
+  --htmpres-code-token-keyword: #9ecae1;
+  --htmpres-code-token-type: #c6dbef;
+  --htmpres-code-token-string: #b7e4c7;
+  --htmpres-code-token-number: #f6c47a;
+  --htmpres-code-token-comment: #8fa6b9;
+  --htmpres-code-token-function: #f0b3d2;
+  --htmpres-code-token-base: #f8fbff;
+  --htmpres-code-line-number: rgba(198, 219, 239, 0.52);
+  --htmpres-code-highlight-bg: rgba(107, 174, 214, 0.22);
+  --htmpres-code-highlight-bar: rgba(107, 174, 214, 0.9);
+  --htmpres-fragment-highlight-bg: rgba(8, 81, 156, 0.12);
+  --htmpres-fragment-highlight-bar: rgba(8, 81, 156, 0.7);
+  --univ-logo-bg-opacity: 0.058;
+  --univ-logo-bg-soft-opacity: 0.035;
+  --univ-logo-bg-strong-opacity: 0.105;
+  --univ-logo-bg-hero-opacity: 0.14;
+  --univ-logo-bg-image: var(--univ-logo-url), var(--point32-logo-url);
+  --univ-logo-bg-position: right 42px top 32px, left 48px bottom 34px;
+  --univ-logo-bg-size: 208px auto, 224px auto;
+}
+
+html[data-theme|="univ-ai"] .slide {
+  background:
+    linear-gradient(180deg, rgba(239, 243, 255, 0.62), rgba(255, 255, 255, 0) 52%),
+    var(--paper);
+  isolation: isolate;
+}
+
+html[data-theme="univ-ai-lab"] .slide {
+  background:
+    linear-gradient(180deg, rgba(8, 69, 148, 0.18), rgba(6, 17, 28, 0) 58%),
+    var(--paper);
+}
+
+html[data-theme="univ-ai-paper"] .slide {
+  background:
+    linear-gradient(90deg, rgba(239, 243, 255, 0.76), rgba(255, 255, 255, 0) 34%),
+    var(--paper);
+}
+
+html[data-theme="univ-ai-p32-consulting"] .slide {
+  background:
+    linear-gradient(180deg, rgba(239, 243, 255, 0.62), rgba(255, 255, 255, 0) 52%),
+    var(--paper);
+}
+
+html[data-theme|="univ-ai"] .slide::before {
+  background-image: var(--univ-logo-bg-image);
+  background-position: var(--univ-logo-bg-position);
+  background-repeat: no-repeat;
+  background-size: var(--univ-logo-bg-size);
+  content: "";
+  filter: var(--univ-logo-bg-filter);
+  inset: var(--univ-logo-bg-inset);
+  opacity: var(--univ-logo-bg-opacity);
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
+html[data-theme|="univ-ai"] .slide::after {
+  z-index: 2;
+}
+
+html[data-theme|="univ-ai"] .slide > .source-line.source-line {
+  bottom: var(--univ-source-line-bottom, 27px);
+  font-size: var(--htmpres-small-size, 0.74rem);
+  left: var(--univ-source-line-left, 58px);
+  position: absolute;
+  right: var(--univ-source-line-right, 128px);
+  z-index: 2;
+}
+
+html[data-theme|="univ-ai"] .slide > .source-line.source-line p {
+  font-size: inherit;
+  line-height: 1.25;
+  margin: 0;
+}
+
+html[data-theme|="univ-ai"] .slide > .semantic-summary.semantic-summary {
+  bottom: var(--univ-summary-bottom, 58px);
+  left: var(--univ-summary-left, 58px);
+  position: absolute;
+  right: var(--univ-summary-right, 58px);
+  z-index: 2;
+}
+
+html[data-theme|="univ-ai"] .slide.no-logo::before,
+html[data-theme|="univ-ai"] .slide.no-logo-bg::before,
+html[data-theme|="univ-ai"] .slide.logo-off::before,
+html[data-theme|="univ-ai"] .slide.univ-ai-logo-off::before {
+  display: none;
+}
+
+html[data-theme|="univ-ai"] .slide.logo-bg-soft::before {
+  opacity: var(--univ-logo-bg-soft-opacity);
+}
+
+html[data-theme|="univ-ai"] .slide.logo-bg-strong::before {
+  opacity: var(--univ-logo-bg-strong-opacity);
+}
+
+html[data-theme|="univ-ai"] .section-divider::before,
+html[data-theme|="univ-ai"] .univ-ai-photo::before {
+  opacity: var(--univ-logo-bg-hero-opacity);
+}
+
+html[data-theme|="univ-ai"] .section-divider,
+html[data-theme|="univ-ai"] .univ-ai-photo {
+  background:
+    linear-gradient(115deg, rgba(6, 17, 28, 0.84), rgba(8, 69, 148, 0.6) 54%, rgba(6, 17, 28, 0.42)),
+    linear-gradient(180deg, rgba(6, 17, 28, 0.16), rgba(6, 17, 28, 0.72)),
+    var(--univ-collab-photo);
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+}
+
+html[data-theme|="univ-ai"] .section-divider h2,
+html[data-theme|="univ-ai"] .univ-ai-photo h2 {
+  color: #ffffff;
+  max-width: 10.5ch;
+}
+
+html[data-theme|="univ-ai"] .section-divider p,
+html[data-theme|="univ-ai"] .univ-ai-photo p,
+html[data-theme|="univ-ai"] .univ-ai-photo .hero-subtitle {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+html[data-theme|="univ-ai"] .univ-ai-learning {
+  background:
+    linear-gradient(100deg, rgba(6, 17, 28, 0.82), rgba(8, 81, 156, 0.44) 58%, rgba(6, 17, 28, 0.18)),
+    var(--univ-learning-photo);
+  background-position: center;
+  background-size: cover;
+}
+
+html[data-theme|="univ-ai"] .eyebrow,
+html[data-theme|="univ-ai"] .focus-panel h3 {
+  color: var(--teal);
+}
+
+html[data-theme|="univ-ai"] .callout {
+  border-left-color: var(--teal);
+}
+
+html[data-theme|="univ-ai"] .metric-card:nth-of-type(2n) {
+  border-top-color: var(--univ-blue-400);
+}
+
+html[data-theme|="univ-ai"] .metric-card:nth-of-type(3n) {
+  border-top-color: var(--amber);
+}
+
+html[data-theme|="univ-ai"] .card,
+html[data-theme|="univ-ai"] .focus-panel,
+html[data-theme|="univ-ai"] .status-card,
+html[data-theme|="univ-ai"] .diagram-frame {
+  box-shadow: 0 10px 24px rgba(8, 48, 107, 0.08);
+}
+
+html[data-theme="univ-ai-lab"] .card,
+html[data-theme="univ-ai-lab"] .focus-panel,
+html[data-theme="univ-ai-lab"] .status-card,
+html[data-theme="univ-ai-lab"] .diagram-frame {
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme|="univ-ai"] .progress span {
+  background: linear-gradient(90deg, var(--univ-blue-300), var(--univ-blue-600), var(--amber));
+}
+
+.univ-ai-ramp {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.univ-ai-ramp span {
+  border-radius: 4px;
+  min-height: 18px;
+}
+
+.univ-ai-ramp span:nth-child(1) { background: var(--univ-blue-50); }
+.univ-ai-ramp span:nth-child(2) { background: var(--univ-blue-100); }
+.univ-ai-ramp span:nth-child(3) { background: var(--univ-blue-200); }
+.univ-ai-ramp span:nth-child(4) { background: var(--univ-blue-300); }
+.univ-ai-ramp span:nth-child(5) { background: var(--univ-blue-400); }
+.univ-ai-ramp span:nth-child(6) { background: var(--univ-blue-500); }
+.univ-ai-ramp span:nth-child(7) { background: var(--univ-blue-600); }
+.univ-ai-ramp span:nth-child(8) { background: var(--univ-blue-800); }
+
+@media (max-width: 980px) {
+  html[data-theme|="univ-ai"] .slide > .source-line.source-line,
+  html[data-theme|="univ-ai"] .slide > .semantic-summary.semantic-summary {
+    display: block;
+    margin-top: 16px;
+    position: static;
+    z-index: auto;
+  }
+}

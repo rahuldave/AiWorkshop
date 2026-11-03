@@ -1,0 +1,3261 @@
+<!doctype html>
+<html lang="en" data-theme="univ-ai-p32-consulting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Point32Health AI Agent Platform Executive Case - Presenter</title>
+  <style>
+@import url("assets/univ-ai-theme.css");
+
+:root {
+      --bg: #f4f7f4;
+      --paper: #ffffff;
+      --ink: #162127;
+      --muted: #5c6970;
+      --line: #d9e1dc;
+      --teal: #0f7773;
+      --green: #5f8f3b;
+      --amber: #bd7b18;
+      --rose: #ad4455;
+      --violet: #6159a8;
+      --profile: #6159a8;
+      --profile-bg: #f1f0fa;
+      --profile-ink: #413a82;
+      --catalog: #0f7773;
+      --catalog-bg: #edf7f6;
+      --catalog-ink: #07514e;
+      --runtime: #bd7b18;
+      --runtime-bg: #fff5e3;
+      --runtime-ink: #71460b;
+      --evidence: #9b2f5f;
+      --evidence-bg: #fff0f5;
+      --evidence-ink: #68213e;
+      --shadow: 0 18px 48px rgba(22, 33, 39, 0.16);
+      --radius: 8px;
+      --slide-w: 1280px;
+      --slide-h: 720px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { overflow: hidden; }
+    button { font: inherit; }
+    .deck-shell { height: 100vh; height: 100dvh; display: grid; grid-template-columns: 232px 1fr; grid-template-rows: minmax(0, 1fr) 58px; overflow: hidden; }
+    .toc { grid-row: 1 / span 2; background: #eaf0ec; border-right: 1px solid var(--line); padding: 18px 14px; overflow: auto; }
+    .toc h1 { margin: 0 0 10px; font-size: 0.94rem; line-height: 1.22; letter-spacing: 0; }
+    .toc .hint { margin: 0 0 14px; color: var(--muted); font-size: 0.76rem; line-height: 1.42; }
+    .toc-list { display: grid; gap: 6px; }
+    .toc button { width: 100%; text-align: left; border: 1px solid transparent; background: transparent; color: #2c383e; border-radius: 6px; padding: 8px 9px; cursor: pointer; font-size: 0.76rem; line-height: 1.25; }
+    .toc button:hover, .toc button:focus-visible { outline: none; border-color: #b9c7bf; background: #fff; }
+    .toc button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .toc small { display: block; margin-bottom: 2px; color: inherit; opacity: .62; text-transform: uppercase; letter-spacing: .08em; font-size: .58rem; }
+
+    .stage-wrap { position: relative; display: grid; align-items: start; justify-items: center; min-width: 0; min-height: 0; padding: 14px 26px 8px; overflow: hidden; }
+    .slide-fit { width: var(--slide-w); height: var(--slide-h); position: relative; }
+    .slides { width: var(--slide-w); height: var(--slide-h); transform: scale(var(--deck-scale, 1)); transform-origin: top left; position: relative; border-radius: var(--radius); box-shadow: var(--shadow); background: var(--paper); overflow: hidden; }
+    .slide { position: absolute; inset: 0; display: none; padding: 38px 50px; background: var(--paper); overflow: hidden; }
+    .slide.active { display: block; }
+    .slide:has(> .source-line).active { display: flex; flex-direction: column; }
+    .slide.diagram-slide.active { display: grid; grid-template-rows: minmax(0, 1fr); }
+    .slide::after { content: attr(data-section); position: absolute; right: 34px; bottom: 27px; color: #7b878e; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+    .eyebrow { display: inline-block; margin: 0 0 13px; color: var(--teal); font-size: .78rem; font-weight: 760; letter-spacing: .1em; text-transform: uppercase; }
+    .slide > p:has(> .eyebrow) { margin: 0; }
+    h2 { margin: 0; max-width: 1120px; font-size: 2.08rem; line-height: 1.06; letter-spacing: 0; }
+    h3 { margin: 0 0 9px; font-size: 1.05rem; line-height: 1.2; letter-spacing: 0; }
+    p { color: var(--muted); line-height: 1.4; font-size: .92rem; }
+    code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .hero-title { margin-top: 20px; max-width: 980px; font-size: 2.95rem; line-height: 1.02; }
+    .hero-subtitle { margin-top: 18px; max-width: 850px; color: #35444b; font-size: 1.1rem; line-height: 1.38; }
+    .why-line { max-width: 1040px; margin: 18px 0 0; color: #203039; font-size: 1.24rem; line-height: 1.32; }
+    .why-line strong { font-weight: 780; }
+    .lead { max-width: 870px; color: #344249; font-size: 1.05rem; line-height: 1.4; }
+    .lead p, .hero-subtitle p, .why-line p, .callout p, .mini-note p, .diagram-caption p, .promotion-rule p { margin: 0; color: inherit; font-size: inherit; line-height: inherit; }
+    .platform-name { color: var(--teal); font-weight: 840; }
+    .source-line { margin-top: auto; padding-top: 14px; color: #6d7980; font-size: .72rem; line-height: 1.25; }
+    .source-line p { margin: 0; color: inherit; font-size: inherit; line-height: inherit; }
+    .source-line code { color: #405058; }
+    .semantic-summary { align-self: flex-end; width: min(760px, 100%); margin-top: 14px; border: 1px solid #b9c7bf; border-left: 5px solid #aebbb4; border-radius: 8px; background: #f8faf8; color: #2e3c42; padding: 10px 14px; text-align: center; font-size: .82rem; font-weight: 680; line-height: 1.25; }
+    .semantic-summary p { margin: 0; color: inherit; font-size: inherit; line-height: inherit; }
+    .section-divider { background: linear-gradient(135deg, #ffffff 0%, #eef7f6 48%, #f8faf8 100%); text-align: center; }
+    .slide.section-divider.active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .section-divider h2 { margin: 0 auto; max-width: 1040px; font-size: 3.25rem; line-height: 1.02; }
+    .section-divider .lead { margin: 24px auto 0; max-width: 870px; font-size: 1.18rem; }
+    .section-divider .chip-row { justify-content: center; margin: 34px auto 0; max-width: 900px; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; }
+    .two-col.wide-left { grid-template-columns: 1.16fr .84fr; }
+    .two-col.wide-right { grid-template-columns: .84fr 1.16fr; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; margin-top: 22px; }
+    .three-col.compact { gap: 13px; margin-top: 16px; }
+    .three-col.compact .card { min-height: 78px; padding: 12px 13px; }
+    .three-col.compact .card strong { margin-bottom: 5px; font-size: .96rem; }
+    .three-col.compact .card p { font-size: .78rem; line-height: 1.28; }
+    .four-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 20px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 16px 17px; background: #fbfcfb; min-height: 108px; }
+    .card strong { display: block; margin-bottom: 8px; color: var(--ink); font-size: 1.05rem; }
+    .card p { margin: 0; font-size: .9rem; }
+    .metric-card { border-top: 5px solid var(--accent, var(--teal)); }
+    .callout { margin-top: 22px; border-left: 5px solid var(--teal); padding: 14px 18px; background: #eef7f6; color: #274045; font-size: 1.02rem; line-height: 1.38; }
+    .callout.neutral { border-left-color: #aebbb4; background: #f8faf8; color: #2e3c42; }
+    .story-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 22px; margin-top: 20px; align-items: stretch; }
+    .story-panel { border: 1px solid var(--line); border-top: 6px solid var(--accent, var(--teal)); border-radius: 8px; background: linear-gradient(180deg, var(--accent-bg, #eef7f6) 0%, #ffffff 88%); padding: 18px 19px; }
+    .story-panel strong { display: block; color: var(--ink); font-size: 1.1rem; line-height: 1.16; margin-bottom: 9px; }
+    .story-panel p { margin: 0; font-size: .92rem; line-height: 1.38; }
+    .story-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .story-steps div { border-left: 5px solid var(--accent, var(--teal)); background: var(--accent-bg, #f7faf8); border-radius: 8px; padding: 13px 14px; min-height: 116px; }
+    .story-steps strong { display: block; color: var(--accent-ink, var(--ink)); font-size: .96rem; line-height: 1.18; margin-bottom: 7px; }
+    .story-steps span { color: #45545b; font-size: .8rem; line-height: 1.3; }
+    .story-stat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 18px; }
+    .story-stat { border: 1px solid var(--line); border-top: 5px solid var(--accent, var(--teal)); border-radius: 8px; background: #fbfcfb; padding: 13px 12px; min-height: 102px; }
+    .story-stat b { display: block; color: var(--accent, var(--teal)); font-size: 1.62rem; line-height: 1; margin-bottom: 8px; }
+    .story-stat span { color: var(--muted); font-size: .76rem; line-height: 1.25; }
+    .story-bridge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; margin-top: 18px; }
+    .story-bridge div { border-left: 5px solid var(--accent); background: var(--accent-bg); color: var(--accent-ink); border-radius: 8px; padding: 11px 12px; min-height: 76px; font-size: .78rem; line-height: 1.26; }
+    .story-bridge strong { display: block; color: var(--accent-ink); font-size: .88rem; margin-bottom: 5px; }
+    .mini-note { color: var(--muted); font-size: .82rem; line-height: 1.35; }
+    .diagram-frame { margin-top: 18px; height: 360px; border: 1px solid var(--line); border-radius: 8px; background: #fbfcfb; display: grid; place-items: center; overflow: hidden; }
+    .diagram-frame figure { width: 100%; height: 100%; margin: 0; display: grid; place-items: center; overflow: hidden; }
+    .diagram-frame figcaption { display: none; }
+    .diagram-frame img { display: block; width: 100%; height: 100%; object-fit: contain; cursor: zoom-in; }
+    .diagram-frame.tall { height: 335px; }
+    .diagram-frame.strip { height: 200px; }
+    .diagram-frame.security-strip { height: 185px; }
+    .diagram-frame.no-border { height: auto; border: none; background: transparent; place-items: stretch; overflow: visible; }
+    .diagram-caption { margin: 8px 0 0; color: #59676f; font-size: .8rem; }
+    .diagram-slide { padding: 18px 28px 26px; }
+    .diagram-slide figure { width: 100%; height: 100%; min-width: 0; min-height: 0; margin: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .slide.diagram-slide img.zoomable { display: block; width: auto; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; }
+    .diagram-slide figcaption { display: none; }
+    .diagram-slide::after { bottom: 12px; }
+    .four-col.compact { gap: 14px; margin-top: 14px; }
+    .four-col.compact .card { min-height: 78px; padding: 12px 13px; }
+    .four-col.compact .card strong { margin-bottom: 5px; font-size: .98rem; }
+    .four-col.compact .card p { font-size: .78rem; line-height: 1.28; }
+
+    .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 30px; align-items: stretch; }
+    .flow div { border: 1px solid var(--line); background: #fbfcfb; border-radius: 8px; padding: 16px 14px; min-height: 112px; }
+    .flow strong { display: block; margin-bottom: 7px; color: var(--ink); font-size: .98rem; }
+    .flow span { color: var(--muted); font-size: .86rem; line-height: 1.34; }
+    .timeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 28px; }
+    .timeline div { border-top: 5px solid var(--accent, var(--teal)); border-radius: 8px; background: #fbfcfb; border-left: 1px solid var(--line); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 13px; min-height: 126px; }
+    .timeline strong { display: block; margin-bottom: 7px; font-size: .96rem; }
+    .timeline span { color: var(--muted); font-size: .82rem; line-height: 1.33; }
+    .release-ladder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 26px; align-items: stretch; }
+    .release-stage { border: 1px solid var(--line); border-top: 6px solid var(--accent, var(--teal)); border-radius: 8px; background: #fbfcfb; padding: 16px 17px; min-height: 186px; }
+    .release-stage h3 { margin: 0 0 9px; font-size: 1.08rem; }
+    .release-stage p { margin: 0; font-size: .84rem; line-height: 1.34; }
+    .release-stage code { display: inline-block; margin-top: 12px; color: #34434a; background: #eef4f0; border: 1px solid #d7e1de; border-radius: 5px; padding: 5px 7px; font-size: .7rem; }
+    .promotion-rule { margin-top: 22px; border: 1px solid #b9c7bf; border-left: 5px solid #aebbb4; border-radius: 8px; background: #f8faf8; color: #2e3c42; padding: 13px 16px; font-size: .91rem; line-height: 1.35; }
+    .matrix { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: .78rem; }
+    .matrix th, .matrix td { border-bottom: 1px solid var(--line); padding: 7px 8px; text-align: left; vertical-align: top; }
+    .matrix th { color: #2e3c42; background: #eef4f0; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
+    .u-dense { padding-top: 34px; }
+    .u-tight { padding-top: 28px; }
+    .u-dense .lead { max-width: 1060px; margin-top: 4px; font-size: .95rem; line-height: 1.32; }
+    .u-dense .matrix { margin-top: 14px; font-size: .73rem; }
+    .u-dense .matrix th, .u-dense .matrix td { padding: 6px 8px; }
+    .u-dense .callout { margin-top: 12px; padding: 9px 13px; font-size: .82rem; line-height: 1.3; }
+    .u-tight .lead { max-width: 1060px; margin-top: 2px; font-size: .86rem; line-height: 1.22; }
+    .u-tight .profile-fragment-grid { gap: 9px; margin-top: 8px; }
+    .u-tight .profile-fragment { padding: 7px 9px; }
+    .u-tight .profile-fragment strong { font-size: .76rem; }
+    .u-tight .profile-fragment span { margin-bottom: 4px; font-size: .6rem; }
+    .u-tight .profile-fragment pre { padding: 6px 7px; font-size: .46rem; line-height: 1.1; }
+    .u-tight .callout { margin-top: 8px; padding: 7px 10px; font-size: .72rem; line-height: 1.22; }
+    .choice-table { table-layout: fixed; margin-top: 16px; font-size: .62rem; line-height: 1.16; }
+    .choice-table th:nth-child(1) { width: 26%; }
+    .choice-table th:nth-child(2) { width: 62%; }
+    .choice-table th:nth-child(3) { width: 12%; text-align: center; }
+    .choice-table td { color: #334249; padding: 6px 7px; }
+    .choice-table td:first-child { color: var(--ink); font-weight: 720; }
+    .choice-table td:last-child { text-align: center; }
+    .yes, .no { display: inline-grid; min-width: 42px; min-height: 22px; place-items: center; border-radius: 999px; font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
+    .yes { border: 1px solid var(--catalog); background: var(--catalog-bg); color: var(--catalog-ink); }
+    .no { border: 1px solid var(--rose); background: #fbecf0; color: #79313c; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chip { border: 1px solid #bac9c0; background: #f7faf8; color: #26373e; border-radius: 999px; padding: 7px 11px; font-size: .78rem; }
+    .theme-profile { --accent: var(--profile); --accent-bg: var(--profile-bg); --accent-ink: var(--profile-ink); }
+    .theme-catalog { --accent: var(--catalog); --accent-bg: var(--catalog-bg); --accent-ink: var(--catalog-ink); }
+    .theme-runtime { --accent: var(--runtime); --accent-bg: var(--runtime-bg); --accent-ink: var(--runtime-ink); }
+    .theme-evidence { --accent: var(--evidence); --accent-bg: var(--evidence-bg); --accent-ink: var(--evidence-ink); }
+    .chip.theme-profile, .chip.theme-catalog, .chip.theme-runtime, .chip.theme-evidence { border-color: var(--accent); background: var(--accent-bg); color: var(--accent-ink); font-weight: 720; }
+    .card.theme-profile, .card.theme-catalog, .card.theme-runtime, .card.theme-evidence, .flow div.theme-profile, .flow div.theme-catalog, .flow div.theme-runtime, .flow div.theme-evidence, .timeline div.theme-profile, .timeline div.theme-catalog, .timeline div.theme-runtime, .timeline div.theme-evidence, .aside-panel.theme-profile, .aside-panel.theme-catalog, .aside-panel.theme-runtime, .aside-panel.theme-evidence, .kpi.theme-profile, .kpi.theme-catalog, .kpi.theme-runtime, .kpi.theme-evidence { border-top: 5px solid var(--accent); background: linear-gradient(180deg, var(--accent-bg) 0%, #ffffff 88%); }
+    .callout.theme-profile, .callout.theme-catalog, .callout.theme-runtime, .callout.theme-evidence { border-left-color: var(--accent); background: var(--accent-bg); color: var(--accent-ink); }
+    .core-cycle-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 30px; align-items: center; margin-top: 18px; }
+    .core-cycle { position: relative; height: 430px; }
+    .core-cycle::before { content: ""; position: absolute; left: 50%; top: 50%; width: 374px; height: 374px; transform: translate(-50%, -50%); border-radius: 50%; background: conic-gradient(from -45deg, var(--profile) 0 23%, transparent 23% 27%, var(--catalog) 27% 48%, transparent 48% 52%, var(--runtime) 52% 73%, transparent 73% 77%, var(--evidence) 77% 98%, transparent 98% 100%); -webkit-mask: radial-gradient(farthest-side, transparent 66%, #000 68%); mask: radial-gradient(farthest-side, transparent 66%, #000 68%); opacity: .92; }
+    .cycle-center { position: absolute; left: 50%; top: 50%; width: 210px; min-height: 106px; transform: translate(-50%, -50%); display: grid; place-items: center; text-align: center; border: 1px solid var(--line); border-radius: 999px; background: #fff; padding: 16px; box-shadow: 0 10px 28px rgba(22, 33, 39, .1); z-index: 2; }
+    .cycle-center strong { display: block; color: var(--ink); font-size: 1.02rem; line-height: 1.12; }
+    .cycle-center span { display: block; margin-top: 7px; color: var(--muted); font-size: .78rem; line-height: 1.25; }
+    .cycle-node { position: absolute; z-index: 3; width: 250px; min-height: 124px; border: 1px solid var(--line); border-top: 8px solid var(--accent); border-radius: 8px; background: linear-gradient(180deg, var(--accent-bg) 0%, #ffffff 86%); padding: 13px 15px 14px; box-shadow: 0 12px 28px rgba(22, 33, 39, .1); }
+    .cycle-node.profile { top: 0; left: 50%; transform: translateX(-50%); }
+    .cycle-node.catalog { right: 0; top: 144px; }
+    .cycle-node.runtime { left: 50%; bottom: 0; transform: translateX(-50%); }
+    .cycle-node.evidence { left: 0; top: 144px; }
+    .cycle-node b { display: inline-grid; place-items: center; width: 30px; height: 30px; margin-bottom: 7px; border-radius: 50%; background: var(--accent); color: #fff; font-size: .82rem; }
+    .cycle-node strong { display: block; color: var(--ink); font-size: 1.22rem; line-height: 1.12; }
+    .cycle-node span { display: block; margin-top: 7px; color: #46565d; font-size: .76rem; line-height: 1.25; }
+    .cycle-arrow { position: absolute; z-index: 4; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1px solid var(--accent); border-radius: 50%; background: var(--accent-bg); color: var(--accent-ink); font-size: .72rem; font-weight: 780; box-shadow: 0 7px 18px rgba(22, 33, 39, .1); }
+    .cycle-arrow span { display: none; }
+    .cycle-arrow b { color: var(--accent); font-size: 1.18rem; line-height: 1; }
+    .cycle-arrow.pc { right: 225px; top: 96px; transform: rotate(28deg); }
+    .cycle-arrow.cr { right: 224px; bottom: 94px; transform: rotate(-28deg); }
+    .cycle-arrow.re { left: 224px; bottom: 94px; transform: rotate(28deg); }
+    .cycle-arrow.ep { left: 225px; top: 96px; transform: rotate(-28deg); }
+    .mini-cycle-list { display: grid; gap: 10px; margin-top: 14px; }
+    .mini-cycle-list div { border-left: 5px solid var(--accent); background: var(--accent-bg); border-radius: 8px; padding: 10px 12px; color: var(--accent-ink); font-size: .84rem; line-height: 1.3; }
+    .kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+    .kpi { border-radius: 8px; padding: 16px; background: #f6f9f8; border: 1px solid var(--line); }
+    .kpi b { display: block; color: var(--teal); font-size: 2rem; line-height: 1; }
+    .kpi span { color: var(--muted); font-size: .88rem; }
+    .code-card { margin-top: 16px; border-radius: 8px; background: #142127; color: #e8f2ef; padding: 14px 16px; overflow: auto; max-height: 370px; border: 1px solid #31454d; }
+    .code-card pre { margin: 0; font-size: .72rem; line-height: 1.28; white-space: pre; }
+    .code-card.small pre { font-size: .68rem; }
+    .code-card.url-card pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .64rem; line-height: 1.34; }
+    .url-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+    .url-pair .code-card { margin-top: 0; }
+    .code-label { display: block; margin-bottom: 8px; color: #9fcbc8; font-size: .68rem; font-weight: 760; letter-spacing: .08em; text-transform: uppercase; }
+    .code-card mark { background: rgba(90, 183, 176, .28); color: inherit; padding: 0 2px; border-radius: 3px; }
+    .aside-panel { border-radius: 8px; background: #f8faf8; border: 1px solid var(--line); padding: 18px; }
+    .profile-fragment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
+    .profile-fragment { border: 1px solid var(--line); border-top: 5px solid var(--accent, var(--profile)); border-radius: 8px; background: linear-gradient(180deg, var(--accent-bg, #f4eff9) 0%, #ffffff 86%); padding: 10px 12px; }
+    .profile-fragment strong { display: block; color: var(--ink); font-size: .88rem; line-height: 1.12; }
+    .profile-fragment span { display: block; margin: 3px 0 7px; color: var(--muted); font-size: .72rem; line-height: 1.2; }
+    .profile-fragment pre { margin: 0; border-radius: 6px; background: #142127; color: #e8f2ef; padding: 8px 9px; font-size: .63rem; line-height: 1.24; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .axis-map { display: grid; gap: 14px; margin-top: 30px; }
+    .axis-map.six { grid-template-columns: repeat(3, 1fr); }
+    .axis-node { border-top: 6px solid var(--accent, var(--teal)); border-radius: 8px; background: #fbfcfb; border-left: 1px solid var(--line); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 15px; min-height: 112px; }
+    .axis-node b { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-bottom: 10px; border-radius: 50%; background: var(--accent, var(--teal)); color: #fff; font-size: .8rem; }
+    .axis-node strong { display: block; color: var(--ink); font-size: 1rem; line-height: 1.16; }
+    .axis-node span { display: block; margin-top: 6px; color: var(--muted); font-size: .78rem; line-height: 1.25; }
+    .axis { display: grid; grid-template-columns: 160px 1fr; gap: 12px; align-items: center; margin-top: 24px; }
+    .axis .label { color: #536168; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; }
+    .axis .bar { height: 34px; border-radius: 4px; background: linear-gradient(90deg, #d9ece8, #cce3c5, #ffe2af, #f1bcc6); border: 1px solid #cdd7d2; display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; text-align: center; font-size: .78rem; color: #34434a; }
+
+    .footer-controls { grid-column: 2; display: flex; align-items: center; gap: 10px; padding: 8px 26px 12px; }
+    .progress { flex: 1; height: 7px; border-radius: 999px; background: #d9e1dc; overflow: hidden; }
+    .progress span { display: block; height: 100%; width: 0%; background: var(--teal); }
+    .counter { min-width: 95px; text-align: right; color: var(--muted); font-size: .82rem; }
+    .nav-btn { border: 1px solid var(--line); background: #fff; color: #24343b; border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+    .nav-btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .nav-btn:hover, .nav-btn:focus-visible { outline: none; border-color: #9aa9a2; }
+    .notes { display: none; position: absolute; left: 46px; right: 46px; bottom: 24px; max-height: 170px; overflow: auto; border: 1px solid #b9c7bf; border-radius: 8px; background: rgba(255, 255, 255, .97); box-shadow: var(--shadow); padding: 16px 18px; color: #24333a; z-index: 3; font-size: .92rem; line-height: 1.4; }
+    .notes.visible { display: block; }
+    .overview { position: fixed; inset: 0; display: none; background: rgba(10, 18, 22, .84); z-index: 10; padding: 34px; overflow: auto; }
+    .overview.visible { display: block; }
+    .overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+    .overview-card { background: #fff; color: var(--ink); border-radius: 8px; padding: 13px; cursor: pointer; min-height: 112px; border: 3px solid transparent; }
+    .overview-card.active { border-color: var(--teal); }
+    .overview-card small { display: block; color: var(--teal); text-transform: uppercase; letter-spacing: .08em; font-size: .62rem; margin-bottom: 6px; }
+    .overview-card strong { display: block; font-size: .95rem; line-height: 1.2; }
+    .zoom { position: fixed; inset: 0; display: none; background: rgba(9, 17, 21, .9); z-index: 20; align-items: center; justify-content: center; padding: 28px; }
+    .zoom.visible { display: flex; }
+    .zoom img { max-width: 96vw; max-height: 94vh; background: #fff; border-radius: 8px; box-shadow: var(--shadow); }
+    .zoom button { position: fixed; top: 18px; right: 20px; border: 1px solid #fff; background: #fff; color: var(--ink); border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+
+    @media (max-width: 980px) {
+      body { overflow: auto; }
+      .deck-shell { min-height: 100vh; display: block; }
+      .toc { display: none; }
+      .stage-wrap { padding: 0; }
+      .slides { min-height: 100vh; border-radius: 0; box-shadow: none; }
+      .slide { min-height: 100vh; padding: 34px 24px 72px; overflow: auto; }
+      h2 { font-size: 2rem; }
+      .hero-title { font-size: 2.35rem; }
+      .core-cycle-layout { grid-template-columns: 1fr; }
+      .core-cycle { height: auto; display: grid; gap: 12px; }
+      .core-cycle::before, .cycle-center, .cycle-arrow { display: none; }
+      .cycle-node, .cycle-node.profile, .cycle-node.catalog, .cycle-node.runtime, .cycle-node.evidence { position: static; width: auto; min-height: 0; transform: none; }
+      .footer-controls { position: fixed; left: 0; right: 0; bottom: 0; background: #f4f7f4; }
+      .slide::after, .semantic-summary { position: static; display: block; margin-top: 16px; }
+      .diagram-slide img { height: auto; }
+    }
+
+    @media print {
+      body { overflow: visible; background: #fff; }
+      .deck-shell, .stage-wrap, .slide-fit, .slides { display: block; height: auto; max-height: none; width: auto; box-shadow: none; }
+      .slides { transform: none; }
+      .toc, .footer-controls, .notes, .overview, .zoom { display: none !important; }
+      .slide { position: relative; display: block !important; page-break-after: always; width: 1280px; height: 720px; border: 1px solid #ddd; }
+      .slide.section-divider { display: flex !important; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    }
+
+
+
+/* Custom htmpres runtime overrides generated after the source deck CSS. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+body.audience-mode .slide .notes {
+  display: none !important;
+}
+
+.htmpres-filter-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.slide div.sourceCode,
+.slide pre {
+  max-width: 100%;
+  overflow: auto;
+}
+
+.slide > div.sourceCode,
+.slide > pre {
+  margin-top: 24px;
+  border: 1px solid var(--htmpres-code-border, rgba(15, 23, 42, 0.16));
+  border-radius: var(--htmpres-code-radius, 8px);
+  background: var(--htmpres-code-bg, #172127);
+  color: var(--htmpres-code-ink, #eff6f4);
+  padding: var(--htmpres-code-pad, 18px);
+}
+
+.slide div.sourceCode > pre,
+.slide pre.sourceCode {
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  box-shadow: none;
+}
+
+.slide pre.sourceCode,
+.slide pre.sourceCode code {
+  white-space: pre;
+}
+
+.slide pre code {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.slide pre.numberSource code {
+  counter-reset: source-line;
+}
+
+.slide pre.numberSource code > span,
+.slide code > .code-line {
+  display: inline-block;
+  min-width: 100%;
+  min-height: 1.45em;
+  box-sizing: border-box;
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+  transition: background 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
+}
+
+.slide pre.numberSource code > span {
+  counter-increment: source-line;
+  position: relative;
+  padding-left: 3.1rem;
+}
+
+.slide pre.numberSource code > span > a:first-child {
+  position: absolute;
+  left: 0;
+  width: 2.35rem;
+  padding-right: 0.5rem;
+  color: var(--htmpres-code-line-number, rgba(226, 232, 240, 0.46));
+  text-align: right;
+  text-decoration: none;
+  user-select: none;
+}
+
+.slide pre.numberSource code > span > a:first-child::before {
+  content: counter(source-line);
+}
+
+.slide .code-line-highlight {
+  background: var(--htmpres-code-highlight-bg, rgba(193, 131, 34, 0.22));
+  box-shadow: inset var(--htmpres-code-highlight-bar-width, 4px) 0 0 var(--htmpres-code-highlight-bar, rgba(193, 131, 34, 0.9));
+}
+
+.slide .code-step-active .code-line-dim {
+  opacity: 0.42;
+}
+
+.slide.transition-fade.active,
+.slide.transition-slide.active,
+.slide.transition-zoom.active {
+  animation-duration: var(--slide-transition-duration, 220ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+.slide.transition-fade.active {
+  animation-name: htmpres-slide-fade;
+}
+
+.slide.transition-slide.active {
+  animation-name: htmpres-slide-next;
+}
+
+html[data-slide-direction="prev"] .slide.transition-slide.active {
+  animation-name: htmpres-slide-prev;
+}
+
+.slide.transition-zoom.active {
+  animation-name: htmpres-slide-zoom;
+}
+
+.slide.transition-none.active,
+html[data-slide-direction="none"] .slide.transition-fade.active,
+html[data-slide-direction="none"] .slide.transition-slide.active,
+html[data-slide-direction="none"] .slide.transition-zoom.active {
+  animation: none;
+}
+
+@keyframes htmpres-slide-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes htmpres-slide-next {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes htmpres-slide-prev {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes htmpres-slide-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slide .fragment {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(var(--fragment-offset, 12px));
+  transition:
+    opacity var(--fragment-duration, 180ms) ease,
+    transform var(--fragment-duration, 180ms) ease,
+    filter var(--fragment-duration, 180ms) ease,
+    background-color var(--fragment-duration, 180ms) ease,
+    box-shadow var(--fragment-duration, 180ms) ease;
+}
+
+.slide .fragment.fragment-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.slide .fragment.fragment-none {
+  transition: none;
+  transform: none;
+}
+
+.slide .fragment.fragment-scale:not(.fragment-visible) {
+  transform: scale(0.96);
+}
+
+.slide .fragment.fragment-left:not(.fragment-visible) {
+  transform: translateX(-18px);
+}
+
+.slide .fragment.fragment-right:not(.fragment-visible) {
+  transform: translateX(18px);
+}
+
+.slide .fragment.fragment-rise:not(.fragment-visible),
+.slide .fragment.fragment-slide:not(.fragment-visible) {
+  transform: translateY(18px);
+}
+
+.slide .fragment.fragment-blur:not(.fragment-visible) {
+  filter: blur(4px);
+}
+
+.slide .fragment.fragment-highlight.fragment-current {
+  background: var(--htmpres-fragment-highlight-bg, rgba(193, 131, 34, 0.14));
+  box-shadow: inset var(--htmpres-fragment-highlight-bar-width, 4px) 0 0 var(--htmpres-fragment-highlight-bar, rgba(193, 131, 34, 0.75));
+}
+
+.slide .fragment.fragment-dim.fragment-past {
+  opacity: 0.42;
+}
+
+.slide .fragment.fragment-dim.fragment-current {
+  opacity: 1;
+}
+
+.slide.htmpres-text-fit-active {
+  --htmpres-text-fit-scale: 1;
+}
+
+.slide.htmpres-text-fit-active h2 {
+  font-size: calc(var(--htmpres-h2-size, 2.35rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active .hero-title h2 {
+  font-size: calc(var(--htmpres-hero-title-size, 3rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active h3 {
+  font-size: calc(var(--htmpres-h3-size, 1.18rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active p,
+.slide.htmpres-text-fit-active li,
+.slide.htmpres-text-fit-active .card,
+.slide.htmpres-text-fit-active .callout {
+  font-size: calc(var(--htmpres-body-size, 1rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active .eyebrow,
+.slide.htmpres-text-fit-active .source-line {
+  font-size: calc(var(--htmpres-small-size, 0.78rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide.htmpres-text-fit-active pre {
+  font-size: calc(var(--htmpres-code-size, 0.9rem) * var(--htmpres-text-fit-scale));
+}
+
+.slide[data-overflow="scroll"],
+html[data-overflow="scroll"] .slide,
+.slide[data-overflow="fit-scroll"].htmpres-text-fit-overflow,
+html[data-overflow="fit-scroll"] .slide.htmpres-text-fit-overflow {
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.slide[data-overflow="hidden"],
+html[data-overflow="hidden"] .slide,
+.slide[data-overflow="fit"],
+html[data-overflow="fit"] .slide {
+  overflow: hidden;
+}
+
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 9;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.82);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.24);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 6px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.scroll-cue[hidden] {
+  display: none;
+}
+
+.slides.scroll-cue-visible .scroll-cue {
+  opacity: 0.92;
+  transform: translate(-50%, 0);
+}
+
+.scroll-cue::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  margin-top: -4px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+  animation: htmpres-scroll-cue 1300ms ease-in-out infinite;
+}
+
+@keyframes htmpres-scroll-cue {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(-2px) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(3px) rotate(45deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide.transition-fade.active,
+  .slide.transition-slide.active,
+  .slide.transition-zoom.active {
+    animation: none;
+  }
+
+  .slide .fragment {
+    transition: none;
+    transform: none;
+  }
+
+  .scroll-cue::before {
+    animation: none;
+  }
+}
+
+@media print {
+  .slide .fragment {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+.slide .sourceCode .al,
+.slide .sourceCode .er {
+  color: var(--htmpres-code-token-alert, #fecdd3);
+}
+
+.slide .sourceCode .kw,
+.slide .sourceCode .cf,
+.slide .sourceCode .im {
+  color: var(--htmpres-code-token-keyword, #7dd3fc);
+  font-weight: 700;
+}
+
+.slide .sourceCode .dt,
+.slide .sourceCode .at {
+  color: var(--htmpres-code-token-type, #c4b5fd);
+}
+
+.slide .sourceCode .st,
+.slide .sourceCode .ss,
+.slide .sourceCode .ch {
+  color: var(--htmpres-code-token-string, #a7f3d0);
+}
+
+.slide .sourceCode .dv,
+.slide .sourceCode .bn,
+.slide .sourceCode .fl {
+  color: var(--htmpres-code-token-number, #fcd34d);
+}
+
+.slide .sourceCode .co {
+  color: var(--htmpres-code-token-comment, #94a3b8);
+  font-style: italic;
+}
+
+.slide .sourceCode .fu,
+.slide .sourceCode .bu,
+.slide .sourceCode .ot {
+  color: var(--htmpres-code-token-function, #f9a8d4);
+}
+
+.slide .sourceCode .op,
+.slide .sourceCode .sc,
+.slide .sourceCode .va {
+  color: var(--htmpres-code-token-base, #f8fafc);
+}
+
+.slide > :not(.ds-full):not(.ds-left):not(.ds-right) {
+  position: relative;
+  z-index: 1;
+}
+
+.slide .ds-full,
+.slide .ds-left,
+.slide .ds-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  align-content: center;
+  justify-items: stretch;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 48px 58px;
+}
+
+.slide .ds-full {
+  left: 0;
+  right: 0;
+}
+
+.slide .ds-global-background {
+  pointer-events: none;
+  opacity: var(--ds-bg-opacity, 1);
+}
+
+.slide .ds-left {
+  left: 0;
+  width: 50%;
+  padding-right: 29px;
+}
+
+.slide .ds-right {
+  right: 0;
+  width: 50%;
+  padding-left: 29px;
+}
+
+.slide .ds-layer {
+  position: relative;
+  z-index: 1;
+}
+
+.slide .ds-no-pad {
+  padding: 0 !important;
+}
+
+.slide .ds-center {
+  place-items: center;
+  text-align: center;
+}
+
+.slide .ds-top {
+  align-content: start;
+}
+
+.slide .ds-bottom {
+  align-content: end;
+}
+
+.slide .ds-split {
+  display: grid;
+  grid-template-columns: repeat(var(--ds-columns, 2), minmax(0, 1fr));
+  gap: var(--ds-gap, 0);
+  min-height: var(--ds-height, 420px);
+  margin-top: var(--ds-margin-top, 24px);
+  overflow: hidden;
+}
+
+.slide .ds-pane,
+.slide .ds-media {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.slide .ds-pane {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  padding: var(--ds-pad, 28px);
+  background: var(--ds-bg, transparent);
+  border: var(--ds-border, 0);
+  border-radius: var(--ds-radius, 0);
+}
+
+.slide .ds-media {
+  display: grid;
+  place-items: center;
+}
+
+.slide .ds-frame {
+  border: 1px solid var(--ds-frame-border, rgba(15, 23, 42, 0.14));
+  border-radius: var(--ds-radius, 8px);
+  background: var(--ds-frame-bg, #ffffff);
+}
+
+.slide .ds-no-border {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.slide .ds-hide {
+  display: none !important;
+}
+
+.slide .ds-media > p,
+.slide .ds-media > figure,
+.slide .ds-media.ds-fit > p,
+.slide .ds-media.ds-fit > figure,
+.slide .ds-media.ds-fill > p,
+.slide .ds-media.ds-fill > figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+.slide .ds-media img,
+.slide .ds-media video,
+.slide .ds-media iframe,
+.slide .ds-media object,
+.slide .ds-media embed,
+.slide img.ds-fit,
+.slide video.ds-fit,
+.slide iframe.ds-fit,
+.slide object.ds-fit,
+.slide embed.ds-fit,
+.slide img.ds-fill,
+.slide video.ds-fill,
+.slide iframe.ds-fill,
+.slide object.ds-fill,
+.slide embed.ds-fill,
+.slide .ds-media.ds-fit img,
+.slide .ds-media.ds-fit video,
+.slide .ds-media.ds-fit iframe,
+.slide .ds-media.ds-fit object,
+.slide .ds-media.ds-fit embed,
+.slide .ds-media.ds-fill img,
+.slide .ds-media.ds-fill video,
+.slide .ds-media.ds-fill iframe,
+.slide .ds-media.ds-fill object,
+.slide .ds-media.ds-fill embed {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.slide .ds-media img,
+.slide .ds-media video,
+.slide .ds-media iframe,
+.slide .ds-media object,
+.slide .ds-media embed {
+  object-fit: contain;
+}
+
+.slide .ds-global-background img,
+.slide .ds-global-background video,
+.slide .ds-global-background iframe,
+.slide .ds-global-background object,
+.slide .ds-global-background embed {
+  object-position: var(--ds-bg-position, center);
+}
+
+.slide img.ds-fit,
+.slide video.ds-fit,
+.slide iframe.ds-fit,
+.slide object.ds-fit,
+.slide embed.ds-fit,
+.slide .ds-media.ds-fit img,
+.slide .ds-media.ds-fit video,
+.slide .ds-media.ds-fit iframe,
+.slide .ds-media.ds-fit object,
+.slide .ds-media.ds-fit embed {
+  object-fit: contain;
+}
+
+.slide img.ds-fill,
+.slide video.ds-fill,
+.slide iframe.ds-fill,
+.slide object.ds-fill,
+.slide embed.ds-fill,
+.slide .ds-media.ds-fill img,
+.slide .ds-media.ds-fill video,
+.slide .ds-media.ds-fill iframe,
+.slide .ds-media.ds-fill object,
+.slide .ds-media.ds-fill embed {
+  object-fit: cover;
+}
+
+.slide audio.ds-fit,
+.slide audio.ds-fill,
+.slide .ds-media audio {
+  width: 100%;
+  height: auto;
+}
+
+.slide .ds-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ds-gap, 14px);
+}
+
+.slide .ds-inline > p,
+.slide .ds-inline > figure {
+  margin: 0;
+}
+
+.slide .ds-inline img,
+.slide .ds-inline video,
+.slide .ds-inline iframe {
+  width: var(--ds-inline-size, 160px);
+  height: auto;
+  max-width: 100%;
+}
+
+.slide .ds-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--ds-columns, 3), minmax(0, 1fr));
+  gap: var(--ds-gap, 12px);
+}
+
+.slide .ds-grid > * {
+  min-width: 0;
+}
+
+.slide .ds-grid > p,
+.slide .ds-grid > figure {
+  margin: 0;
+}
+
+.slide img.ds-rounded,
+.slide video.ds-rounded,
+.slide iframe.ds-rounded,
+.slide object.ds-rounded,
+.slide embed.ds-rounded,
+.slide .ds-rounded img,
+.slide .ds-rounded video,
+.slide .ds-rounded iframe,
+.slide .ds-rounded object,
+.slide .ds-rounded embed {
+  border-radius: var(--ds-radius, 16px);
+}
+
+.slide img.ds-bn,
+.slide video.ds-bn,
+.slide iframe.ds-bn,
+.slide object.ds-bn,
+.slide embed.ds-bn,
+.slide img.ds-bw,
+.slide video.ds-bw,
+.slide iframe.ds-bw,
+.slide object.ds-bw,
+.slide embed.ds-bw,
+.slide .ds-bn img,
+.slide .ds-bn video,
+.slide .ds-bn iframe,
+.slide .ds-bn object,
+.slide .ds-bn embed,
+.slide .ds-bw img,
+.slide .ds-bw video,
+.slide .ds-bw iframe,
+.slide .ds-bw object,
+.slide .ds-bw embed {
+  --ds-filter-preset: var(--ds-bn-filter, grayscale(1));
+}
+
+.slide img.ds-vivid,
+.slide video.ds-vivid,
+.slide iframe.ds-vivid,
+.slide object.ds-vivid,
+.slide embed.ds-vivid,
+.slide .ds-vivid img,
+.slide .ds-vivid video,
+.slide .ds-vivid iframe,
+.slide .ds-vivid object,
+.slide .ds-vivid embed {
+  --ds-filter-preset: var(--ds-vivid-filter, saturate(1.35) contrast(1.12));
+}
+
+.slide img.ds-noir,
+.slide video.ds-noir,
+.slide iframe.ds-noir,
+.slide object.ds-noir,
+.slide embed.ds-noir,
+.slide .ds-noir img,
+.slide .ds-noir video,
+.slide .ds-noir iframe,
+.slide .ds-noir object,
+.slide .ds-noir embed {
+  --ds-filter-preset: var(--ds-noir-filter, grayscale(1) contrast(1.36) brightness(0.9));
+}
+
+.slide img.ds-chrome,
+.slide video.ds-chrome,
+.slide iframe.ds-chrome,
+.slide object.ds-chrome,
+.slide embed.ds-chrome,
+.slide .ds-chrome img,
+.slide .ds-chrome video,
+.slide .ds-chrome iframe,
+.slide .ds-chrome object,
+.slide .ds-chrome embed {
+  --ds-filter-preset: var(--ds-chrome-filter, saturate(1.45) contrast(1.16) brightness(1.06));
+}
+
+.slide img.ds-fade,
+.slide video.ds-fade,
+.slide iframe.ds-fade,
+.slide object.ds-fade,
+.slide embed.ds-fade,
+.slide .ds-fade img,
+.slide .ds-fade video,
+.slide .ds-fade iframe,
+.slide .ds-fade object,
+.slide .ds-fade embed {
+  --ds-filter-preset: var(--ds-fade-filter, saturate(0.62) contrast(0.92) brightness(1.12) opacity(0.82));
+}
+
+.slide img.ds-filter,
+.slide video.ds-filter,
+.slide iframe.ds-filter,
+.slide object.ds-filter,
+.slide embed.ds-filter,
+.slide .ds-filter img,
+.slide .ds-filter video,
+.slide .ds-filter iframe,
+.slide .ds-filter object,
+.slide .ds-filter embed {
+  --ds-filter-custom:
+    grayscale(var(--ds-grayscale, 0))
+    sepia(var(--ds-sepia, 0))
+    saturate(var(--ds-saturation, 1))
+    contrast(var(--ds-contrast, 1))
+    brightness(clamp(0, calc(var(--ds-brightness, 1) + var(--ds-exposure, 0)), 3))
+    hue-rotate(var(--ds-hue, 0deg))
+    blur(var(--ds-blur, 0))
+    opacity(var(--ds-opacity, 1));
+}
+
+.slide img.ds-alpha,
+.slide video.ds-alpha,
+.slide iframe.ds-alpha,
+.slide object.ds-alpha,
+.slide embed.ds-alpha,
+.slide .ds-alpha img,
+.slide .ds-alpha video,
+.slide .ds-alpha iframe,
+.slide .ds-alpha object,
+.slide .ds-alpha embed {
+  opacity: var(--ds-opacity, 0.6);
+}
+
+.slide img.ds-zoom,
+.slide video.ds-zoom,
+.slide iframe.ds-zoom,
+.slide object.ds-zoom,
+.slide embed.ds-zoom,
+.slide .ds-zoom img,
+.slide .ds-zoom video,
+.slide .ds-zoom iframe,
+.slide .ds-zoom object,
+.slide .ds-zoom embed {
+  transform: scale(var(--ds-scale, 1.2));
+}
+
+.slide img.ds-theme-filter,
+.slide video.ds-theme-filter,
+.slide iframe.ds-theme-filter,
+.slide object.ds-theme-filter,
+.slide embed.ds-theme-filter,
+.slide .ds-theme-filter img,
+.slide .ds-theme-filter video,
+.slide .ds-theme-filter iframe,
+.slide .ds-theme-filter object,
+.slide .ds-theme-filter embed {
+  --ds-filter-preset: var(--ds-theme-filter, );
+}
+
+.slide img.ds-sharpen,
+.slide video.ds-sharpen,
+.slide iframe.ds-sharpen,
+.slide object.ds-sharpen,
+.slide embed.ds-sharpen,
+.slide .ds-sharpen img,
+.slide .ds-sharpen video,
+.slide .ds-sharpen iframe,
+.slide .ds-sharpen object,
+.slide .ds-sharpen embed {
+  --ds-filter-sharpen: var(--ds-sharpen-filter, url("#htmpres-sharpen"));
+}
+
+.slide img.ds-bn,
+.slide video.ds-bn,
+.slide iframe.ds-bn,
+.slide object.ds-bn,
+.slide embed.ds-bn,
+.slide img.ds-bw,
+.slide video.ds-bw,
+.slide iframe.ds-bw,
+.slide object.ds-bw,
+.slide embed.ds-bw,
+.slide img.ds-vivid,
+.slide video.ds-vivid,
+.slide iframe.ds-vivid,
+.slide object.ds-vivid,
+.slide embed.ds-vivid,
+.slide img.ds-noir,
+.slide video.ds-noir,
+.slide iframe.ds-noir,
+.slide object.ds-noir,
+.slide embed.ds-noir,
+.slide img.ds-chrome,
+.slide video.ds-chrome,
+.slide iframe.ds-chrome,
+.slide object.ds-chrome,
+.slide embed.ds-chrome,
+.slide img.ds-fade,
+.slide video.ds-fade,
+.slide iframe.ds-fade,
+.slide object.ds-fade,
+.slide embed.ds-fade,
+.slide img.ds-filter,
+.slide video.ds-filter,
+.slide iframe.ds-filter,
+.slide object.ds-filter,
+.slide embed.ds-filter,
+.slide img.ds-theme-filter,
+.slide video.ds-theme-filter,
+.slide iframe.ds-theme-filter,
+.slide object.ds-theme-filter,
+.slide embed.ds-theme-filter,
+.slide img.ds-sharpen,
+.slide video.ds-sharpen,
+.slide iframe.ds-sharpen,
+.slide object.ds-sharpen,
+.slide embed.ds-sharpen,
+.slide .ds-bn img,
+.slide .ds-bn video,
+.slide .ds-bn iframe,
+.slide .ds-bn object,
+.slide .ds-bn embed,
+.slide .ds-bw img,
+.slide .ds-bw video,
+.slide .ds-bw iframe,
+.slide .ds-bw object,
+.slide .ds-bw embed,
+.slide .ds-vivid img,
+.slide .ds-vivid video,
+.slide .ds-vivid iframe,
+.slide .ds-vivid object,
+.slide .ds-vivid embed,
+.slide .ds-noir img,
+.slide .ds-noir video,
+.slide .ds-noir iframe,
+.slide .ds-noir object,
+.slide .ds-noir embed,
+.slide .ds-chrome img,
+.slide .ds-chrome video,
+.slide .ds-chrome iframe,
+.slide .ds-chrome object,
+.slide .ds-chrome embed,
+.slide .ds-fade img,
+.slide .ds-fade video,
+.slide .ds-fade iframe,
+.slide .ds-fade object,
+.slide .ds-fade embed,
+.slide .ds-filter img,
+.slide .ds-filter video,
+.slide .ds-filter iframe,
+.slide .ds-filter object,
+.slide .ds-filter embed,
+.slide .ds-theme-filter img,
+.slide .ds-theme-filter video,
+.slide .ds-theme-filter iframe,
+.slide .ds-theme-filter object,
+.slide .ds-theme-filter embed,
+.slide .ds-sharpen img,
+.slide .ds-sharpen video,
+.slide .ds-sharpen iframe,
+.slide .ds-sharpen object,
+.slide .ds-sharpen embed {
+  filter: var(--ds-filter-preset, ) var(--ds-filter-custom, ) var(--ds-filter-sharpen, );
+}
+
+.slide img.ds-original,
+.slide video.ds-original,
+.slide iframe.ds-original,
+.slide object.ds-original,
+.slide embed.ds-original,
+.slide .ds-original img,
+.slide .ds-original video,
+.slide .ds-original iframe,
+.slide .ds-original object,
+.slide .ds-original embed {
+  filter: none !important;
+  opacity: 1;
+}
+
+.slide .ds-readable,
+.slide .ds-vignette {
+  position: relative;
+  isolation: isolate;
+}
+
+.slide .ds-readable::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    var(--ds-readable-angle, 90deg),
+    rgba(0, 0, 0, var(--ds-readable-start, 0.5)),
+    rgba(0, 0, 0, var(--ds-readable-end, 0.16))
+  );
+}
+
+.slide .ds-vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: inset 0 0 var(--ds-vignette-size, 160px) var(--ds-vignette-color, rgba(0, 0, 0, var(--ds-vignette, 0.35)));
+}
+
+.slide .ds-vignette-light {
+  --ds-vignette-color: rgba(255, 255, 255, var(--ds-vignette, 0.35));
+}
+
+.slide .ds-readable .ds-layer,
+.slide .ds-vignette .ds-layer {
+  z-index: 2;
+}
+
+body.presenter-mode .deck-shell {
+  grid-template-columns: minmax(180px, 220px) minmax(0, 1fr) minmax(280px, 360px) !important;
+  grid-template-rows: minmax(0, 1fr) 58px !important;
+  column-gap: 12px;
+}
+
+body.presenter-mode .stage-wrap {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+body.presenter-mode .footer-controls {
+  grid-column: 2 / 4 !important;
+  grid-row: 2 !important;
+}
+
+.presenter-notes {
+  grid-column: 3;
+  grid-row: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+  border-left: 1px solid var(--htmpres-panel-border, rgba(15, 23, 42, 0.14));
+  background: var(--htmpres-panel-bg, #fff);
+  color: var(--htmpres-panel-ink, #172033);
+  padding: 18px 20px;
+  overflow: auto;
+}
+
+.presenter-notes h2 {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--htmpres-panel-muted, #64748b);
+}
+
+.presenter-note-body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.presenter-note-body p {
+  margin: 0 0 0.85rem;
+}
+
+.presenter-note-empty {
+  color: var(--htmpres-panel-muted, #64748b);
+  font-style: italic;
+}
+
+@media (max-width: 980px) {
+  .slide-fit {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .slides {
+    width: 100% !important;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    transform: none !important;
+  }
+
+  .two-col,
+  .two-col.wide-left,
+  .two-col.wide-right,
+  .three-col,
+  .four-col,
+  .five-col,
+  .flow,
+  .timeline,
+  .release-ladder,
+  .story-layout,
+  .story-steps,
+  .story-stat-grid,
+  .story-bridge,
+  .url-pair,
+  .profile-fragment-grid,
+  .axis-map,
+  .axis-map.six,
+  .axis-map.eight,
+  .kpi-grid,
+  .mini-diagram,
+  .checklist,
+  .mixed-transition,
+  .transition-strip,
+  .feature-status {
+    grid-template-columns: 1fr !important;
+  }
+
+  .two-col > *,
+  .three-col > *,
+  .four-col > *,
+  .five-col > *,
+  .flow > *,
+  .timeline > *,
+  .release-ladder > *,
+  .story-layout > *,
+  .story-steps > *,
+  .story-stat-grid > *,
+  .story-bridge > *,
+  .url-pair > *,
+  .profile-fragment-grid > *,
+  .axis-map > *,
+  .kpi-grid > *,
+  .mini-diagram > *,
+  .checklist > *,
+  .mixed-transition > *,
+  .transition-strip > *,
+  .feature-status > *,
+  .code-card,
+  .lead,
+  .callout,
+  .source-line,
+  .axis,
+  .matrix {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .chip-row > p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 0;
+  }
+
+  .chip-row .chip {
+    display: inline-flex;
+    max-width: 100%;
+  }
+
+  .source-line {
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    display: block;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .source-line code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .slide .code-card pre,
+  .slide .code-card pre.sourceCode,
+  .slide .code-card pre.sourceCode code,
+  .slide .code-card code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .slide code,
+  .scheme-row code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .axis {
+    grid-template-columns: 1fr !important;
+  }
+
+  .axis .bar {
+    min-width: 0;
+  }
+
+  body.presenter-mode .deck-shell {
+    position: fixed;
+    inset: 0;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: minmax(104px, 32vh) minmax(0, 1fr) var(--htmpres-mobile-footer-row, 64px) !important;
+    width: 100%;
+    height: max(360px, calc(var(--htmpres-viewport-height, 100dvh) - var(--htmpres-mobile-browser-clearance, 0px))) !important;
+    max-height: max(360px, calc(var(--htmpres-viewport-height, 100dvh) - var(--htmpres-mobile-browser-clearance, 0px))) !important;
+    min-height: 0;
+    overflow: hidden;
+    column-gap: 0;
+  }
+
+  body.presenter-mode .stage-wrap {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+
+  body.presenter-mode .footer-controls {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+  }
+
+  .presenter-notes {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+    min-height: 0;
+    max-height: none;
+    padding: 14px 16px;
+    overflow: auto;
+  }
+}
+
+  </style>
+</head>
+<body class="presenter-mode">
+  <div class="deck-shell">
+    <aside class="toc" aria-label="Slide list">
+      <h1>Point32Health AI Agent Platform Executive Case</h1>
+      <p class="hint">Presenter view: notes sit beside or above the slide. Arrow keys or Space advance. O opens overview. Click diagrams to zoom.</p>
+      <div class="toc-list" id="tocList"></div>
+    </aside>
+
+    <main class="stage-wrap">
+      <div class="slide-fit" id="slideFit">
+        <div class="slides" id="slides">
+          <section class="slide section-divider active" data-section="Opening" data-title="Point32Health AI Agent Platform Executive Case">
+
+            <h2>From AI Pilots To A Managed AI Platform</h2>
+            <p><span class="eyebrow">Executive case</span></p>
+            <div class="lead">
+            <p>Rahul Dave (Univ.Ai)</p>
+            </div>
+            <div class="lead">
+            <p>A practical case for moving from scattered AI experiments to <span class="platform-name">The Shared Platform</span> that Point32Health can manage, reuse, and improve.</p>
+            </div>
+            <div class="why-line">
+            <p>The choice is whether AI work grows in many separate corners, or through <span class="platform-name">The Shared Platform</span>: one managed path that leaders can see, trust, and scale.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="BBVA Case" data-title="BBVA Faced Hidden AI Demand">
+
+            <h2>BBVA Faced Hidden AI Demand In A Regulated Business</h2>
+            <p><span class="eyebrow">Regulated enterprise</span></p>
+            <div class="lead">
+            <p>BBVA was not an obvious fast mover: a global bank with heavy regulation, deep compliance requirements, and a large workforce. Leaders saw that employees were going to use AI, so unmanaged use became the risk to solve.</p>
+            </div>
+            <div class="story-stat-grid" aria-label="BBVA starting point">
+            <div class="story-stat theme-catalog">
+            <b>25</b><span>Countries in BBVA’s global operations.</span>
+            </div>
+            <div class="story-stat" style="--accent: var(--teal);">
+            <b>77M+</b><span>Clients, which made privacy and trust central.</span>
+            </div>
+            <div class="story-stat" style="--accent: var(--green);">
+            <b>125k</b><span>Workers, enough for hidden AI use to spread quickly.</span>
+            </div>
+            <div class="story-stat theme-evidence">
+            <b>Regulated</b><span>Risk, legal, compliance, privacy, and audit all mattered.</span>
+            </div>
+            <div class="story-stat" style="--accent: var(--amber);">
+            <b>Hidden demand</b><span>Employees already had reasons to use AI; leadership needed a managed path.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>The setup is the tension: moving slowly leaves AI use unmanaged, but moving fast without controls creates risk.</p>
+            </div>
+            <div class="source-line">
+            <p>Source: Garicano et al. BBVA case excerpt supplied by Rahul.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="BBVA Case" data-title="BBVA Made Adoption Social And Useful">
+
+            <h2>BBVA Made Adoption Social And Useful</h2>
+            <p><span class="eyebrow">Managed adoption</span></p>
+            <div class="lead">
+            <p>BBVA treated adoption as a change program, not only a software rollout. Early access went to motivated employees, peer support spread know-how, and useful internal assistants became a source of status.</p>
+            </div>
+            <div class="story-layout">
+            <div class="story-panel theme-catalog">
+            <strong>What changed</strong>
+            <p>
+            AI moved from scattered interest to visible participation. People had a reason to use it, share what worked, and help others learn.
+            </p>
+            </div>
+            <div class="story-steps">
+            <div class="theme-profile">
+            <strong>Motivated first users</strong><span>Early access went to committed employees, not only the most senior people.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Peer network</strong><span>Regional champions and power users helped people learn from colleagues.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>Status and sharing</strong><span>People were rewarded for building and sharing useful assistants, not just trying the tool.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Strong implementer</strong><span>Elena Alfaro brought bank knowledge, technology judgment, communication skill, and leadership backing.</span>
+            </div>
+            </div>
+            </div>
+            <div class="source-line">
+            <p>Source: Garicano et al. BBVA case excerpt supplied by Rahul.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="BBVA Case" data-title="BBVA Then Proved Scale With Control">
+
+            <h2>BBVA Then Proved Scale With Control</h2>
+            <p><span class="eyebrow">Measured result</span></p>
+            <div class="lead">
+            <p>The payoff came after the operating choices were in place: approved access, fast review, prompt privacy, human ownership, quality checks, and visible measurement.</p>
+            </div>
+            <div class="story-stat-grid" aria-label="BBVA measured results">
+            <div class="story-stat theme-catalog">
+            <b>2 mo.</b><span>Risk, legal, and compliance review moved quickly enough to become the managed path.</span>
+            </div>
+            <div class="story-stat" style="--accent: var(--teal);">
+            <b>83%</b><span>OpenAI reported weekly active use among early licensed users in 2025.</span>
+            </div>
+            <div class="story-stat" style="--accent: var(--green);">
+            <b>3 hrs</b><span>OpenAI reported average time saved per employee each week.</span>
+            </div>
+            <div class="story-stat theme-evidence">
+            <b>20k+</b><span>OpenAI reported custom GPTs created across the bank.</span>
+            </div>
+            <div class="story-stat" style="--accent: var(--amber);">
+            <b>100k+</b><span>OpenAI reported broad ChatGPT Enterprise use across BBVA in 2026.</span>
+            </div>
+            </div>
+            <div class="callout theme-catalog">
+            <p>Point32Health needs the same arc, tuned for healthcare: start with visible demand, build the managed path, then scale only with privacy, compliance, evidence, and human accountability.</p>
+            </div>
+            <div class="source-line">
+            <p>Sources: Garicano et al. BBVA case excerpt supplied by Rahul; OpenAI BBVA case study, June 11, 2026; BBVA news on the 2025 expansion to 11,000 licenses.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="The Ask" data-title="The Shared Path">
+
+            <h2>The Shared Path</h2>
+            <p><span class="eyebrow">The ask</span></p>
+            <div class="lead">
+            <p>Approve a staged program that creates <span class="platform-name">The Shared Platform</span> for AI agents, shows it works through safe first demos, and gives executives a way to manage the AI portfolio.</p>
+            </div>
+            <div class="three-col compact">
+            <div class="card metric-card theme-runtime">
+            <p><strong>Core build team</strong></p>
+            <p>Product, engineering, security, data, compliance, design, and business experts working as one program.</p>
+            </div>
+            <div class="card metric-card theme-catalog">
+            <p><strong>Shared platform services</strong></p>
+            <p>Catalog, profiles, agent harnesses, runtime services, evidence, quality checks, and release gates. Human-in-the-loop review is part of the runtime: <span class="platform-name">The Shared Platform</span> routes work to people when review is required.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>First demonstrations</strong></p>
+            <p>Agent harnesses for Codex and Claude Code; DAIS, the legal redlining app, as the first app port; Synthetic Benefits with synthetic data in the same early wave.</p>
+            </div>
+            </div>
+            <div class="callout theme-profile">
+            <p>The decision today is not a final production launch. The decision is whether Point32Health builds <span class="platform-name">The Shared Platform</span> needed before many teams scale AI agents.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="The Ask" data-title="Agent Harnesses Create The First Platform Foundation">
+
+            <h2>Agent Harnesses Create The First Platform Foundation</h2>
+            <p><span class="eyebrow">Foundation build</span></p>
+            <div class="lead">
+            <p>The first build creates controlled Codex and Claude Code workspaces, then uses their work to grow the catalog, context indexes, memory, and trace indexes.</p>
+            </div>
+            <div class="timeline">
+            <div class="theme-runtime">
+            <strong>1. Agent harnesses</strong><span>Codex and Claude Code launch with approved instructions, allowed files and tools, and named reviewers.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>2. Runtime review</strong><span>Start with markdown plan/spec review: the runtime routes the plan to people so they can approve, question, or change it before agent work continues.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>3. Context capture</strong><span>As agents work, save the documents, code, decisions, and notes they actually used.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>4. Catalog indexes and memory</strong><span>Build catalog-owned search stores and memory, including vector databases for meaning-based search.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>5. Trace indexes</strong><span>Index the step-by-step traces so reviewers can inspect, compare, reuse, and debug agent work.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>The benefit is that DAIS, Synthetic Benefits, and later teams inherit these platform functions instead of rebuilding them: harnesses, human review, context capture, catalog memory, and trace indexing.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="The Ask" data-title="Applications Are The Next Step">
+
+            <h2>Applications Are The Next Step</h2>
+            <p><span class="eyebrow">First applications</span></p>
+            <div class="lead">
+            <p>After the agent harnesses, the next step is to test <span class="platform-name">The Shared Platform</span> with two applications: DAIS, our legal redlining pilot, and Synthetic Benefits, using synthetic data.</p>
+            </div>
+            <div class="timeline">
+            <div class="theme-runtime">
+            <strong>1. Application controls</strong><span>Keep the harness controls; add app-specific users, tools, screens, and limits for each workflow.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>2. Runtime review</strong><span>Keep markdown plan/spec review; add DAIS redline review and Synthetic Benefits answer review through the shared runtime.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>3. Context capture</strong><span>DAIS adds legal documents and contract language; Synthetic Benefits adds plan documents, benefits rules, and provider data.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>4. Catalog indexes and memory</strong><span>Keep catalog-owned search and memory; add redline examples, benefit examples, reviewer decisions, and reusable patterns.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>5. Trace indexes</strong><span>Keep step-by-step traces; add app outcomes such as accepted redlines, changed answers, issues, and time saved.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>The application work improves the harness foundation instead of bypassing it.</p>
+            </div>
+          </section>
+
+          <section class="slide hero-title" data-section="Platform Case" data-title="What The Shared Platform Gives Point32Health">
+
+            <h2>What The Shared Platform Gives Point32Health</h2>
+            <p><span class="eyebrow">Shared foundation</span></p>
+            <div class="why-line">
+            <p>AI agents will touch data, decisions, workflows, and customers. <span class="platform-name">The Shared Platform</span> gives every team the same basic path for using them safely.</p>
+            </div>
+            <div class="axis-map six" aria-label="Executive platform reasons">
+            <div class="axis-node" style="--accent: var(--teal)">
+            <b>1</b><strong>Managed adoption</strong><span>Employees get an approved path instead of hidden AI use.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--rose)">
+            <b>2</b><strong>Shared controls</strong><span>PHI, security, compliance, runtime review, and evidence are handled once.</span>
+            </div>
+            <div class="axis-node theme-catalog">
+            <b>3</b><strong>Portfolio visibility</strong><span>The catalog shows owners, value, risk, stage, and next decisions.</span>
+            </div>
+            <div class="axis-node theme-runtime">
+            <b>4</b><strong>Better context</strong><span>Agents use approved context packs and memory, not random files.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--green)">
+            <b>5</b><strong>Reuse and learning</strong><span>Good prompts, services, fixes, and evidence help the next team.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--amber)">
+            <b>6</b><strong>Path to scale</strong><span>Release gates and future AI patterns fit the same model.</span>
+            </div>
+            </div>
+          </section>
+
+          <section class="slide hero-title" data-section="Platform Model" data-title="The Four Platform Parts">
+
+            <h2>The Four Platform Parts</h2>
+            <p><span class="eyebrow">Four parts</span></p>
+            <div class="hero-subtitle">
+            <p>Every AI effort uses the same four parts: one agreement on what is allowed, one shared view of the work, one controlled place to run it, and one record of what happened.</p>
+            </div>
+            <div class="flow" aria-label="Platform plain-English building blocks">
+            <div class="theme-profile">
+            <strong>Profile</strong><span>The approved instructions for one AI effort: owner, purpose, data, actions, review, and stage.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Catalog</strong><span>The shared map of AI work: owners, risks, approvals, value, evidence, and readiness.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Runtime</strong><span>The controlled place where approved AI work runs, uses only the access it needs, and routes required human review.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence</strong><span>The record of what happened: data used, tools called, approvals, outputs, issues, and results.</span>
+            </div>
+            </div>
+            <div class="semantic-summary">
+            <p>A profile says what is allowed. The catalog shows the portfolio. The runtime runs approved work safely, including required human review. Evidence shows what happened and why decisions were made.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Platform Model" data-title="Shared Services Avoid Rebuilt Controls">
+
+            <h2>Shared Services Mean Teams Need Not Rebuild Controls</h2>
+            <p><span class="eyebrow">Shared services</span></p>
+            <div class="lead">
+            <p>Shared services are common platform capabilities every team can use, such as PHI handling, access checks, runtime review, compliance review, evidence capture, monitoring, and rollback.</p>
+            </div>
+            <div class="three-col compact">
+            <div class="card metric-card" style="--accent: var(--rose)">
+            <p><strong>PHI and sensitive data</strong></p>
+            <p>Minimum necessary data, approved sources, masking, retention, and member privacy rules are handled once and reused.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--amber)">
+            <p><strong>Security and access</strong></p>
+            <p>Identity, narrow permissions, tool limits, secrets, monitoring, and emergency stop controls are shared.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--teal)">
+            <p><strong>Compliance and evidence</strong></p>
+            <p>Approvals, runtime review, evidence, traces, test results, and audit records follow the same pattern.</p>
+            </div>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">PHI</span><span class="chip">Security</span><span class="chip">Compliance</span><span class="chip">Runtime review</span><span class="chip">Evidence</span><span class="chip">Access</span><span class="chip">Monitoring</span><span class="chip">Rollback</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Platform Model" data-title="How The Four Parts Work Together">
+
+            <h2>How The Four Parts Work Together</h2>
+            <p><span class="eyebrow">Operating model</span></p>
+            <div class="lead">
+            <p>Profile, catalog, runtime, and evidence are the working parts of <span class="platform-name">The Shared Platform</span>. They let teams move faster without losing control.</p>
+            </div>
+            <div class="core-cycle-layout">
+            <div class="core-cycle" aria-label="Profile to catalog to runtime to evidence cycle">
+            <div class="cycle-center">
+            <div>
+            <strong>Managed AI work</strong><span>Clear rules, controlled action, visible evidence.</span>
+            </div>
+            </div>
+            <div class="cycle-node profile theme-profile">
+            <b>1</b><strong>Profile</strong><span>The approved instructions for one AI effort.</span>
+            </div>
+            <div class="cycle-node catalog theme-catalog">
+            <b>2</b><strong>Catalog</strong><span>The shared map of work, owners, value, risk, and readiness.</span>
+            </div>
+            <div class="cycle-node runtime theme-runtime">
+            <b>3</b><strong>Runtime</strong><span>The controlled place where approved work runs and required human review happens.</span>
+            </div>
+            <div class="cycle-node evidence theme-evidence">
+            <b>4</b><strong>Evidence</strong><span>The record that shows what happened and helps improve it.</span>
+            </div>
+            <div class="cycle-arrow pc theme-profile">
+            <b>→</b>
+            </div>
+            <div class="cycle-arrow cr theme-catalog">
+            <b>→</b>
+            </div>
+            <div class="cycle-arrow re theme-runtime">
+            <b>→</b>
+            </div>
+            <div class="cycle-arrow ep theme-evidence">
+            <b>→</b>
+            </div>
+            </div>
+            <section id="why-executives-should-care" class="aside-panel theme-evidence">
+            <h3>Why executives should care</h3>
+            <p>Business owners, delivery teams, Security, Compliance, and executives work from the same facts.</p>
+            </section>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Catalog Control" data-title="What The Catalog Does">
+
+            <h2>What The Catalog Does</h2>
+            <p><span class="eyebrow">Living inventory</span></p>
+            <div class="lead">
+            <p>The catalog is the living inventory for AI work. It shows what exists, who owns it, what it can touch, what stage it is in, what evidence supports it, and what decision is needed next.</p>
+            </div>
+            <div class="axis-map six" aria-label="Catalog functionality">
+            <div class="axis-node theme-catalog">
+            <b>1</b><strong>Inventory</strong><span>List AI efforts, agent harnesses, apps, owners, business areas, and current stage.</span>
+            </div>
+            <div class="axis-node theme-profile">
+            <b>2</b><strong>Profiles</strong><span>Link each effort to the approved instructions and limits it must follow.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--amber)">
+            <b>3</b><strong>Data and systems</strong><span>Show which data, tools, vendors, and business systems each effort can use.</span>
+            </div>
+            <div class="axis-node theme-evidence">
+            <b>4</b><strong>Evidence</strong><span>Keep the records needed for review, audit, quality checks, and learning.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--green)">
+            <b>5</b><strong>Reuse</strong><span>Make useful prompts, data packages, review patterns, and services discoverable.</span>
+            </div>
+            <div class="axis-node" style="--accent: var(--rose)">
+            <b>6</b><strong>Decisions</strong><span>Help leaders decide what to grow, pause, fix, retire, or move to the next stage.</span>
+            </div>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Catalog Control" data-title="Catalog Shows Portfolio Risk And Decisions">
+
+            <h2>The Catalog Shows Portfolio, Risk, And Next Decisions</h2>
+            <p><span class="eyebrow">Executive view</span></p>
+            <div class="lead">
+            <p>The catalog is the one view for AI work. Security, Compliance, business owners, delivery teams, and executives work from the same facts.</p>
+            </div>
+            <div class="kpi-grid">
+            <div class="kpi theme-catalog">
+            <b>Portfolio</b><span>What exists, who owns it, which business area it serves, and what stage it is in.</span>
+            </div>
+            <div class="kpi">
+            <b>Value</b><span>Expected benefit, users affected, adoption, cost, quality, and business result.</span>
+            </div>
+            <div class="kpi">
+            <b>Risk</b><span>Data involved, systems touched, member or provider impact, allowed actions, and open exceptions.</span>
+            </div>
+            <div class="kpi theme-evidence">
+            <b>Next decision</b><span>Approve testing, request changes, expand, pause, retire, or assign follow-up.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>Executives see which AI efforts to grow, pause, fix, or retire without asking each team for a different report.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Catalog Control" data-title="Catalog Shows What Context An Agent May Use">
+
+            <h2>The Catalog Shows What Context An Agent May Use</h2>
+            <p><span class="eyebrow">Catalog and context</span></p>
+            <div class="lead">
+            <p>Context means the information given to an agent for one task. The catalog shows which sources are approved, who owns them, what limits apply, and what must be saved as evidence.</p>
+            </div>
+            <div class="timeline">
+            <div class="theme-profile">
+            <strong>Request</strong><span>What the person is asking the agent to do, and what outcome is expected.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Approved sources</strong><span>Policies, plan rules, workflows, examples, and operating guidance cleared for this kind of task.</span>
+            </div>
+            <div style="--accent: var(--amber)">
+            <strong>Allowed data</strong><span>Only the records, documents, and data packages the task is allowed to use.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Runtime limits</strong><span>What the agent may do with the context, and when a human must review it.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Source record</strong><span>Where the information came from, which version was used, and why it was allowed.</span>
+            </div>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Runtime Control" data-title="Every Agent Run Starts With A Check">
+
+            <h2>Every Agent Run Starts With A Check</h2>
+            <p><span class="eyebrow">Runtime</span></p>
+            <div class="lead">
+            <p>A run is one piece of AI work. Before it starts, the runtime checks the profile, owner, purpose, data, allowed action, review need, and release stage.</p>
+            </div>
+            <div class="flow runtime-flow" style="grid-template-columns: repeat(5, 1fr);">
+            <div class="theme-profile">
+            <strong>Check the profile</strong><span>Confirm owner, purpose, limits, and stage.</span>
+            </div>
+            <div>
+            <strong>Check access</strong><span>Give only the narrow access needed for this task.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Check approved data</strong><span>Use approved sources and versions, not unapproved places.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Run the work</strong><span>Call the model, tools, and shared human review steps through the runtime.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Write evidence</strong><span>Record decisions, data used, tool calls, approvals, results, and issues.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>This is how speed stays safe: each run gets narrow access for that task instead of ongoing broad access.</p>
+            </div>
+          </section>
+
+          <section class="slide section-divider" data-section="Evidence And Controls" data-title="Approvals Create The Control Record">
+
+            <h2>Approvals Create The Control Record</h2>
+            <p><span class="eyebrow">Approval and evidence</span></p>
+            <div class="lead">
+            <p>Before AI work grows, the platform asks the same questions: who owns it, what value it creates, what data it touches, what actions are allowed, what human review is required, and what evidence it leaves. Those answers become the record Security and Compliance use.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip theme-evidence">Owner</span><span class="chip theme-evidence">Purpose</span><span class="chip theme-evidence">Data</span><span class="chip theme-evidence">Allowed actions</span><span class="chip theme-evidence">Human review</span><span class="chip theme-evidence">Evidence</span><span class="chip theme-evidence">Release stage</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Evidence And Controls" data-title="The Evidence Layers">
+
+            <h2>The Evidence Layers</h2>
+            <p><span class="eyebrow">Evidence layers</span></p>
+            <div class="lead">
+            <p>Evidence is not one log file. It is a set of records that gives control teams the facts they need.</p>
+            </div>
+            <div class="timeline">
+            <div class="theme-profile">
+            <strong>Decision record</strong><span>Who approved the work, what profile applied, and what stage it was allowed to run in.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Context record</strong><span>Which information was provided to the agent, from which source, and under which limits.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Run trace</strong><span>What the agent did step by step: model calls, tool calls, outputs, and errors.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Review record</strong><span>Who reviewed the output, what they changed, and whether it was accepted or rejected.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>Outcome record</strong><span>Whether the work saved time, improved quality, reduced risk, or created follow-up work.</span>
+            </div>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Evidence And Controls" data-title="Evidence Turns Agent Work Into Auditable Work">
+
+            <h2>Every Important Run Leaves Evidence</h2>
+            <p><span class="eyebrow">Auditability</span></p>
+            <div class="timeline">
+            <div class="theme-profile">
+            <strong>What was approved?</strong><span>The profile, owner, and allowed stage.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Who got access?</strong><span>The exact data, tool, system, and time limit.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>What was used?</strong><span>Approved data source, version, citation, and context.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>What happened?</strong><span>Model calls, tool calls, human review, output, and exceptions.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>What was decided?</strong><span>Approval, failure, move-forward gate, rollback, or improvement item.</span>
+            </div>
+            </div>
+            <div class="callout theme-evidence">
+            <p>Evidence protects the company and helps teams improve. It gives Security and Compliance the record needed for audit, quality review, incident response, and future reuse.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Security And Compliance" data-title="Access Is Decided Limited And Recorded">
+
+            <h2>Access Is Decided, Limited, And Recorded For Each Run</h2>
+            <p><span class="eyebrow">Security and access</span></p>
+            <div class="lead">
+            <p>For each run, the platform asks who is requesting access, why it is needed, what data or tool is required, and what human review applies.</p>
+            </div>
+            <div class="four-col compact">
+            <div class="card metric-card">
+            <p><strong>Decision per run</strong></p>
+            <p>Approve, deny, narrow, or require human review for that task.</p>
+            </div>
+            <div class="card metric-card theme-profile">
+            <p><strong>Short lived</strong></p>
+            <p>Access expires and can be revoked.</p>
+            </div>
+            <div class="card metric-card theme-runtime">
+            <p><strong>Purpose bound</strong></p>
+            <p>Access is tied to the approved task, stage, and business purpose.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Recorded</strong></p>
+            <p>The decision, exchange, and next step are saved as evidence.</p>
+            </div>
+            </div>
+            <div class="callout">
+            <p>Because the decision is recorded, Security and Compliance can see why access was granted, narrowed, denied, or sent for review.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Security And Compliance" data-title="Audits For Compliance And Security">
+
+            <h2>Audits For Compliance And Security</h2>
+            <p><span class="eyebrow">Audit tests</span></p>
+            <div class="lead">
+            <p>Because runs leave evidence, AI can help test the work itself. Security and Compliance can scan traces, context, citations, outputs, and reviewer decisions for known problems.</p>
+            </div>
+            <div class="four-col compact">
+            <div class="card metric-card" style="--accent: var(--rose)">
+            <p><strong>PHI checks</strong></p>
+            <p>Look for sensitive data that was not needed, missing masking, wrong retention, or use outside the approved purpose.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--amber)">
+            <p><strong>Prompt exfiltration</strong></p>
+            <p>Test whether prompts or outside content can trick the agent into leaking data, ignoring rules, or calling the wrong tool.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--violet)">
+            <p><strong>Fairness checks</strong></p>
+            <p>Review outputs for unfair treatment, unsupported denials, missing citations, or inconsistent decisions across similar cases.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Exception checks</strong></p>
+            <p>Find unresolved exceptions, failed tests, reviewer overrides, incidents, and release blockers before the work expands.</p>
+            </div>
+            </div>
+            <div class="callout theme-evidence">
+            <p>This makes evidence useful, not passive: AI helps inspect the record, and humans decide what must be fixed before release.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Security And Compliance" data-title="Healthcare Risks Are First-Class Controls">
+
+            <h2>Healthcare Risks Are Built Into The Platform</h2>
+            <p><span class="eyebrow">Healthcare guardrails</span></p>
+            <div class="three-col compact">
+            <div class="card metric-card" style="--accent: var(--rose)">
+            <p><strong>Minimum necessary data</strong></p>
+            <p>Use only the data needed for the approved task, with the approved masking rules.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--amber)">
+            <p><strong>Unsafe content and tool use</strong></p>
+            <p>Treat outside content carefully, control tool use, and test for data leaks or manipulation.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--violet)">
+            <p><strong>Human review</strong></p>
+            <p>Clinical, financial, denial-related, external, or system-changing actions require the right human approval.</p>
+            </div>
+            </div>
+            <table class="matrix">
+            <thead>
+            <tr>
+            <th>
+            Risk
+            </th>
+            <th>
+            Platform response
+            </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>
+            Too much sensitive data
+            </td>
+            <td>
+            Clear data rules, use only what is needed, masking, and retention rules.
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Unauthorized action
+            </td>
+            <td>
+            Approved tools, access checks, narrow access, and approval gates.
+            </td>
+            </tr>
+            <tr>
+            <td>
+            Unsafe release
+            </td>
+            <td>
+            Quality tests, security review, compliance signoff, monitoring, and rollback.
+            </td>
+            </tr>
+            </tbody>
+            </table>
+          </section>
+
+          <section class="slide" data-section="Security And Compliance" data-title="Shared Release Gates">
+
+            <h2>Release Gates Create One Path From Test To Scale</h2>
+            <p><span class="eyebrow">Controlled growth</span></p>
+            <div class="lead">
+            <p>Release gates are checkpoints before an AI effort expands. Each gate asks whether the owner is clear, the data is approved, the human review is working, the controls are working, and there is a rollback plan.</p>
+            </div>
+            <div class="release-ladder" aria-label="Shared release path from dev to staging to production">
+            <div class="release-stage theme-runtime">
+            <h3>
+            Explore
+            </h3>
+            <p>
+            Use synthetic or non-production data. Show value, ownership, basic evidence, and safety assumptions.
+            </p>
+            <p><code>prototype</code></p>
+            </div>
+            <div class="release-stage theme-evidence">
+            <h3>
+            Pilot
+            </h3>
+            <p>
+            Use stricter review, production-like controls, support plans, and failure tests before broader use.
+            </p>
+            <p><code>controlled</code></p>
+            </div>
+            <div class="release-stage theme-catalog">
+            <h3>
+            Scale
+            </h3>
+            <p>
+            Run only approved versions with visible owners, monitoring, incident response, and rollback.
+            </p>
+            <p><code>production</code></p>
+            </div>
+            </div>
+            <div class="promotion-rule">
+            <p>The rule is shared. Each application brings its own facts, evidence, approvals, and business risk.</p>
+            </div>
+          </section>
+
+          <section class="slide section-divider" data-section="Reuse" data-title="Reuse And Cooperation">
+
+            <h2>Reuse And Cooperation</h2>
+            <p><span class="eyebrow">Reusable work</span></p>
+            <div class="lead">
+            <p>Reuse has two forms: teams reuse shared platform services, and agents reuse approved context, memory, and evidence from prior work.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">Shared services</span><span class="chip">Context packs</span><span class="chip">Memory</span><span class="chip">Evidence</span><span class="chip">Human review patterns</span><span class="chip">Quality tests</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Reuse" data-title="Application Teams Focus On The Workflow">
+
+            <h2>Application Teams Focus On The Workflow</h2>
+            <p><span class="eyebrow">Delivery benefit</span></p>
+            <div class="lead">
+            <p>Reuse does not mean every application looks the same. Teams keep ownership of their workflow while <span class="platform-name">The Shared Platform</span> supplies the common services they should not rebuild.</p>
+            </div>
+            <div class="four-col compact">
+            <div class="card metric-card theme-profile">
+            <p><strong>Workflow ownership</strong></p>
+            <p>Business teams own the users, rules, exceptions, and success measures for their work.</p>
+            </div>
+            <div class="card metric-card theme-runtime">
+            <p><strong>Reusable runtime</strong></p>
+            <p>Run creation, model and tool calls, access checks, human review, and stop controls are shared.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Reusable evidence</strong></p>
+            <p>Traces, approvals, test results, reviewer feedback, and audit records follow one pattern.</p>
+            </div>
+            <div class="card metric-card theme-catalog">
+            <p><strong>Reusable connections</strong></p>
+            <p>Approved data, context packs, Teams and file sources, APIs, and platform services are cataloged.</p>
+            </div>
+            </div>
+            <div class="callout">
+            <p>This is the practical reuse story: faster delivery for teams and a stronger control baseline for Security and Compliance.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Reuse" data-title="Shared Context Makes Reuse Work">
+
+            <h2>Shared Context Makes Reuse Work</h2>
+            <p><span class="eyebrow">Context and memory</span></p>
+            <div class="lead">
+            <p>The catalog enables context and memory systems. When agents use approved material, the platform can remember what helped, keep the source and owner attached, and make the next project start faster.</p>
+            </div>
+            <div class="three-col compact">
+            <div class="card metric-card theme-catalog">
+            <p><strong>Context packs</strong></p>
+            <p>Approved bundles of policies, source documents, examples, data definitions, and review rules for a job.</p>
+            </div>
+            <div class="card metric-card theme-runtime">
+            <p><strong>Memory system</strong></p>
+            <p>The platform remembers useful decisions, fixes, patterns, and context from prior runs, with sources and owners attached.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Search indexes</strong></p>
+            <p>Vector databases and trace indexes help agents and reviewers find related policies, past work, and prior decisions.</p>
+            </div>
+            </div>
+            <div class="callout">
+            <p>This starts during the agent harness phase: Codex and Claude Code runs leave traces, those traces point back to context, and the catalog decides what becomes reusable.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Reuse" data-title="Capabilities Can Be Reused Across Use Cases">
+
+            <h2>Good Local Ideas Can Become Shared Assets</h2>
+            <p><span class="eyebrow">Reuse path</span></p>
+            <div class="lead">
+            <p>A reusable asset can be a shared service, context pack, review pattern, quality test, evidence pattern, or prompt. The catalog records the owner, rules, inputs, outputs, and readiness.</p>
+            </div>
+            <div class="timeline">
+            <div style="--accent: var(--rose)">
+            <strong>Local idea</strong><span>A team shows a useful pattern in one workflow.</span>
+            </div>
+            <div style="--accent: var(--amber)">
+            <strong>Candidate</strong><span>Another team needs the same service, context, review step, test, prompt, or data.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>Owned asset</strong><span>The company names the owner, rules, inputs, outputs, and quality checks.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Shared release</strong><span>The asset becomes searchable, approved, monitored, and versioned.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>Ready for reuse</strong><span>Multiple teams use it with visible value, cost, quality, risk, and evidence.</span>
+            </div>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">Shared platform service</span><span class="chip theme-catalog">Context pack</span><span class="chip theme-runtime">Memory</span><span class="chip theme-evidence">Evidence pattern</span><span class="chip theme-runtime">Review routing</span><span class="chip">Quality test</span></p>
+            </div>
+          </section>
+
+          <section class="slide section-divider" data-section="Future Readiness" data-title="Simple For Users Ready For Change">
+
+            <h2>Simple For Users, Ready For Change</h2>
+            <p><span class="eyebrow">Keep it usable</span></p>
+            <div class="lead">
+            <p>Users should not need to understand the platform. They should get a simple, approved way to request AI help, review work, and trust the result.</p>
+            </div>
+            <div class="chip-row">
+            <p><span class="chip">Simple request</span><span class="chip">Clear review</span><span class="chip">Reusable learning</span><span class="chip">Change tools safely</span><span class="chip">Controlled adoption</span></p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Future Readiness" data-title="AI Will Change But The Rules Stay Clear">
+
+            <h2>AI Will Change, But The Rules Stay Clear</h2>
+            <p><span class="eyebrow">Future readiness</span></p>
+            <div class="three-col compact">
+            <div class="card metric-card" style="--accent: var(--violet)">
+            <p><strong>Delegated work</strong></p>
+            <p>If one agent asks another agent for help, that added work still needs limits, budget, owner, and evidence.</p>
+            </div>
+            <div class="card metric-card theme-catalog">
+            <p><strong>Memory</strong></p>
+            <p>Only approved past work should become reusable memory, and it must keep owner, privacy, and source links.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Improvement</strong></p>
+            <p>Prompts and workflows should improve against approved examples and quality checks, not hidden experiments.</p>
+            </div>
+            <div class="card metric-card" style="--accent: var(--amber)">
+            <p><strong>Summaries</strong></p>
+            <p>Short summaries should link back to the original source and carry warnings when they are incomplete.</p>
+            </div>
+            <div class="card metric-card theme-runtime">
+            <p><strong>New platforms</strong></p>
+            <p>Azure, Databricks, OpenAI, and future tools can change while the business rules stay consistent.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Feedback</strong></p>
+            <p>Human feedback should become quality evidence, not disappear after the meeting or chat.</p>
+            </div>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Technology Choices" data-title="Trusted Enterprise Systems Can Carry The Platform">
+
+            <h2>Trusted Enterprise Systems Can Carry The Platform</h2>
+            <p><span class="eyebrow">Enterprise systems</span></p>
+            <div class="lead">
+            <p>The technology direction is to keep AI work inside trusted enterprise systems where they fit, and to make exceptions visible.</p>
+            </div>
+            <div class="three-col compact">
+            <div class="card metric-card theme-runtime">
+            <p><strong>Azure for enterprise control</strong></p>
+            <p>Identity, app hosting, API management, monitoring, search, model oversight, and secrets should use approved enterprise services where they fit.</p>
+            </div>
+            <div class="card metric-card theme-catalog">
+            <p><strong>Databricks where the data lives</strong></p>
+            <p>Data, analytics, machine learning work, and data rules should stay close to approved enterprise data when that is the right home.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Exceptions are deliberate</strong></p>
+            <p>Special tools can be added when they solve a real gap, but they should not become hidden places where important decisions happen.</p>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>The architecture goal is simple: one visible set of rules, even when the tools underneath differ.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Roadmap" data-title="How The Work Builds Over Time">
+
+            <h2>How The Work Builds Over Time</h2>
+            <p><span class="eyebrow">Roadmap</span></p>
+            <div class="timeline">
+            <div class="theme-runtime">
+            <strong>Phase 1</strong><span>Build agent harnesses for Codex and Claude Code, plus catalog basics, human review, ownership records, and evidence capture.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>Phase 2A</strong><span>Port DAIS, the legal redlining app, with profile, shared review, and evidence.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Phase 2B</strong><span>Build Synthetic Benefits with synthetic data and benefits workflow checks.</span>
+            </div>
+            <div class="theme-runtime">
+            <strong>Phase 3</strong><span>Select two or three business pilots with clear value and manageable risk.</span>
+            </div>
+            <div style="--accent: var(--green)">
+            <strong>Phase 4</strong><span>Scale reusable services, operating model, dashboards, training, and support.</span>
+            </div>
+            </div>
+            <div class="callout">
+            <p>Each phase earns the next one by showing value, evidence, adoption, control, and readiness.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Operating Model" data-title="Agent-Native Operating Model">
+
+            <h2>Agent-Native Means AI Is Everywhere, Safely</h2>
+            <p><span class="eyebrow">Agent-native operating model</span></p>
+            <div class="lead">
+            <p>Agent-native means approved AI help is available where work already happens: in files, Teams channels, workflows, and business applications. People do not leave their work to find AI; AI is part of how the company works.</p>
+            </div>
+            <div class="story-bridge">
+            <div class="theme-runtime">
+            <strong>Easy to use</strong><span>AI help shows up in everyday places, not only in special experiments or separate tools.</span>
+            </div>
+            <div class="theme-profile">
+            <strong>Company rules travel with it</strong><span>Approved data, allowed actions, human review, and release stage stay attached to the work.</span>
+            </div>
+            <div class="theme-evidence">
+            <strong>Evidence and traces are built in</strong><span>Important work leaves a record that Security, Compliance, and business owners can inspect.</span>
+            </div>
+            <div class="theme-catalog">
+            <strong>Learning becomes reusable</strong><span>Useful prompts, review patterns, data packages, and lessons become shared company assets.</span>
+            </div>
+            </div>
+            <div class="callout neutral">
+            <p>BBVA shows the direction: broad AI use across a regulated company, supported by approved access, training, measurement, and expansion. <span class="platform-name">The Shared Platform</span> gives Point32Health the controls needed to make that kind of broad use safe.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-section="Executive Decision" data-title="Build The Shared Platform">
+
+            <h2>The Decision: Build The Shared Platform</h2>
+            <p><span class="eyebrow">Executive decision</span></p>
+            <div class="lead">
+            <p>The recommended decision is to approve <span class="platform-name">The Shared Platform</span> program and hold it accountable to visible outcomes.</p>
+            </div>
+            <div class="three-col compact">
+            <div class="card metric-card theme-catalog">
+            <p><strong>Approve the program</strong></p>
+            <p>Create <span class="platform-name">The Shared Platform</span> path for AI agent harnesses, ownership, runtime review, evidence, and release.</p>
+            </div>
+            <div class="card metric-card theme-runtime">
+            <p><strong>Staff the core team</strong></p>
+            <p>Assign product, engineering, security, compliance, data, operations, and business experts.</p>
+            </div>
+            <div class="card metric-card theme-evidence">
+            <p><strong>Measure progress</strong></p>
+            <p>Track adoption, value, quality, risk, reuse, incidents, review time, and release readiness.</p>
+            </div>
+            </div>
+            <div class="callout theme-profile">
+            <p>This investment creates <span class="platform-name">The Shared Platform</span> path that many future AI efforts can use. Without it, every new pilot has to invent its own controls.</p>
+            </div>
+          </section>
+          <div class="scroll-cue" id="scrollCue" hidden aria-hidden="true"></div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="presenter-notes" aria-label="Presenter notes">
+      <h2>Presenter Notes</h2>
+      <div class="presenter-note-body" id="presenterNotes"></div>
+    </aside>
+
+    <footer class="footer-controls">
+      <div class="progress" aria-label="Deck progress"><span id="progressBar"></span></div>
+      <div class="counter" id="counter">1 / 32</div>
+      <button class="nav-btn" id="overviewBtn" aria-label="Open overview">O</button>
+      <button class="nav-btn" id="prevBtn" aria-label="Previous slide">Prev</button>
+      <button class="nav-btn primary" id="nextBtn" aria-label="Next slide">Next</button>
+    </footer>
+  </div>
+
+  <div class="overview" id="overview"><div class="overview-grid" id="overviewGrid"></div></div>
+  <div class="zoom zoom-modal" id="zoom" aria-modal="true" role="dialog" aria-label="Diagram zoom">
+    <button class="zoom-close" id="zoomClose" type="button">Close</button>
+    <img id="zoomImg" alt="Zoomed diagram">
+  </div>
+  <svg class="htmpres-filter-defs" aria-hidden="true" focusable="false" width="0" height="0">
+    <filter id="htmpres-sharpen">
+      <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0"></feConvolveMatrix>
+    </filter>
+  </svg>
+
+  <script id="deckNotes" type="application/json">["\u003cp\u003eSet the tone as an executive decision discussion. The ask comes later; the opener should frame why a shared platform matters before talking about money.\u003c/p\u003e","\u003cp\u003eDo not draw the conclusion yet. Use this slide to set up BBVA as the story, then let the next slides explain the adoption system.\u003c/p\u003e","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]</script>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const tocList = document.getElementById("tocList");
+    const overview = document.getElementById("overview");
+    const overviewGrid = document.getElementById("overviewGrid");
+    const slidesViewport = document.getElementById("slides");
+    const scrollCue = document.getElementById("scrollCue");
+    const notesBox = document.getElementById("notesBox");
+    const presenterNotes = document.getElementById("presenterNotes");
+    const counter = document.getElementById("counter");
+    const progressBar = document.getElementById("progressBar");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const overviewBtn = document.getElementById("overviewBtn");
+    const slideFit = document.getElementById("slideFit");
+    const zoom = document.getElementById("zoom");
+    const zoomImg = document.getElementById("zoomImg");
+    const zoomClose = document.getElementById("zoomClose");
+    let current = 0;
+    let hasRendered = false;
+    let textFitFrame = 0;
+    let viewportFrame = 0;
+    const deckNotes = readDeckNotes();
+    const slideFragmentStates = new WeakMap();
+    const slideCodeStates = new WeakMap();
+    const mobileDeckFlowQuery = "(max-width: 980px)";
+
+    function buildNav() {
+      slides.forEach((slide, index) => {
+        const title = slide.dataset.title || slide.querySelector("h2")?.textContent || `Slide ${index + 1}`;
+        const section = slide.dataset.section || "";
+        const nav = document.createElement("button");
+        nav.textContent = `${index + 1}. ${title}`;
+        nav.addEventListener("click", () => goTo(index));
+        tocList?.appendChild(nav);
+
+        const card = document.createElement("button");
+        card.className = "overview-card";
+        card.innerHTML = `<small>${index + 1} / ${slides.length}${section ? ` - ${section}` : ""}</small><strong>${title}</strong>`;
+        card.addEventListener("click", () => {
+          overview?.classList.remove("visible");
+          goTo(index);
+        });
+        overviewGrid?.appendChild(card);
+      });
+    }
+
+    function scaleDeck() {
+      if (!slideFit) return;
+      const stage = slideFit.parentElement;
+      if (!stage) return;
+      if (mobileDeckFlowActive()) {
+        document.documentElement.style.setProperty("--deck-scale", "1");
+        slideFit.style.removeProperty("width");
+        slideFit.style.removeProperty("height");
+        return;
+      }
+      const width = 1280;
+      const height = 720;
+      const rect = stage.getBoundingClientRect();
+      const stageStyle = getComputedStyle(stage);
+      const availableWidth = Math.max(0, rect.width - cssPixels(stageStyle.paddingLeft) - cssPixels(stageStyle.paddingRight));
+      const availableHeight = Math.max(0, rect.height - cssPixels(stageStyle.paddingTop) - cssPixels(stageStyle.paddingBottom));
+      const scale = Math.min(availableWidth / width, availableHeight / height, 1);
+      document.documentElement.style.setProperty("--deck-scale", scale.toString());
+      slideFit.style.width = `${width * scale}px`;
+      slideFit.style.height = `${height * scale}px`;
+    }
+
+    function mobileDeckFlowActive() {
+      return window.matchMedia?.(mobileDeckFlowQuery)?.matches || false;
+    }
+
+    function cssPixels(value) {
+      const parsed = Number.parseFloat(value);
+      return Number.isFinite(parsed) ? parsed : 0;
+    }
+
+    function updateViewportHeight() {
+      const height = window.visualViewport?.height || window.innerHeight || document.documentElement.clientHeight;
+      if (!height) return;
+      document.documentElement.style.setProperty("--htmpres-viewport-height", `${Math.floor(height)}px`);
+      document.documentElement.style.setProperty(
+        "--htmpres-mobile-browser-clearance",
+        `${mobileBrowserChromeClearance(height)}px`,
+      );
+    }
+
+    function mobileBrowserChromeClearance(height) {
+      const isMobileTouch = window.matchMedia?.("(max-width: 980px) and (pointer: coarse)")?.matches;
+      const isPortrait = window.matchMedia?.("(orientation: portrait)")?.matches;
+      const isStandalone = window.navigator.standalone || window.matchMedia?.("(display-mode: standalone)")?.matches;
+      const screenHeight = Math.max(window.screen?.height || 0, window.screen?.availHeight || 0);
+      if (!isMobileTouch || !isPortrait || isStandalone || !screenHeight) return 0;
+      return height >= screenHeight * 0.9 ? 112 : 0;
+    }
+
+    function scheduleViewportLayout() {
+      if (viewportFrame) cancelAnimationFrame(viewportFrame);
+      viewportFrame = requestAnimationFrame(() => {
+        viewportFrame = 0;
+        updateViewportHeight();
+        scaleDeck();
+        scheduleTextFit();
+      });
+    }
+
+    function scheduleTextFit() {
+      if (textFitFrame) cancelAnimationFrame(textFitFrame);
+      textFitFrame = requestAnimationFrame(() => {
+        textFitFrame = 0;
+        fitSlideText(slides[current]);
+      });
+    }
+
+    function fitSlideText(slide) {
+      if (!slide) {
+        updateScrollCue();
+        return;
+      }
+      slide.classList.remove("htmpres-text-fit-overflow");
+      if (!slideTextFitEnabled(slide)) {
+        resetTextFit(slide);
+        updateScrollCue();
+        return;
+      }
+      if (!slide.classList.contains("active")) {
+        updateScrollCue();
+        return;
+      }
+
+      const minScale = textFitMinimum(slide);
+      let scale = 1;
+      slide.classList.add("htmpres-text-fit-active");
+      slide.style.setProperty("--htmpres-text-fit-scale", "1");
+
+      let overflow = slideOverflowRatio(slide);
+      for (let attempt = 0; attempt < 8 && overflow > 1.01 && scale > minScale; attempt += 1) {
+        const nextScale = Math.max(minScale, Math.min((scale / overflow) * 0.985, scale - 0.01));
+        if (Math.abs(nextScale - scale) < 0.002) break;
+        scale = nextScale;
+        slide.style.setProperty("--htmpres-text-fit-scale", scale.toFixed(4));
+        overflow = slideOverflowRatio(slide);
+      }
+
+      slide.dataset.textFitScale = scale.toFixed(3);
+      slide.classList.toggle("htmpres-text-fit-overflow", overflow > 1.02 && scale <= minScale + 0.002);
+      updateScrollCue();
+    }
+
+    function resetTextFit(slide) {
+      slide.classList.remove("htmpres-text-fit-active", "htmpres-text-fit-overflow");
+      slide.style.removeProperty("--htmpres-text-fit-scale");
+      delete slide.dataset.textFitScale;
+    }
+
+    function slideTextFitEnabled(slide) {
+      if (truthy(slide.dataset.textFit) || truthy(slide.dataset.autoscale) || slide.classList.contains("autoscale")) return true;
+      if (falsy(slide.dataset.textFit) || falsy(slide.dataset.autoscale) || slide.classList.contains("no-autoscale")) return false;
+      if (fitOverflowPolicy(slide)) return true;
+      return truthy(document.documentElement.dataset.textFit) || truthy(document.documentElement.dataset.autoscale);
+    }
+
+    function fitOverflowPolicy(slide) {
+      const mode = String(slide.dataset.overflow || document.documentElement.dataset.overflow || "").trim().toLowerCase();
+      return mode === "fit" || mode === "fit-scroll";
+    }
+
+    function textFitMinimum(slide) {
+      const style = getComputedStyle(slide);
+      return clampNumber(
+        slide.dataset.textFitMin ||
+          slide.dataset.autoscaleMin ||
+          document.documentElement.dataset.textFitMin ||
+          style.getPropertyValue("--htmpres-text-fit-min"),
+        0.45,
+        1,
+        0.62,
+      );
+    }
+
+    function slideOverflowRatio(slide) {
+      if (!slide.clientWidth || !slide.clientHeight) return 1;
+      return Math.max(slide.scrollWidth / slide.clientWidth, slide.scrollHeight / slide.clientHeight);
+    }
+
+    function wireScrollCue() {
+      slides.forEach((slide) => slide.addEventListener("scroll", updateScrollCue, { passive: true }));
+    }
+
+    function updateScrollCue() {
+      const slide = slides[current];
+      if (!slidesViewport || !scrollCue || !slide) return;
+      const overflowY = getComputedStyle(slide).overflowY;
+      const scrollOverflow = slide.scrollHeight - slide.clientHeight;
+      const canScroll = /(auto|scroll)/.test(overflowY) && scrollOverflow > 12;
+      const atEnd = !canScroll || slide.scrollTop + slide.clientHeight >= slide.scrollHeight - 12;
+      slide.classList.toggle("htmpres-slide-scrollable", canScroll);
+      slide.classList.toggle("htmpres-slide-scrolled-end", atEnd);
+      slidesViewport.classList.toggle("scroll-cue-visible", canScroll && !atEnd);
+      scrollCue.hidden = !(canScroll && !atEnd);
+    }
+
+    function resetInactiveScrollState(activeSlide) {
+      slides.forEach((slide) => {
+        if (slide === activeSlide) return;
+        slide.classList.remove("htmpres-slide-scrollable", "htmpres-slide-scrolled-end");
+      });
+    }
+
+    function truthy(value) {
+      return /^(1|true|yes|on)$/i.test(String(value || "").trim());
+    }
+
+    function falsy(value) {
+      return /^(0|false|no|off)$/i.test(String(value || "").trim());
+    }
+
+    function clampNumber(value, min, max, fallback) {
+      const number = Number.parseFloat(String(value || "").trim());
+      if (!Number.isFinite(number)) return fallback;
+      return Math.max(min, Math.min(max, number));
+    }
+
+    function goTo(index) {
+      const next = Math.max(0, Math.min(slides.length - 1, index));
+      const direction = !hasRendered || next === current ? "none" : next > current ? "next" : "prev";
+      const shouldResetSteps = !hasRendered || next !== current;
+      current = next;
+      document.documentElement.dataset.slideDirection = direction;
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+      if (shouldResetSteps) {
+        slides[current].scrollTop = 0;
+        slides[current].scrollLeft = 0;
+      }
+      resetInactiveScrollState(slides[current]);
+      updateScrollCue();
+      Array.from(tocList?.children || []).forEach((btn, i) => btn.classList.toggle("active", i === current));
+      Array.from(overviewGrid?.children || []).forEach((card, i) => card.classList.toggle("active", i === current));
+      if (counter) counter.textContent = `${current + 1} / ${slides.length}`;
+      if (progressBar) progressBar.style.width = `${((current + 1) / slides.length) * 100}%`;
+      if (shouldResetSteps) resetSlideSteps(slides[current]);
+      updateNotes();
+      syncSlideMedia();
+      scheduleTextFit();
+      hasRendered = true;
+      if (location.hash !== `#/${current + 1}`) history.replaceState(null, "", `#/${current + 1}`);
+    }
+
+    function prepareSlideTransitions() {
+      slides.forEach((slide) => {
+        const transition = sanitizeClassToken(slide.dataset.transition || "");
+        if (transition) slide.classList.add(`transition-${transition}`);
+      });
+    }
+
+    function prepareFragments() {
+      slides.forEach((slide) => {
+        const fragments = [];
+        const seen = new Set();
+
+        slide.querySelectorAll(".fragment").forEach((fragment) => addFragment(fragments, seen, fragment));
+        slide.querySelectorAll(".incremental > li, .incremental > ol > li, .incremental > ul > li, ol.incremental > li, ul.incremental > li").forEach((item) => {
+          item.classList.add("fragment");
+          const owner = item.closest(".incremental");
+          if (owner?.dataset.fragmentEffect && !item.dataset.fragmentEffect) {
+            item.dataset.fragmentEffect = owner.dataset.fragmentEffect;
+          }
+          addFragment(fragments, seen, item);
+        });
+
+        if (!fragments.length) return;
+        slide.classList.add("has-fragments");
+        fragments.sort((a, b) => {
+          if (a.element === b.element) return 0;
+          return a.element.compareDocumentPosition(b.element) & Node.DOCUMENT_POSITION_PRECEDING ? 1 : -1;
+        });
+        let nextIndex = 1;
+        fragments.forEach((fragment) => {
+          const explicit = Number(fragment.element.dataset.fragmentIndex);
+          if (Number.isFinite(explicit)) {
+            fragment.index = Math.max(0, Math.floor(explicit));
+            nextIndex = Math.max(nextIndex, fragment.index + 1);
+          } else {
+            fragment.index = nextIndex;
+            nextIndex += 1;
+          }
+          const effect = sanitizeClassToken(fragment.element.dataset.fragmentEffect || "");
+          if (effect) fragment.element.classList.add(`fragment-${effect}`);
+        });
+        slideFragmentStates.set(slide, {
+          fragments,
+          maxSteps: Math.max(...fragments.map((fragment) => fragment.index)),
+          step: 0,
+        });
+      });
+    }
+
+    function addFragment(fragments, seen, element) {
+      if (seen.has(element)) return;
+      seen.add(element);
+      fragments.push({ element, index: 0 });
+    }
+
+    function sanitizeClassToken(value) {
+      return value.trim().toLowerCase().replace(/[^a-z0-9_-]+/g, "-").replace(/^-+|-+$/g, "");
+    }
+
+    function resetSlideSteps(slide) {
+      resetFragmentStep(slide);
+      resetCodeStep(slide);
+    }
+
+    function resetFragmentStep(slide) {
+      const state = slideFragmentStates.get(slide);
+      if (!state) return;
+      state.step = 0;
+      applyFragmentStep(slide);
+    }
+
+    function advanceFragmentStep() {
+      const state = slideFragmentStates.get(slides[current]);
+      if (!state || state.step >= state.maxSteps) return false;
+      state.step += 1;
+      applyFragmentStep(slides[current]);
+      return true;
+    }
+
+    function retreatFragmentStep() {
+      const state = slideFragmentStates.get(slides[current]);
+      if (!state || state.step <= 0) return false;
+      state.step -= 1;
+      applyFragmentStep(slides[current]);
+      return true;
+    }
+
+    function applyFragmentStep(slide) {
+      const state = slideFragmentStates.get(slide);
+      if (!state) return;
+      state.fragments.forEach((fragment) => {
+        const visible = fragment.index <= state.step;
+        const currentFragment = fragment.index === state.step && state.step > 0;
+        fragment.element.classList.toggle("fragment-visible", visible);
+        fragment.element.classList.toggle("fragment-current", currentFragment);
+        fragment.element.classList.toggle("fragment-past", visible && fragment.index < state.step);
+        fragment.element.setAttribute("aria-hidden", visible ? "false" : "true");
+      });
+    }
+
+    function settleFragmentStep(slide) {
+      const state = slideFragmentStates.get(slide);
+      if (!state || state.step < state.maxSteps) return;
+      state.fragments.forEach((fragment) => {
+        fragment.element.classList.remove("fragment-current");
+        fragment.element.classList.toggle("fragment-past", fragment.index <= state.step);
+      });
+    }
+
+    function prepareCodeSteppers() {
+      slides.forEach((slide) => {
+        const blocks = [];
+        slide.querySelectorAll("div.sourceCode, pre, code").forEach((root) => {
+          if (!hasCodeDirective(root)) return;
+          if (root.matches("pre, code") && root.closest("div.sourceCode[data-highlight], div.sourceCode[data-steps], div.sourceCode[data-highlight-steps]")) return;
+
+          const code = root.matches("code") ? root : root.querySelector("code");
+          if (!code) return;
+
+          const lines = codeLineNodes(code);
+          if (!lines.length) return;
+
+          const highlight = getCodeData(root, code, "highlight");
+          const steps = getCodeData(root, code, "steps") || getCodeData(root, code, "highlightSteps");
+          const staticLines = parseLineSelection(highlight, lines.length);
+          const stepLines = parseStepSelections(steps, lines.length);
+          if (!staticLines.size && !stepLines.length) return;
+
+          root.classList.add("code-stepper");
+          blocks.push({ root, lines, staticLines, stepLines });
+        });
+
+        if (!blocks.length) return;
+        slideCodeStates.set(slide, {
+          blocks,
+          maxSteps: Math.max(...blocks.map((block) => block.stepLines.length)),
+          step: 0,
+        });
+      });
+    }
+
+    function hasCodeDirective(root) {
+      return Boolean(root.dataset.highlight || root.dataset.steps || root.dataset.highlightSteps);
+    }
+
+    function getCodeData(root, code, key) {
+      const pre = code.closest("pre");
+      return root.dataset[key] || pre?.dataset[key] || code.dataset[key] || "";
+    }
+
+    function codeLineNodes(code) {
+      const pandocLines = Array.from(code.children).filter((child) => {
+        if (child.tagName !== "SPAN") return false;
+        return Boolean(child.dataset.line || /-\d+$/.test(child.id || ""));
+      });
+
+      const lines = pandocLines.length ? pandocLines : wrapPlainCodeLines(code);
+      lines.forEach((line, index) => {
+        line.classList.add("code-line");
+        line.dataset.line = String(lineNumber(line, index));
+      });
+      return lines;
+    }
+
+    function wrapPlainCodeLines(code) {
+      const text = code.textContent || "";
+      const hadTrailingNewline = /\n$/.test(text);
+      const parts = text.replace(/\n$/, "").split("\n");
+      code.textContent = "";
+      const lines = parts.map((part, index) => {
+        const line = document.createElement("span");
+        line.textContent = part || "\u200b";
+        code.appendChild(line);
+        if (index < parts.length - 1 || hadTrailingNewline) code.appendChild(document.createTextNode("\n"));
+        return line;
+      });
+      return lines;
+    }
+
+    function lineNumber(line, index) {
+      const dataLine = Number(line.dataset.line);
+      if (Number.isFinite(dataLine) && dataLine > 0) return dataLine;
+      const match = /-(\d+)$/.exec(line.id || "");
+      return match ? Number(match[1]) : index + 1;
+    }
+
+    function parseStepSelections(value, lineCount) {
+      if (!value) return [];
+      return value.split("|").map((part) => parseLineSelection(part, lineCount));
+    }
+
+    function parseLineSelection(value, lineCount) {
+      const selected = new Set();
+      const raw = (value || "").trim().toLowerCase();
+      if (!raw || raw === "none") return selected;
+      if (raw === "all") {
+        for (let line = 1; line <= lineCount; line += 1) selected.add(line);
+        return selected;
+      }
+
+      raw.split(/[,\s]+/).forEach((part) => {
+        if (!part) return;
+        const range = /^(\d+)-(\d+)$/.exec(part);
+        if (range) {
+          const start = Math.max(1, Math.min(Number(range[1]), Number(range[2])));
+          const end = Math.min(lineCount, Math.max(Number(range[1]), Number(range[2])));
+          for (let line = start; line <= end; line += 1) selected.add(line);
+          return;
+        }
+        const line = Number(part);
+        if (Number.isInteger(line) && line >= 1 && line <= lineCount) selected.add(line);
+      });
+      return selected;
+    }
+
+    function resetCodeStep(slide) {
+      const state = slideCodeStates.get(slide);
+      if (!state) return;
+      state.step = 0;
+      applyCodeStep(slide);
+    }
+
+    function advanceCodeStep() {
+      const state = slideCodeStates.get(slides[current]);
+      if (!state || state.maxSteps < 2 || state.step >= state.maxSteps - 1) return false;
+      state.step += 1;
+      applyCodeStep(slides[current]);
+      return true;
+    }
+
+    function retreatCodeStep() {
+      const state = slideCodeStates.get(slides[current]);
+      if (!state || state.step <= 0) return false;
+      state.step -= 1;
+      applyCodeStep(slides[current]);
+      return true;
+    }
+
+    function applyCodeStep(slide) {
+      const state = slideCodeStates.get(slide);
+      if (!state) return;
+
+      state.blocks.forEach((block) => {
+        const stepSet = block.stepLines.length ? block.stepLines[Math.min(state.step, block.stepLines.length - 1)] : null;
+        const activeLines = new Set(block.staticLines);
+        if (stepSet) stepSet.forEach((line) => activeLines.add(line));
+        const shouldDim = Boolean(stepSet && activeLines.size);
+
+        block.lines.forEach((line) => {
+          const active = activeLines.has(Number(line.dataset.line));
+          line.classList.toggle("code-line-highlight", active);
+          line.classList.toggle("code-line-dim", shouldDim && !active);
+        });
+
+        block.root.classList.toggle("code-step-active", Boolean(block.stepLines.length));
+        if (block.stepLines.length) {
+          block.root.dataset.activeStep = String(Math.min(state.step + 1, block.stepLines.length));
+        } else {
+          delete block.root.dataset.activeStep;
+        }
+      });
+    }
+
+    function nextStepOrSlide() {
+      if (advanceFragmentStep()) return;
+      settleFragmentStep(slides[current]);
+      if (advanceCodeStep()) return;
+      goTo(current + 1);
+    }
+
+    function prevStepOrSlide() {
+      if (retreatCodeStep()) return;
+      if (retreatFragmentStep()) return;
+      goTo(current - 1);
+    }
+
+    function updateNotes() {
+      const noteHtml = deckNotes[current] || "";
+      if (presenterNotes) {
+        presenterNotes.innerHTML = noteHtml || '<p class="presenter-note-empty">No presenter notes for this slide.</p>';
+      }
+      if (!notesBox) return;
+      const note = slides[current]?.querySelector(".notes");
+      notesBox.innerHTML = noteHtml || (note ? note.innerHTML : "No speaker notes for this slide.");
+    }
+
+    function toggleNotes() {
+      if (!notesBox) return;
+      notesBox?.classList.toggle("visible");
+    }
+
+    function toggleOverview() {
+      overview?.classList.toggle("visible");
+    }
+
+    function closeOverlays() {
+      overview?.classList.remove("visible");
+      zoom?.classList.remove("visible");
+      notesBox?.classList.remove("visible");
+    }
+
+    function wireZoom() {
+      document.querySelectorAll(".zoomable").forEach((image) => {
+        image.addEventListener("click", () => {
+          if (!zoom || !zoomImg) return;
+          zoomImg.src = image.currentSrc || image.src;
+          zoomImg.alt = image.alt || "Zoomed diagram";
+          zoom.classList.add("visible");
+        });
+      });
+      zoomClose?.addEventListener("click", () => zoom?.classList.remove("visible"));
+      zoom?.addEventListener("click", (event) => {
+        if (event.target === zoom) zoom.classList.remove("visible");
+      });
+    }
+
+    function wireTapNavigation() {
+      if (!slideFit) return;
+
+      let touchStart = null;
+      let suppressClickUntil = 0;
+      const swipeDistance = 48;
+      const swipeVerticalTolerance = 0.8;
+      const swipeMaxDuration = 800;
+
+      slideFit.addEventListener("click", (event) => {
+        if (performance.now() < suppressClickUntil) return;
+        if (event.defaultPrevented || ("button" in event && event.button !== 0) || interactiveTapTarget(event.target)) return;
+        const rect = slideFit.getBoundingClientRect();
+        if (!rect.width) return;
+        const x = event.clientX - rect.left;
+        if (x < rect.width * 0.28) {
+          prevStepOrSlide();
+        } else {
+          nextStepOrSlide();
+        }
+      });
+
+      slideFit.addEventListener("touchstart", (event) => {
+        if (event.touches.length !== 1 || interactiveTapTarget(event.target)) {
+          touchStart = null;
+          return;
+        }
+        const touch = event.touches[0];
+        touchStart = {
+          x: touch.clientX,
+          y: touch.clientY,
+          time: performance.now(),
+        };
+      }, { passive: true });
+
+      slideFit.addEventListener("touchend", (event) => {
+        if (!touchStart || interactiveTapTarget(event.target)) {
+          touchStart = null;
+          return;
+        }
+        const touch = event.changedTouches[0];
+        if (!touch) {
+          touchStart = null;
+          return;
+        }
+        const dx = touch.clientX - touchStart.x;
+        const dy = touch.clientY - touchStart.y;
+        const duration = performance.now() - touchStart.time;
+        touchStart = null;
+        if (Math.abs(dx) < swipeDistance) return;
+        if (Math.abs(dy) > Math.abs(dx) * swipeVerticalTolerance) return;
+        if (duration > swipeMaxDuration) return;
+        suppressClickUntil = performance.now() + 650;
+        if (dx < 0) {
+          nextStepOrSlide();
+        } else {
+          prevStepOrSlide();
+        }
+      }, { passive: true });
+
+      slideFit.addEventListener("touchcancel", () => {
+        touchStart = null;
+      }, { passive: true });
+    }
+
+    function interactiveTapTarget(target) {
+      if (!(target instanceof Element)) return false;
+      return Boolean(target.closest(
+        "a, button, input, select, textarea, summary, label, pre, code, video, audio, iframe, object, embed, [contenteditable], [role='button'], .sourceCode, .zoomable, .no-tap-nav, .no-slide-nav, [data-no-tap-nav], [data-no-slide-nav]",
+      ));
+    }
+
+    function wireMediaDirectives() {
+      document.querySelectorAll("video, audio").forEach((media) => {
+        if (media.classList.contains("ds-controls")) media.setAttribute("controls", "");
+        if (media.classList.contains("ds-autoplay")) media.setAttribute("autoplay", "");
+        if (media.classList.contains("ds-loop")) media.setAttribute("loop", "");
+        if (media.classList.contains("ds-muted")) {
+          media.muted = true;
+          media.setAttribute("muted", "");
+        }
+        if (media.classList.contains("ds-hide")) media.setAttribute("aria-hidden", "true");
+        if (media.classList.contains("ds-autoadvance")) {
+          media.addEventListener("ended", () => {
+            if (slides[current]?.contains(media)) goTo(current + 1);
+          });
+        }
+      });
+    }
+
+    function syncSlideMedia() {
+      slides.forEach((slide, index) => {
+        slide.querySelectorAll("video, audio").forEach((media) => {
+          if (index === current) {
+            if (media.classList.contains("ds-autoplay")) media.play?.().catch(() => {});
+            return;
+          }
+          media.pause?.();
+          if (!media.classList.contains("ds-keep-time")) {
+            try {
+              media.currentTime = 0;
+            } catch {
+              // Some streaming sources do not allow seeking until metadata loads.
+            }
+          }
+        });
+      });
+    }
+
+    function readDeckNotes() {
+      const node = document.getElementById("deckNotes");
+      if (!node) return [];
+      try {
+        const parsed = JSON.parse(node.textContent || "[]");
+        return Array.isArray(parsed) ? parsed : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function initialSlideFromHash() {
+      const match = /^#\/(\d+)/.exec(location.hash);
+      if (!match) return 0;
+      return Number(match[1]) - 1;
+    }
+
+    prevBtn?.addEventListener("click", prevStepOrSlide);
+    nextBtn?.addEventListener("click", nextStepOrSlide);
+    overviewBtn?.addEventListener("click", toggleOverview);
+    overview?.addEventListener("click", (event) => {
+      if (event.target === overview) overview.classList.remove("visible");
+    });
+    window.addEventListener("resize", scheduleViewportLayout);
+    window.addEventListener("orientationchange", scheduleViewportLayout);
+    window.visualViewport?.addEventListener("resize", scheduleViewportLayout);
+    window.visualViewport?.addEventListener("scroll", scheduleViewportLayout);
+    window.addEventListener("load", scheduleTextFit);
+    document.fonts?.ready?.then(scheduleTextFit)?.catch(() => {});
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === " " || event.key === "PageDown") {
+        event.preventDefault();
+        nextStepOrSlide();
+      }
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        prevStepOrSlide();
+      }
+      if (event.key === "Home") goTo(0);
+      if (event.key === "End") goTo(slides.length - 1);
+      if (event.key.toLowerCase() === "o") toggleOverview();
+      if (event.key.toLowerCase() === "n") toggleNotes();
+      if (event.key === "Escape") closeOverlays();
+      if (event.key.toLowerCase() === "f" && document.fullscreenEnabled) {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+        else document.exitFullscreen();
+      }
+    });
+
+    updateViewportHeight();
+    buildNav();
+    wireZoom();
+    wireScrollCue();
+    wireTapNavigation();
+    wireMediaDirectives();
+    prepareSlideTransitions();
+    prepareFragments();
+    prepareCodeSteppers();
+    scaleDeck();
+    goTo(initialSlideFromHash());
+
+  </script>
+  <script>
+(() => {
+  function currentSlideFor(node) {
+    return node.closest(".slide") || node.closest(".reveal .slides section") || document;
+  }
+
+  function scopedQuery(node, selector) {
+    const slide = currentSlideFor(node);
+    return slide.querySelector(selector) || document.querySelector(selector);
+  }
+
+  function setActive(control) {
+    const group = control.closest(".pill-row") || control.closest("[data-choice-group]");
+    if (!group) return;
+    group.querySelectorAll(".active").forEach((item) => item.classList.remove("active"));
+    control.classList.add("active");
+  }
+
+  function writePanel(panel, title, text, html) {
+    if (!panel) return;
+    if (html) {
+      panel.innerHTML = html;
+      return;
+    }
+    panel.innerHTML = "";
+    if (title) {
+      const heading = document.createElement("h3");
+      heading.textContent = title;
+      panel.appendChild(heading);
+    }
+    if (text) {
+      const para = document.createElement("p");
+      para.textContent = text;
+      panel.appendChild(para);
+    }
+  }
+
+  function activateGeneric(control) {
+    const selector = control.dataset.target || control.dataset.updateTarget;
+    if (!selector) return false;
+    const panel = scopedQuery(control, selector);
+    writePanel(panel, control.dataset.title, control.dataset.text, control.dataset.html);
+    setActive(control);
+    return true;
+  }
+
+  function activateFilter(control) {
+    const filter = control.dataset.filter || control.dataset.itemFilter;
+    const selector = control.dataset.filterTarget;
+    if (!filter || !selector) return false;
+    const slide = currentSlideFor(control);
+    slide.querySelectorAll(selector).forEach((item) => {
+      const values = (item.dataset.filter || item.dataset.tags || "").split(/\s+/);
+      item.hidden = filter !== "all" && !values.includes(filter);
+    });
+    setActive(control);
+    return true;
+  }
+
+  function makeInteractive(control, handler) {
+    if (!control.matches("button")) {
+      control.setAttribute("role", control.getAttribute("role") || "button");
+      control.setAttribute("tabindex", control.getAttribute("tabindex") || "0");
+    }
+    control.addEventListener("click", handler);
+    control.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        handler(event);
+      }
+    });
+  }
+
+  function wirePanelControls() {
+    document.querySelectorAll("[data-target], [data-update-target]").forEach((control) => {
+      makeInteractive(control, () => activateGeneric(control));
+    });
+    document.querySelectorAll("[data-filter], [data-item-filter]").forEach((control) => {
+      makeInteractive(control, () => activateFilter(control));
+    });
+  }
+
+  function ensureZoomModal() {
+    let modal = document.getElementById("htmpresZoom");
+    if (modal) return modal;
+    modal = document.createElement("div");
+    modal.id = "htmpresZoom";
+    modal.className = "htmpres-zoom";
+    modal.innerHTML = '<button type="button" aria-label="Close zoom">Close</button><img alt="">';
+    document.body.appendChild(modal);
+    modal.querySelector("button").addEventListener("click", () => modal.classList.remove("visible"));
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) modal.classList.remove("visible");
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") modal.classList.remove("visible");
+    });
+    return modal;
+  }
+
+  function wireZoom() {
+    if (document.getElementById("zoom") || document.getElementById("zoomImg")) return;
+    const modal = ensureZoomModal();
+    const modalImage = modal.querySelector("img");
+    document.querySelectorAll("img.zoomable, .zoomable img").forEach((image) => {
+      image.addEventListener("click", () => {
+        modalImage.src = image.currentSrc || image.src;
+        modalImage.alt = image.alt || "Zoomed slide image";
+        modal.classList.add("visible");
+      });
+    });
+  }
+
+  function init() {
+    wirePanelControls();
+    wireZoom();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+</body>
+</html>

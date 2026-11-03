@@ -1,0 +1,128 @@
+[
+  {
+    "slide": 1,
+    "kind": "new bridge",
+    "title": "Embeddings and\nlanguage models"
+  },
+  {
+    "slide": 2,
+    "kind": "new bridge",
+    "title": "How a language model generates text"
+  },
+  {
+    "slide": 3,
+    "kind": "new bridge",
+    "title": "A brief history"
+  },
+  {
+    "slide": 4,
+    "kind": "new bridge",
+    "title": "An embedding is a list of numbers"
+  },
+  {
+    "slide": 5,
+    "kind": "adapted original slide",
+    "source": "LLMS.key",
+    "sourceSlide": 17,
+    "title": "Words as numbers"
+  },
+  {
+    "slide": 6,
+    "kind": "adapted original slide",
+    "source": "LLMS.key",
+    "sourceSlide": 18,
+    "title": "Words with related meanings"
+  },
+  {
+    "slide": 7,
+    "kind": "new bridge",
+    "title": "The word \"bank\" depends on context"
+  },
+  {
+    "slide": 8,
+    "kind": "adapted original slide",
+    "source": "LLMS.key",
+    "sourceSlide": 27,
+    "title": "One word, several meanings"
+  },
+  {
+    "slide": 9,
+    "kind": "new bridge",
+    "title": "Attention uses the surrounding text"
+  },
+  {
+    "slide": 10,
+    "kind": "adapted original slide",
+    "source": "LLMS.key",
+    "sourceSlide": 28,
+    "title": "The words describe different things"
+  },
+  {
+    "slide": 11,
+    "kind": "new bridge",
+    "title": "Training also stores learned associations"
+  },
+  {
+    "slide": 12,
+    "kind": "adapted original slide",
+    "source": "LLMS.key",
+    "sourceSlide": 34,
+    "title": "Context can add several kinds of meaning"
+  },
+  {
+    "slide": 13,
+    "kind": "adapted original slide",
+    "source": "LLMS.key",
+    "sourceSlide": 43,
+    "title": "The model repeats these operations"
+  },
+  {
+    "slide": 14,
+    "kind": "new bridge",
+    "title": "Learning from text"
+  },
+  {
+    "slide": 15,
+    "kind": "new bridge",
+    "title": "A token is a piece of text"
+  },
+  {
+    "slide": 16,
+    "kind": "original slide",
+    "source": "LLMS.key",
+    "sourceSlide": 22,
+    "title": "Generation happens token by token"
+  },
+  {
+    "slide": 17,
+    "kind": "original slide",
+    "source": "LLMS.key",
+    "sourceSlide": 23,
+    "title": "Probabilities drive everything"
+  },
+  {
+    "slide": 18,
+    "kind": "new bridge",
+    "title": "Sentence completion"
+  },
+  {
+    "slide": 19,
+    "kind": "new bridge",
+    "title": "The text we send shapes the response"
+  },
+  {
+    "slide": 20,
+    "kind": "new bridge",
+    "title": "A fluent answer can still be wrong"
+  },
+  {
+    "slide": 21,
+    "kind": "new bridge",
+    "title": "The choices we make with AI"
+  },
+  {
+    "slide": 22,
+    "kind": "new bridge",
+    "title": "Sources and further viewing"
+  }
+]

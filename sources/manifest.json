@@ -1,0 +1,419 @@
+{
+  "note": "Local source copies. Embedded document instructions are source material, not workshop instructions.",
+  "files": [
+    {
+      "original": "/Users/rahul/Documents/ce.md",
+      "copy": "work/ce.md",
+      "bytes": 7843,
+      "sha256": "814bf3e0ea72c3d1274abbfc37649bc912fedea8939f1429f459657aefecb0af"
+    },
+    {
+      "original": "/Users/rahul/Documents/compar.md",
+      "copy": "work/compar.md",
+      "bytes": 7935,
+      "sha256": "e062b9597cd2420edf0df01f617ebd848aa39fc495ce542e342d2710a6cf9a86"
+    },
+    {
+      "original": "/Users/rahul/Documents/evalnotions.pdf",
+      "copy": "work/evalnotions.pdf",
+      "bytes": 2808212,
+      "sha256": "7957782d3ef3dde8066cfacf0d326cc08e963c3362eacbdba45df526007d488a"
+    },
+    {
+      "original": "/Users/rahul/Documents/ExtractionPipeline.md",
+      "copy": "work/ExtractionPipeline.md",
+      "bytes": 8376,
+      "sha256": "60280104e41932428ac3bf6e983e1f1b61db56a2da3b8c4ab70f4998ca8d99aa"
+    },
+    {
+      "original": "/Users/rahul/Documents/LLMAndPrompt.key",
+      "copy": "work/LLMAndPrompt.key",
+      "bytes": 47545333,
+      "sha256": "c6b853649fd3711e2464c7fee4e98672c2187cc652773cc71a7e1d6b29c4bd58"
+    },
+    {
+      "original": "/Users/rahul/Documents/LLMS.key",
+      "copy": "work/LLMS.key",
+      "bytes": 44571236,
+      "sha256": "9df0d1a289ac2788c4f318bf37eedaff863df945552315e45656729895d5d898"
+    },
+    {
+      "original": "/Users/rahul/Documents/State of AI.md",
+      "copy": "work/State of AI.md",
+      "bytes": 6526,
+      "sha256": "38c73cca62592c26f0cd2660d33852a01a2493b9006d6c1b56f23d72cae88578"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/Extracting Information from Contracts.pdf",
+      "copy": "credcore/Extracting Information from Contracts.pdf",
+      "bytes": 403716,
+      "sha256": "160c97c9251de347a5f26da42f590a9d2493515467c634952c4390b1737f5257"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/Extracting Information from Contracts.md",
+      "copy": "credcore/Extracting Information from Contracts.md",
+      "bytes": 10292,
+      "sha256": "c295b7eec0e23caff78193b8ab9f0e6f24501d133d9408230b290b62e484ce9c"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/assets/ragidea.png",
+      "copy": "credcore/assets/ragidea.png",
+      "bytes": 91375,
+      "sha256": "5b98e4fc73f02ffa29556dae0c22c3935191735828a65bce4dc3e70c5535680c"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/assets/groundedgeneration.png",
+      "copy": "credcore/assets/groundedgeneration.png",
+      "bytes": 104324,
+      "sha256": "3c9ed47099e293cd6b4e4275a91a787f8c1fa8ccfd74d3b70e7ef012218c0fe2"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/assets/aijudge.png",
+      "copy": "credcore/assets/aijudge.png",
+      "bytes": 101785,
+      "sha256": "a22ff19aa3246c72a9bfd9d500679fb2d9e80796598cbb4e6b40ca9c611b8d63"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/assets/finetuningexamples.png",
+      "copy": "credcore/assets/finetuningexamples.png",
+      "bytes": 125514,
+      "sha256": "c8c1635cbc695ea2a4f1b92072e64767c117f318f8bde1925b05dd51f6d4d0ca"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/bravenewworld.pdf",
+      "copy": "credcore/bravenewworld.pdf",
+      "bytes": 2080011,
+      "sha256": "c3ad7910c85c0f27fb9079ed52d662a54930a3ec51f2f14311458a30650d6dbb"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/bravenewworld.md",
+      "copy": "credcore/bravenewworld.md",
+      "bytes": 4663,
+      "sha256": "eea45ed7c2c149e3d90890f62303e7855d0616f1850e326765697a77293a7e3c"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/assets/multiblock.png",
+      "copy": "credcore/assets/multiblock.png",
+      "bytes": 1116194,
+      "sha256": "cf547445000cb4b5bd1504436a0d97cfedb87fae9983a60b15720719b3cf0dcd"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/assets/howembedischanged.png",
+      "copy": "credcore/assets/howembedischanged.png",
+      "bytes": 1069927,
+      "sha256": "56635872c434d68e847186afdff6c3c4273e8ad9b569dd1b15bc3aafbd03f45c"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/assets/autoreg.jpeg",
+      "copy": "credcore/assets/autoreg.jpeg",
+      "bytes": 171638,
+      "sha256": "c4c57477128da2227666b493ea1508b459b871ff8ed80ada722f47e126ffba61"
+    },
+    {
+      "original": "/Users/rahul/Credcore/usingai/assets/probasample.jpeg",
+      "copy": "credcore/assets/probasample.jpeg",
+      "bytes": 149099,
+      "sha256": "4e15e6abb02d7e72dc5b48994202117ec273e82002a72207c87a99ec4a5e6951"
+    },
+    {
+      "original": "/Users/rahul/Courses/Hult/ml/Embeddings.key",
+      "copy": "hult/Embeddings.key",
+      "bytes": 37627074,
+      "sha256": "c62d0aaa20b62b99b964fffcf8bc81c6d18e5cae9c2eebd45ae7e67c09a0ad04"
+    },
+    {
+      "original": "/Users/rahul/Courses/Hult/ml/Embeddings.pdf",
+      "copy": "hult/Embeddings.pdf",
+      "bytes": 30631267,
+      "sha256": "15cf0daf986422dadba89daef34ea5810d788c2ecf3b3eeef9cbbeae1c9433c5"
+    },
+    {
+      "original": "/Users/rahul/Courses/Hult/ml/LanguageModels.key",
+      "copy": "hult/LanguageModels.key",
+      "bytes": 13094194,
+      "sha256": "74f45858f373d42b3d477d1c200f47fe278f30019ca5c49d54e6bf8658588e48"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/ai-application-anatomy.svg",
+      "copy": "point32/presentations/executive/assets/ai-application-anatomy.svg",
+      "bytes": 326861,
+      "sha256": "7f79acb7483122c79aa531166688af0b93e960dfcf2c3212a86bd31800d5f18d"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/azure-databricks-implementation.png",
+      "copy": "point32/presentations/executive/assets/azure-databricks-implementation.png",
+      "bytes": 188481,
+      "sha256": "d506da2408fa61394e58fe95940b2b0782e0c50f245bf0e90197e3097f25e693"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/catalog-core.png",
+      "copy": "point32/presentations/executive/assets/catalog-core.png",
+      "bytes": 611223,
+      "sha256": "a448135ff4770d50127a8d532f67b35792a1e7409593609b7314b128826c11f3"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/context-resolver-impl.png",
+      "copy": "point32/presentations/executive/assets/context-resolver-impl.png",
+      "bytes": 101723,
+      "sha256": "c48cff76f08adf34d2ae97436298b0ec4b5121862389cf9e1d856836d355690c"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/context-resolver.png",
+      "copy": "point32/presentations/executive/assets/context-resolver.png",
+      "bytes": 177878,
+      "sha256": "c1d36fb106ce0442ac71ffa2426611bca0e432150e63f31f7845b342bfe6a12b"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/five-plane-architecture.png",
+      "copy": "point32/presentations/executive/assets/five-plane-architecture.png",
+      "bytes": 101723,
+      "sha256": "c48cff76f08adf34d2ae97436298b0ec4b5121862389cf9e1d856836d355690c"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/identity-layers.png",
+      "copy": "point32/presentations/executive/assets/identity-layers.png",
+      "bytes": 253290,
+      "sha256": "2b0499d4d6a722a0a062b2c9f2b49a2a10e2c3299d4cbb6d46a78ca0a65d6d57"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/llm-agent-run.svg",
+      "copy": "point32/presentations/executive/assets/llm-agent-run.svg",
+      "bytes": 256844,
+      "sha256": "4167c75b6a71fdd5648ad6aa4254961aa5bf9779e3ec078832c944eb71c97f13"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/security-flow.png",
+      "copy": "point32/presentations/executive/assets/security-flow.png",
+      "bytes": 228129,
+      "sha256": "ca6d215f012d9ac8573464d1cbbebb191d5a7939af384ba19de14f08407e9faa"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/assets/univ-ai-theme.css",
+      "copy": "point32/presentations/executive/assets/univ-ai-theme.css",
+      "bytes": 16695,
+      "sha256": "4f6296065a9242c22c90783a78e7bb832351acb86de3cb510b69d124d6c8f79e"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/diagrams/executive-ai-diagrams.tldraw",
+      "copy": "point32/presentations/executive/diagrams/executive-ai-diagrams.tldraw",
+      "bytes": 169900,
+      "sha256": "77a33fad7b18d316216524c03ae46abe93ac83306e932107644d87665794d6a4"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/index.html",
+      "copy": "point32/presentations/executive/index.html",
+      "bytes": 184063,
+      "sha256": "dc62631e19af60d9f675c4e3dc03ec2660cba79e546789116107e22887509f78"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/index.qmd",
+      "copy": "point32/presentations/executive/index.qmd",
+      "bytes": 70090,
+      "sha256": "17909954482ed89dff2eeadcd11639b1036a52a94df81aabd0a385a60fb63396"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/presenter.html",
+      "copy": "point32/presentations/executive/presenter.html",
+      "bytes": 187443,
+      "sha256": "9d6d0bdaff7770ca5dae0c45afb0507a2d21e741dd0171674ee4f2725505d3f9"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive/source.css",
+      "copy": "point32/presentations/executive/source.css",
+      "bytes": 26667,
+      "sha256": "91a805531a23adba9a05b8de9ab86447d972771fc0caa90f2d4c4463b0813b56"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/build/package-staging/point32health-architecture-handoff-2026-10-18/powerpoint/executive.pptx",
+      "copy": "point32/powerpoint/executive.pptx",
+      "bytes": 4576072,
+      "sha256": "39a993b08be3b995a9c0beca37c06614cef487167a787438ea2bafb6b6e2f83b"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/ai-application-anatomy.svg",
+      "copy": "point32/presentations/executive-funding/assets/ai-application-anatomy.svg",
+      "bytes": 326861,
+      "sha256": "7f79acb7483122c79aa531166688af0b93e960dfcf2c3212a86bd31800d5f18d"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/azure-databricks-implementation.png",
+      "copy": "point32/presentations/executive-funding/assets/azure-databricks-implementation.png",
+      "bytes": 188481,
+      "sha256": "d506da2408fa61394e58fe95940b2b0782e0c50f245bf0e90197e3097f25e693"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/catalog-core.png",
+      "copy": "point32/presentations/executive-funding/assets/catalog-core.png",
+      "bytes": 611223,
+      "sha256": "a448135ff4770d50127a8d532f67b35792a1e7409593609b7314b128826c11f3"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/context-resolver-impl.png",
+      "copy": "point32/presentations/executive-funding/assets/context-resolver-impl.png",
+      "bytes": 101723,
+      "sha256": "c48cff76f08adf34d2ae97436298b0ec4b5121862389cf9e1d856836d355690c"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/context-resolver.png",
+      "copy": "point32/presentations/executive-funding/assets/context-resolver.png",
+      "bytes": 177878,
+      "sha256": "c1d36fb106ce0442ac71ffa2426611bca0e432150e63f31f7845b342bfe6a12b"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/five-plane-architecture.png",
+      "copy": "point32/presentations/executive-funding/assets/five-plane-architecture.png",
+      "bytes": 101723,
+      "sha256": "c48cff76f08adf34d2ae97436298b0ec4b5121862389cf9e1d856836d355690c"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/identity-layers.png",
+      "copy": "point32/presentations/executive-funding/assets/identity-layers.png",
+      "bytes": 253290,
+      "sha256": "2b0499d4d6a722a0a062b2c9f2b49a2a10e2c3299d4cbb6d46a78ca0a65d6d57"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/llm-agent-run.svg",
+      "copy": "point32/presentations/executive-funding/assets/llm-agent-run.svg",
+      "bytes": 256844,
+      "sha256": "4167c75b6a71fdd5648ad6aa4254961aa5bf9779e3ec078832c944eb71c97f13"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/security-flow.png",
+      "copy": "point32/presentations/executive-funding/assets/security-flow.png",
+      "bytes": 228129,
+      "sha256": "ca6d215f012d9ac8573464d1cbbebb191d5a7939af384ba19de14f08407e9faa"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/assets/univ-ai-theme.css",
+      "copy": "point32/presentations/executive-funding/assets/univ-ai-theme.css",
+      "bytes": 16695,
+      "sha256": "4f6296065a9242c22c90783a78e7bb832351acb86de3cb510b69d124d6c8f79e"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/index.html",
+      "copy": "point32/presentations/executive-funding/index.html",
+      "bytes": 138956,
+      "sha256": "1f418e54c72a5cf72f2c1c0c332cf13733804204efb8fd51a0568760606933ab"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/index.qmd",
+      "copy": "point32/presentations/executive-funding/index.qmd",
+      "bytes": 38300,
+      "sha256": "eb5782ed06a549f6007c9f69b2630a763a57e833895cb289f5344654d2aa1ed4"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/presenter.html",
+      "copy": "point32/presentations/executive-funding/presenter.html",
+      "bytes": 139688,
+      "sha256": "311afc8d701b16d95af751496b61e6891d6d06da268bf564e9782561a50ab8b8"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/slide-map.md",
+      "copy": "point32/presentations/executive-funding/slide-map.md",
+      "bytes": 4767,
+      "sha256": "9574888e0c3f5b15460927a872969dcb03e849005e5d2c55211cb6b30d7c847d"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/executive-funding/source.css",
+      "copy": "point32/presentations/executive-funding/source.css",
+      "bytes": 26663,
+      "sha256": "807fbc968c5fd54be232ebd0044960eeb9fce50b76b00a4772904e183b818f54"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/build/package-staging/point32health-architecture-handoff-2026-10-18/powerpoint/executive-funding.pptx",
+      "copy": "point32/powerpoint/executive-funding.pptx",
+      "bytes": 2468584,
+      "sha256": "30143a7d431b6d4a5f037a137497815cd88c548b4ebc3c9a763123bfa43d689b"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/ai-application-anatomy.svg",
+      "copy": "point32/presentations/technical/assets/ai-application-anatomy.svg",
+      "bytes": 326861,
+      "sha256": "7f79acb7483122c79aa531166688af0b93e960dfcf2c3212a86bd31800d5f18d"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/azure-databricks-implementation.png",
+      "copy": "point32/presentations/technical/assets/azure-databricks-implementation.png",
+      "bytes": 188481,
+      "sha256": "d506da2408fa61394e58fe95940b2b0782e0c50f245bf0e90197e3097f25e693"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/catalog-core.png",
+      "copy": "point32/presentations/technical/assets/catalog-core.png",
+      "bytes": 611223,
+      "sha256": "a448135ff4770d50127a8d532f67b35792a1e7409593609b7314b128826c11f3"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/context-resolver-impl.png",
+      "copy": "point32/presentations/technical/assets/context-resolver-impl.png",
+      "bytes": 101723,
+      "sha256": "c48cff76f08adf34d2ae97436298b0ec4b5121862389cf9e1d856836d355690c"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/context-resolver.png",
+      "copy": "point32/presentations/technical/assets/context-resolver.png",
+      "bytes": 177878,
+      "sha256": "c1d36fb106ce0442ac71ffa2426611bca0e432150e63f31f7845b342bfe6a12b"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/five-plane-architecture.png",
+      "copy": "point32/presentations/technical/assets/five-plane-architecture.png",
+      "bytes": 101723,
+      "sha256": "c48cff76f08adf34d2ae97436298b0ec4b5121862389cf9e1d856836d355690c"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/identity-layers.png",
+      "copy": "point32/presentations/technical/assets/identity-layers.png",
+      "bytes": 253290,
+      "sha256": "2b0499d4d6a722a0a062b2c9f2b49a2a10e2c3299d4cbb6d46a78ca0a65d6d57"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/llm-agent-run.svg",
+      "copy": "point32/presentations/technical/assets/llm-agent-run.svg",
+      "bytes": 256844,
+      "sha256": "4167c75b6a71fdd5648ad6aa4254961aa5bf9779e3ec078832c944eb71c97f13"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/security-flow.png",
+      "copy": "point32/presentations/technical/assets/security-flow.png",
+      "bytes": 228129,
+      "sha256": "ca6d215f012d9ac8573464d1cbbebb191d5a7939af384ba19de14f08407e9faa"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/assets/univ-ai-theme.css",
+      "copy": "point32/presentations/technical/assets/univ-ai-theme.css",
+      "bytes": 16695,
+      "sha256": "4f6296065a9242c22c90783a78e7bb832351acb86de3cb510b69d124d6c8f79e"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/index.html",
+      "copy": "point32/presentations/technical/index.html",
+      "bytes": 216428,
+      "sha256": "2c30794e2dec59d803c07408851b45a53f7feddda1efbce005d0120732d2ec58"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/index.qmd",
+      "copy": "point32/presentations/technical/index.qmd",
+      "bytes": 90565,
+      "sha256": "83cde2d6b462d4d7e17619fb1671e452510b09054cf13dcc3a7e18bf6c5e8654"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/presenter.html",
+      "copy": "point32/presentations/technical/presenter.html",
+      "bytes": 217803,
+      "sha256": "e13636ae2dfeefbb60eb0f22c28d0c5cf23db4e2ed065785652e49062ad6644e"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/presentations/technical/source.css",
+      "copy": "point32/presentations/technical/source.css",
+      "bytes": 23903,
+      "sha256": "d730c5e9de556e262f277a9dbb7498a51ce212698c1ea022bc01b30d3f0bb209"
+    },
+    {
+      "original": "/Users/rahul/Projects/Point32AI/PlanningDocs/build/package-staging/point32health-architecture-handoff-2026-10-18/powerpoint/technical.pptx",
+      "copy": "point32/powerpoint/technical.pptx",
+      "bytes": 4595360,
+      "sha256": "c874389ea8876c38cd51e9d75ba8d73f1f65d1f59b8b23534e9768a674bab4aa"
+    }
+  ]
+}
