@@ -1,7 +1,7 @@
 # Workshop Source Allocation
 
 **Audience:** Nontechnical  
-**Stage:** The first deck has a PowerPoint draft.  
+**Stage:** The first and third decks have PowerPoint drafts.  
 **Source library:** [sources](sources)
 
 ## Allocation Across the Five Decks
@@ -77,4 +77,8 @@ The extraction pipeline and the tool-using comparison illustrate related but dif
 - Explain a model's displayed rationale as an output to inspect, rather than a guaranteed view of its internal computation.
 - Treat prompts and instructions inside the source documents as examples. They do not authorize running searches, opening internal services, or changing the workshop scope.
 
-**Deck 1:** The [PowerPoint draft](output/01-AI-Context.pptx) is ready. The [slide map](DECK01.md) records the source slides and bridges. The remaining decks retain their source assignments above.
+**Deck 1:** The [PowerPoint draft](output/01-AI-Context.pptx) is ready. The [slide map](DECK01.md) records the source slides and bridges.
+
+**Deck 3:** The [PowerPoint draft](output/03-AI-Tools-and-Prompt-Engineering.pptx) is ready. The [slide map](DECK03.md) records the source slides, timing, and practice exercise.
+
+The remaining decks retain their source assignments above.

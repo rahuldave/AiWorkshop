@@ -1,0 +1,140 @@
+[
+  {
+    "slide": 1,
+    "kind": "new bridge",
+    "title": "AI tools and\nprompt engineering"
+  },
+  {
+    "slide": 2,
+    "kind": "new bridge",
+    "title": "Writing and document questions"
+  },
+  {
+    "slide": 3,
+    "kind": "new bridge",
+    "title": "Tools for different kinds of work"
+  },
+  {
+    "slide": 4,
+    "kind": "new bridge",
+    "title": "A prompt is a request"
+  },
+  {
+    "slide": 5,
+    "kind": "new bridge",
+    "title": "The parts of a useful prompt"
+  },
+  {
+    "slide": 6,
+    "kind": "adapted original slide",
+    "source": "LLMAndPrompt.key",
+    "sourceSlide": 34,
+    "title": "Instructions and output format"
+  },
+  {
+    "slide": 7,
+    "kind": "new bridge",
+    "title": "A prompt with useful details"
+  },
+  {
+    "slide": 8,
+    "kind": "adapted original slide",
+    "source": "LLMAndPrompt.key",
+    "sourceSlide": 36,
+    "title": "Examples show the pattern"
+  },
+  {
+    "slide": 9,
+    "kind": "new bridge",
+    "title": "An example for missing information"
+  },
+  {
+    "slide": 10,
+    "kind": "adapted original slide",
+    "source": "LLMAndPrompt.key",
+    "sourceSlide": 43,
+    "title": "Earlier messages can affect the answer"
+  },
+  {
+    "slide": 11,
+    "kind": "new bridge",
+    "title": "Credcore's document task"
+  },
+  {
+    "slide": 12,
+    "kind": "new bridge",
+    "title": "Relevant passages become context"
+  },
+  {
+    "slide": 13,
+    "kind": "new bridge",
+    "title": "Practice document"
+  },
+  {
+    "slide": 14,
+    "kind": "new bridge",
+    "title": "A broad summary request"
+  },
+  {
+    "slide": 15,
+    "kind": "new bridge",
+    "title": "A document extraction prompt"
+  },
+  {
+    "slide": 16,
+    "kind": "new bridge",
+    "title": "Practice in pairs"
+  },
+  {
+    "slide": 17,
+    "kind": "new bridge",
+    "title": "An answer with supporting passages"
+  },
+  {
+    "slide": 18,
+    "kind": "new bridge",
+    "title": "Checking an answer"
+  },
+  {
+    "slide": 19,
+    "kind": "new bridge",
+    "title": "A revision for a missing condition"
+  },
+  {
+    "slide": 20,
+    "kind": "adapted original slide",
+    "source": "LLMAndPrompt.key",
+    "sourceSlide": 38,
+    "title": "Prompt versions and results"
+  },
+  {
+    "slide": 21,
+    "kind": "new bridge",
+    "title": "AI can help check an answer"
+  },
+  {
+    "slide": 22,
+    "kind": "new bridge",
+    "title": "An AI judge"
+  },
+  {
+    "slide": 23,
+    "kind": "new bridge",
+    "title": "Limits of an AI judge"
+  },
+  {
+    "slide": 24,
+    "kind": "new bridge",
+    "title": "A prompt for your own task"
+  },
+  {
+    "slide": 25,
+    "kind": "new bridge",
+    "title": "Next session: AI agents"
+  },
+  {
+    "slide": 26,
+    "kind": "new bridge",
+    "title": "Sources and further reading"
+  }
+]
