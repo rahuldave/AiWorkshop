@@ -6,3 +6,10 @@ Thumbs.db
 # Office lock files
 ~$*
 .~lock.*#
+
+# Local source files with a credential visible in a screenshot
+/sources/work/LLMAndPrompt.key
+/.build/deck03/LLMAndPrompt-original.pptx
+/.build/deck03/LLMAndPrompt-original.pdf
+/.build/deck04/source-52.png
+/.build/deck04/source-art/slide52-pic388.png

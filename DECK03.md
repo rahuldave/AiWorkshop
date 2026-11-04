@@ -45,7 +45,7 @@ The Credcore case explains retrieval, prompt feedback, and AI judges. The contra
 
 ## Source use
 
-The deck adapts four slides from [LLMAndPrompt.key](sources/work/LLMAndPrompt.key). It keeps the original pictures and removes the technical detail around them.
+The deck adapts four slides from the [local reference presentation](sources/README.md#local-reference), `LLMAndPrompt.key`. It keeps the original pictures and removes the technical detail around them.
 
 The adapted slides show instructions and output format, examples, conversation history, and prompt versions. Original diagram credits remain visible.
 

@@ -39,6 +39,8 @@ The third deck has 26 slides for a 60 minute session. It includes a document exe
 
 The source library includes the Hult teaching decks and materials from Rahul Dave's Credcore and Point32 work.
 
+One original deck and its full exports remain local because a screenshot contains a credential. See the [source library note](sources/README.md#local-reference).
+
 Third-party visuals and excerpts retain their original credits, including 3Blue1Brown, Alammar and colleagues, and Chip Huyen.
 
 The [source manifest](sources/manifest.json) records the original locations and checksums of the copied files.
