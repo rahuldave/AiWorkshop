@@ -1,0 +1,88 @@
+[
+  {
+    "slide": 1,
+    "kind": "new bridge",
+    "title": "AI agents\nThe name is Bond"
+  },
+  {
+    "slide": 2,
+    "kind": "new bridge",
+    "title": "An agent's next action"
+  },
+  {
+    "slide": 3,
+    "kind": "adapted original slide",
+    "source": "LLMAndPrompt.key",
+    "sourceSlide": 49,
+    "title": "A tool returns a result"
+  },
+  {
+    "slide": 4,
+    "kind": "adapted original slide",
+    "source": "LLMAndPrompt.key",
+    "sourceSlide": 51,
+    "title": "Results become the next input"
+  },
+  {
+    "slide": 5,
+    "kind": "new bridge",
+    "title": "Fixed steps and agent choices"
+  },
+  {
+    "slide": 6,
+    "kind": "new bridge",
+    "title": "The Credcore comparison task"
+  },
+  {
+    "slide": 7,
+    "kind": "new bridge",
+    "title": "The recorded search sequence"
+  },
+  {
+    "slide": 8,
+    "kind": "new bridge",
+    "title": "Follow-up searches for evidence"
+  },
+  {
+    "slide": 9,
+    "kind": "new bridge",
+    "title": "An answer needs source locations"
+  },
+  {
+    "slide": 10,
+    "kind": "adapted original slide",
+    "source": "LLMAndPrompt.key",
+    "sourceSlide": 53,
+    "title": "A detail can remain unresolved"
+  },
+  {
+    "slide": 11,
+    "kind": "new bridge",
+    "title": "Review in the extraction workflow"
+  },
+  {
+    "slide": 12,
+    "kind": "new bridge",
+    "title": "Permissions for a document agent"
+  },
+  {
+    "slide": 13,
+    "kind": "new bridge",
+    "title": "Stopping conditions"
+  },
+  {
+    "slide": 14,
+    "kind": "new bridge",
+    "title": "The next action"
+  },
+  {
+    "slide": 15,
+    "kind": "new bridge",
+    "title": "A task with clear limits"
+  },
+  {
+    "slide": 16,
+    "kind": "new bridge",
+    "title": "Sources and further reading"
+  }
+]

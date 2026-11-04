@@ -1,12 +1,14 @@
 # AI Workshop: Source Research and Presentation Plan
 
-**Status:** The first and third PowerPoint drafts are ready. The other decks remain in planning.  
+**Status:** Decks 1, 3, and 4 have PowerPoint drafts. The other decks remain in planning.  
 **Audience:** Nontechnical participants  
 **Planned format:** One PowerPoint deck for each of the five teaching sessions
 
 The first deck is [Embeddings and language models](output/01-AI-Context.pptx). See the [slide map](DECK01.md) for its order and source slides.
 
 The third deck is [AI tools and prompt engineering](output/03-AI-Tools-and-Prompt-Engineering.pptx). Its [slide map](DECK03.md) includes timing and a practice exercise.
+
+The fourth deck is [AI agents](output/04-AI-Agents.pptx). Its [slide map](DECK04.md) covers the saved Credcore search account and the practice exercise.
 
 The newer [Source Allocation](SOURCE_ALLOCATION.md) incorporates all supplied Credcore and work materials and defines their use across the five decks. The [source library](sources/README.md) contains the complete reference files and linked images. That allocation supersedes the earlier source and preparation suggestions below where they differ.
 

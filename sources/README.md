@@ -1,6 +1,6 @@
 # Workshop Source Library
 
-These are local copies for preparing the AI Training Workshop. Original files remain in their original locations.
+The source library holds copies for preparing the AI training workshop. Original files remain in their original locations.
 
 ## Contents
 
@@ -19,7 +19,7 @@ See [Source Allocation](../SOURCE_ALLOCATION.md) for the deck assignments and se
 
 `work/LLMAndPrompt.key` contains an API key in a screenshot. The original file and its full PowerPoint and PDF exports remain local.
 
-Those files have been removed from the current public version. Older Git commits can still contain them. Revoke or rotate the key if it remains active.
+The current public version omits those files. Older Git commits can still contain them. Revoke or rotate the key if it remains active.
 
 The workshop decks use selected figures that omit the screenshot with the credential.
 

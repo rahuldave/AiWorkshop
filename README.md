@@ -11,7 +11,7 @@ The workshop runs from 10:00 AM to 3:00 PM. It uses everyday examples, discussio
 | 1 | Embeddings and language models | [PowerPoint draft](output/01-AI-Context.pptx) |
 | 2 | AI agency and the ecosystem we want | Planned |
 | 3 | AI tools and prompt engineering | [PowerPoint draft](output/03-AI-Tools-and-Prompt-Engineering.pptx) |
-| 4 | AI agents | Planned |
+| 4 | AI agents | [PowerPoint draft](output/04-AI-Agents.pptx) |
 | 5 | From learning to action | Planned |
 
 The first deck has 22 slides, including a source slide. Speaker notes include explanations, timing, and source links.
@@ -20,11 +20,14 @@ It combines adapted slides from Rahul Dave's teaching presentations with new sli
 
 The third deck has 26 slides for a 60 minute session. It includes a document exercise and a [practice handout](output/03-Practice.md).
 
+The fourth deck has 16 slides for a 30 minute session. It follows a saved Credcore search account and includes a [practice handout](output/04-Practice.md).
+
 ## Workshop documents
 
 - [Workshop agenda](WORKSHOP_AGENDA.md)
 - [First deck slide map](DECK01.md)
 - [Third deck slide map](DECK03.md)
+- [Fourth deck slide map](DECK04.md)
 - [Sources assigned to each deck](SOURCE_ALLOCATION.md)
 - [Research and presentation plan](RESEARCH_PLAN.md)
 
@@ -36,6 +39,7 @@ The third deck has 26 slides for a 60 minute session. It includes a document exe
 | [sources](sources/README.md) | Original Keynote, PowerPoint, PDF, HTML, and Markdown references, with their assets |
 | [.build/deck01](.build/deck01) | Build scripts, exported source slides, previews, and validation records for the first deck |
 | [.build/deck03](.build/deck03) | Build scripts, exported source slides, previews, and validation records for the third deck |
+| [.build/deck04](.build/deck04) | Build scripts, selected source figures, previews, and validation records for the fourth deck |
 
 The source library includes the Hult teaching decks and materials from Rahul Dave's Credcore and Point32 work.
 

@@ -1,7 +1,7 @@
 # Workshop Source Allocation
 
 **Audience:** Nontechnical  
-**Stage:** The first and third decks have PowerPoint drafts.  
+**Stage:** Decks 1, 3, and 4 have PowerPoint drafts.  
 **Source library:** [sources](sources)
 
 ## Allocation Across the Five Decks
@@ -80,5 +80,7 @@ The extraction pipeline and the tool-using comparison illustrate related but dif
 **Deck 1:** The [PowerPoint draft](output/01-AI-Context.pptx) is ready. The [slide map](DECK01.md) records the source slides and bridges.
 
 **Deck 3:** The [PowerPoint draft](output/03-AI-Tools-and-Prompt-Engineering.pptx) is ready. The [slide map](DECK03.md) records the source slides, timing, and practice exercise.
+
+**Deck 4:** The [PowerPoint draft](output/04-AI-Agents.pptx) is ready. The [slide map](DECK04.md) records the saved search account, adapted source slides, timing, and practice exercise.
 
 The remaining decks retain their source assignments above.
